@@ -1,0 +1,100 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Residents - 30+ NPC Tracker & Confirmed Names';
+const description =
+  'Grave Seasons residents guide framework for the 30+ Ashenridge NPCs, confirmed Yuto and Hari references, romance overlap, and launch-day roster tracking.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Residents', url: '/residents/' },
+];
+const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.blumhouseMedia];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.hari.src}>
+  <article class="mx-auto max-w-4xl">
+    <p class="section-kicker">Resident index</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Grave Seasons Residents
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Steam confirms that Ashenridge has 30+ residents, 12 potential romanceable people, 70+ interiors, and killer-specific campaigns. This page is the resident framework page: it tracks every NPC slot as a verified source becomes available, while the <a href="/characters/" class="text-wheat underline underline-offset-4">characters page</a> keeps the shorter confirmed-name summary.
+    </p>
+
+    <div class="mt-8 grid gap-5 md:grid-cols-2">
+      <figure>
+        <img src={ASSETS.yuto.src} alt={ASSETS.yuto.alt} width={ASSETS.yuto.width} height={ASSETS.yuto.height} class="rounded-md border border-white/10" loading="lazy" />
+        <figcaption class="mt-2 text-xs text-fog">Official media caption references talking to Yuto in the grocery store.</figcaption>
+      </figure>
+      <figure>
+        <img src={ASSETS.hari.src} alt={ASSETS.hari.alt} width={ASSETS.hari.width} height={ASSETS.hari.height} class="rounded-md border border-white/10" loading="lazy" />
+        <figcaption class="mt-2 text-xs text-fog">Official media caption references meeting Hari.</figcaption>
+      </figure>
+    </div>
+
+    <section class="prose-page mt-8">
+      <h2>Why residents need their own tracker</h2>
+      <p>
+        Grave Seasons is not only a farming sim; it is also a relationship and murder mystery game. Steam says players must protect victims and uncover supernatural murders over one year, while every playthrough selects a killer from a candidate pool. That means resident notes need to track ordinary social data and investigation data without mixing spoiler-heavy facts into spoiler-light pages.
+      </p>
+      <p>
+        The safe pre-launch stance is to publish the structure now and withhold unverified names. Yuto and Hari are currently safe to name because official Blumhouse media captions reference them. The rest of the 30+ resident roster should wait for official profiles, store updates, trailer captions, press kits, or direct in-game verification after release.
+      </p>
+    </section>
+
+    <section class="mt-10">
+      <p class="section-kicker">Roster framework</p>
+      <h2 class="mt-2 text-2xl font-black text-bone">Resident fields to verify</h2>
+      <div class="mt-5 overflow-x-auto rounded-md border border-white/10">
+        <table class="w-full min-w-[760px] border-collapse text-sm">
+          <thead class="bg-moss/25 text-left text-bone">
+            <tr>
+              <th class="px-4 py-3">Field</th>
+              <th class="px-4 py-3">Why it matters</th>
+              <th class="px-4 py-3">Current rule</th>
+            </tr>
+          </thead>
+          <tbody class="text-fog">
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-bold text-bone">Name and portrait</td>
+              <td class="px-4 py-3">Needed for search snippets and route pages.</td>
+              <td class="px-4 py-3">Only publish when an official source or in-game evidence confirms it.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-bold text-bone">Home and schedule</td>
+              <td class="px-4 py-3">Players need location routing for gifts, quests, and investigations.</td>
+              <td class="px-4 py-3">Verify by season, day, time, and location after launch.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-bold text-bone">Romance status</td>
+              <td class="px-4 py-3">Steam confirms 12 romanceable people, but not their names.</td>
+              <td class="px-4 py-3">Cross-link confirmed romance routes to the romance guide.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-bold text-bone">Killer relevance</td>
+              <td class="px-4 py-3">Steam confirms killer candidates can change the campaign.</td>
+              <td class="px-4 py-3">Hide major spoilers behind warning labels and version notes.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-bold text-bone">Storyline outcomes</td>
+              <td class="px-4 py-3">Deaths and survival can unlock different storylines.</td>
+              <td class="px-4 py-3">Record evidence by playthrough and avoid claiming universal outcomes too early.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="prose-page mt-10">
+      <h2>Residents versus characters</h2>
+      <p>
+        The characters page is a short public-facing overview for confirmed names, while this residents page is the deeper SEO framework for tracking every Ashenridge NPC. Keeping both pages distinct avoids another keyword collision: "characters" can summarize the cast, and "residents" can carry schedule, location, romance, death, and investigation tables as the game data becomes available.
+      </p>
+    </section>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

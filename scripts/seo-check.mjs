@@ -15,7 +15,9 @@ const requiredPages = [
   '/romance-guide/',
   '/walkthrough/',
   '/characters/',
-  '/romance/',
+  '/collectibles/',
+  '/platforms/',
+  '/residents/',
   '/tips/',
   '/quests/',
   '/about/',
@@ -48,11 +50,38 @@ for (const page of requiredPages) {
   assert(existsSync(outputPath), `Missing built route: ${page}`);
 }
 
+const forbiddenBuiltPages = ['/romance/'];
+for (const page of forbiddenBuiltPages) {
+  const outputPath = join(root, 'dist', page.replace(/^\/|\/$/g, ''), 'index.html');
+  assert(!existsSync(outputPath), `Deprecated route should not be built as an indexable page: ${page}`);
+}
+
 const distIndex = join(root, 'dist', 'index.html');
 if (existsSync(distIndex)) {
   const distText = readFileSync(join(root, 'dist', 'index.html'), 'utf8');
+  const bodyText = distText
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const wordCount = bodyText.split(/\s+/).filter(Boolean).length;
   assert(distText.includes('Grave Seasons Guide'), 'Homepage H1/title target is missing.');
   assert(distText.includes('application/ld+json'), 'JSON-LD schema is missing from homepage.');
+  assert(distText.includes('"@type":"FAQPage"'), 'Homepage FAQPage schema is missing.');
+  assert(distText.includes('When does Grave Seasons release?'), 'Homepage release FAQ is missing.');
+  assert(wordCount >= 1200, `Homepage content is too thin: ${wordCount} words found.`);
+  assert(!distText.includes('"@type":"WebSite"') || !distText.includes('"about":{"@type":"VideoGame"'), 'Homepage WebSite schema should not embed VideoGame in about.');
+}
+
+const builtHeader = existsSync(distIndex) ? readFileSync(distIndex, 'utf8') : '';
+assert(!builtHeader.includes('href="/romance/"'), 'Deprecated /romance/ link is still present in rendered homepage.');
+
+const redirectsPath = join(root, 'public', '_redirects');
+assert(existsSync(redirectsPath), 'Cloudflare Pages redirect file is missing.');
+if (existsSync(redirectsPath)) {
+  const redirects = readFileSync(redirectsPath, 'utf8');
+  assert(redirects.includes('/romance/ /romance-guide/ 301'), 'Deprecated /romance/ route must 301 to /romance-guide/.');
 }
 
 const sourceFiles = [
@@ -61,6 +90,9 @@ const sourceFiles = [
   'src/pages/romance-guide.astro',
   'src/pages/walkthrough.astro',
   'src/pages/characters.astro',
+  'src/pages/collectibles.astro',
+  'src/pages/platforms.astro',
+  'src/pages/residents.astro',
 ].map((file) => join(root, file));
 
 for (const sourceUrl of requiredSourceUrls) {

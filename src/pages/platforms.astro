@@ -1,0 +1,103 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+import { SITE } from '../data/site';
+
+const title = 'Grave Seasons Platforms - PC, PlayStation, Xbox & Store Links';
+const description =
+  'Official-source Grave Seasons platforms guide comparing Steam, PlayStation Store, and Microsoft Store availability without inventing unconfirmed Game Pass or edition details.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Platforms', url: '/platforms/' },
+];
+const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.playstation, SOURCES.xbox];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.steamHeader.src}>
+  <article class="mx-auto max-w-4xl">
+    <p class="section-kicker">Platform tracker</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Grave Seasons Platforms
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      This page tracks where Grave Seasons is officially listed. The current verified sources are Steam, Blumhouse, PlayStation Store, and Microsoft Store. It does not claim Game Pass, Switch, editions, pricing, preload timing, or performance modes unless an official platform page publishes those details.
+    </p>
+
+    <section class="mt-8 grid gap-4 md:grid-cols-3">
+      <a href={SITE.steamUrl} target="_blank" rel="nofollow noopener noreferrer" class="surface p-5">
+        <p class="text-xs font-black uppercase text-wheat">PC listing</p>
+        <h2 class="mt-2 text-xl font-black text-bone">Steam</h2>
+        <p class="mt-2 text-sm text-fog">Steam page is live for app {SITE.appId}; Steam currently lists the release timing as {SITE.steamReleaseText}.</p>
+      </a>
+      <a href={SITE.playstationUrl} target="_blank" rel="nofollow noopener noreferrer" class="surface p-5">
+        <p class="text-xs font-black uppercase text-wheat">Console listing</p>
+        <h2 class="mt-2 text-xl font-black text-bone">PlayStation</h2>
+        <p class="mt-2 text-sm text-fog">A PlayStation Store concept page is live and linked from the official platform ecosystem.</p>
+      </a>
+      <a href={SITE.xboxUrl} target="_blank" rel="nofollow noopener noreferrer" class="surface p-5">
+        <p class="text-xs font-black uppercase text-wheat">Console listing</p>
+        <h2 class="mt-2 text-xl font-black text-bone">Xbox / Microsoft Store</h2>
+        <p class="mt-2 text-sm text-fog">A Microsoft Store product page is live; Game Pass availability is not confirmed here.</p>
+      </a>
+    </section>
+
+    <section class="prose-page mt-10">
+      <h2>Official platform baseline</h2>
+      <p>
+        Blumhouse lists Grave Seasons as launching in Fall 2026, while Steam currently lists 2026. Steam, PlayStation Store, and Microsoft Store pages give the site enough evidence to maintain platform-specific URLs before launch, but not enough to publish store comparison claims that have not been announced.
+      </p>
+      <p>
+        This matters for search because players often look for "Grave Seasons PS5", "Grave Seasons Xbox", "Grave Seasons PC", and "Grave Seasons Game Pass" before a release date is final. The right answer today is a verified store-link hub, with unconfirmed questions explicitly marked as unconfirmed.
+      </p>
+    </section>
+
+    <section class="mt-10">
+      <p class="section-kicker">Comparison table</p>
+      <h2 class="mt-2 text-2xl font-black text-bone">What each official listing supports</h2>
+      <div class="mt-5 overflow-x-auto rounded-md border border-white/10">
+        <table class="w-full min-w-[760px] border-collapse text-sm">
+          <thead class="bg-moss/25 text-left text-bone">
+            <tr>
+              <th class="px-4 py-3">Platform query</th>
+              <th class="px-4 py-3">Verified source</th>
+              <th class="px-4 py-3">Safe wording</th>
+            </tr>
+          </thead>
+          <tbody class="text-fog">
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-bold text-bone">Grave Seasons PC</td>
+              <td class="px-4 py-3">Steam store page</td>
+              <td class="px-4 py-3">Steam listing is live; Steam currently shows a 2026 release text.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-bold text-bone">Grave Seasons PlayStation</td>
+              <td class="px-4 py-3">PlayStation Store concept page</td>
+              <td class="px-4 py-3">PlayStation Store page is live; exact launch details should be checked on the store.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-bold text-bone">Grave Seasons Xbox</td>
+              <td class="px-4 py-3">Microsoft Store product page</td>
+              <td class="px-4 py-3">Microsoft Store page is live; Game Pass is not confirmed by this evidence alone.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-bold text-bone">Grave Seasons Switch</td>
+              <td class="px-4 py-3">No tracked official listing</td>
+              <td class="px-4 py-3">Do not claim a Switch release until Nintendo, Blumhouse, or another official page lists it.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="prose-page mt-10">
+      <h2>Update rules for launch</h2>
+      <p>
+        When more store data appears, this page should add pricing, editions, preload dates, achievements or trophies, accessibility notes, controller support, and platform-specific screenshots only after those details can be verified. If a platform holder changes a listing before Blumhouse updates the main page, keep both source dates visible so readers can see which information changed first.
+      </p>
+    </section>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

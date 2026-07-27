@@ -1,4 +1,5 @@
 ---
+import FaqBlock from '../components/FaqBlock.astro';
 import GuideCard from '../components/GuideCard.astro';
 import SourcePanel from '../components/SourcePanel.astro';
 import Layout from '../layouts/Layout.astro';
@@ -9,6 +10,33 @@ import { OFFICIAL_FACTS, REQUIRED_GUIDES, SITE } from '../data/site';
 const title = 'Grave Seasons Guide - Romance, Walkthrough & Characters';
 const description =
   'Official-source Grave Seasons guide for romance, walkthrough, characters, quests, and tips. Built from Steam and Blumhouse data, with launch-day updates clearly separated.';
+const homeFaqs = [
+  {
+    question: 'When does Grave Seasons release?',
+    answer:
+      'The official Blumhouse Games page says Grave Seasons is launching in Fall 2026, while the Steam store page currently lists the release timing as 2026. This site uses Fall 2026 as the official launch window because it comes from the publisher page, and it avoids inventing a specific day until Steam, Blumhouse, PlayStation, or Microsoft publishes one. If a store page changes, the date should be rechecked against at least one official listing before this guide updates its release language. That source discipline matters because release-date pages can age quickly; every date update should keep the store text, publisher text, and verification date visible for readers. If the publisher later posts a trailer, press release, or storefront update with a more exact date, that item should be linked from the sources panel before the homepage headline changes.',
+  },
+  {
+    question: 'Is Grave Seasons on Game Pass?',
+    answer:
+      'There is no official Game Pass confirmation in the sources tracked here. A Microsoft Store product page for Grave Seasons is live and Blumhouse links to platform listings, but a store page is not the same thing as a Game Pass announcement. Until Microsoft, Xbox Wire, Blumhouse Games, or the store listing explicitly marks Game Pass availability, this guide treats Game Pass as unconfirmed and avoids promising subscription access. If Game Pass becomes official later, the platforms page should cite the exact Microsoft or publisher source, then separate launch access from any preorder, wishlist, or store-page availability language. This keeps the answer helpful without overstating what a storefront currently proves.',
+  },
+  {
+    question: 'How many romance options are in Grave Seasons?',
+    answer:
+      'Steam states that Grave Seasons includes 12 potential romanceable people. The same official description also says a few romanceable folks may have the potential to be the killer, which makes the romance system part of the murder mystery rather than a separate side activity. The full route names, gift preferences, heart events, marriage rules, and dialogue choices have not been officially published yet, so the romance guide keeps a verified framework now and will separate launch-day findings from pre-launch facts. After release, each romance route should list version notes and spoiler labels because killer selection can change story context.',
+  },
+  {
+    question: 'Is Grave Seasons multiplayer?',
+    answer:
+      'The official pages checked for this site do not confirm multiplayer, co-op, or online shared-farm features. Steam, Blumhouse, PlayStation, and Microsoft listings are useful for platform and release-window verification, but this guide does not convert missing feature text into a promise either way. Until an official page lists multiplayer support or the released game exposes it directly, the safe SEO answer is that multiplayer status is unconfirmed and the current guide focuses on the confirmed farming, relationship, and murder mystery structure. If feature tags change, this answer should quote the updated platform source rather than paraphrase rumors.',
+  },
+  {
+    question: 'What platforms is Grave Seasons on?',
+    answer:
+      'The tracked official sources show a Steam page, a PlayStation Store concept page, and a Microsoft Store product page for Grave Seasons. Steam app details currently support the PC listing, while the console store pages confirm PlayStation and Xbox ecosystem presence without requiring this site to guess release parity, performance modes, or edition details. The platforms page keeps those official links together and leaves room for store-specific updates when the publisher or platform holders publish more complete launch information. It also avoids unsupported platform claims, such as Switch or Game Pass, until an official page provides evidence. That keeps platform SEO useful for searchers without turning the site into a rumor mirror. The same rule applies to editions.',
+  },
+];
 ---
 
 <Layout title={title} description={description} pageType="home" fullWidth image={ASSETS.hero.src}>
@@ -152,6 +180,7 @@ const description =
         </figure>
       </div>
       <SourcePanel sources={CORE_SOURCES} />
+      <FaqBlock items={homeFaqs} />
     </div>
   </section>
 </Layout>

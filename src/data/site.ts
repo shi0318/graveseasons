@@ -26,7 +26,6 @@ export const NAV = [
   { label: 'Romance Guide', href: '/romance-guide/' },
   { label: 'Walkthrough', href: '/walkthrough/' },
   { label: 'Characters', href: '/characters/' },
-  { label: 'Romance', href: '/romance/' },
   { label: 'Tips', href: '/tips/' },
   { label: 'Quests', href: '/quests/' },
 ] as const;
@@ -100,11 +99,25 @@ export const REQUIRED_GUIDES = [
     priority: 'P1',
   },
   {
-    href: '/romance/',
-    title: 'Romance System',
+    href: '/collectibles/',
+    title: 'Collectibles',
     description:
-      'A focused system explainer linked back to the full romance guide.',
-    priority: 'P2',
+      'Crop, tool, item, and special-object tracker ready for release-day verification.',
+    priority: 'P1',
+  },
+  {
+    href: '/platforms/',
+    title: 'Platforms',
+    description:
+      'PC, PlayStation, and Xbox availability notes with only official store data.',
+    priority: 'P1',
+  },
+  {
+    href: '/residents/',
+    title: 'Residents',
+    description:
+      '30+ resident framework that separates confirmed names from launch-day roster work.',
+    priority: 'P1',
   },
   {
     href: '/tips/',
