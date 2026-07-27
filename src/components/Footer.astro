@@ -3,11 +3,17 @@ import { NAV, SITE } from '../data/site';
 import { CORE_SOURCES } from '../data/sources';
 
 const year = new Date().getFullYear();
+const trustLinks = [
+  { label: 'About', href: '/about/' },
+  { label: 'Contact', href: '/contact/' },
+  { label: 'Privacy Policy', href: '/privacy-policy/' },
+  { label: 'Sitemap', href: '/sitemap-index.xml' },
+] as const;
 ---
 
 <footer class="border-t border-white/10 bg-soil">
   <div class="container py-12">
-    <div class="grid gap-8 md:grid-cols-[1.25fr_1fr_1fr]">
+    <div class="grid gap-8 md:grid-cols-[1.25fr_1fr_1fr_1fr]">
       <div>
         <div class="flex items-center gap-3">
           <span class="grid h-10 w-10 place-items-center rounded-md border border-wheat/30 bg-wheat/10 text-sm font-black text-wheat">
@@ -42,6 +48,17 @@ const year = new Date().getFullYear();
               <a href={source.url} target="_blank" rel="nofollow noopener noreferrer" class="text-sm text-fog hover:text-wheat">
                 {source.label}
               </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <nav aria-label="Site links">
+        <p class="text-xs font-black uppercase text-bone">Site</p>
+        <ul class="mt-3 space-y-2">
+          {trustLinks.map((item) => (
+            <li>
+              <a href={item.href} class="text-sm text-fog hover:text-wheat">{item.label}</a>
             </li>
           ))}
         </ul>

@@ -72,6 +72,8 @@ if (existsSync(distIndex)) {
   assert(distText.includes('When does Grave Seasons release?'), 'Homepage release FAQ is missing.');
   assert(wordCount >= 1200, `Homepage content is too thin: ${wordCount} words found.`);
   assert(!distText.includes('"@type":"WebSite"') || !distText.includes('"about":{"@type":"VideoGame"'), 'Homepage WebSite schema should not embed VideoGame in about.');
+  assert(distText.includes('href="/about/"'), 'Footer must link to /about/.');
+  assert(distText.includes('href="/contact/"'), 'Footer must link to /contact/.');
 }
 
 const builtHeader = existsSync(distIndex) ? readFileSync(distIndex, 'utf8') : '';
@@ -82,6 +84,28 @@ assert(existsSync(redirectsPath), 'Cloudflare Pages redirect file is missing.');
 if (existsSync(redirectsPath)) {
   const redirects = readFileSync(redirectsPath, 'utf8');
   assert(redirects.includes('/romance/ /romance-guide/ 301'), 'Deprecated /romance/ route must 301 to /romance-guide/.');
+}
+
+const sitemapPath = join(root, 'dist', 'sitemap-0.xml');
+if (existsSync(sitemapPath)) {
+  const sitemap = readFileSync(sitemapPath, 'utf8');
+  assert(sitemap.includes('https://graveseasonsguide.com/about/'), 'Sitemap must include /about/.');
+  assert(sitemap.includes('https://graveseasonsguide.com/contact/'), 'Sitemap must include /contact/.');
+}
+
+const charactersPath = join(root, 'dist', 'characters', 'index.html');
+if (existsSync(charactersPath)) {
+  const charactersText = readFileSync(charactersPath, 'utf8');
+  assert(charactersText.includes('Character overview'), '/characters/ must be positioned as the character overview page.');
+  assert(charactersText.includes('short confirmed-name overview'), '/characters/ must explain it is the short confirmed-name overview.');
+  assert(!charactersText.includes('Resident tracker'), '/characters/ should not label itself as a resident tracker.');
+}
+
+const residentsPath = join(root, 'dist', 'residents', 'index.html');
+if (existsSync(residentsPath)) {
+  const residentsText = readFileSync(residentsPath, 'utf8');
+  assert(residentsText.includes('deep resident tracking framework'), '/residents/ must be positioned as the deep resident tracking framework.');
+  assert(residentsText.includes('schedule, location, romance, death, and investigation tables'), '/residents/ must own schedule/location/romance/death/investigation tracking.');
 }
 
 const sourceFiles = [
