@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+
+const title = 'Page Not Found - Grave Seasons Guide';
+const description = 'The requested Grave Seasons Guide page could not be found.';
+---
+
+<Layout title={title} description={description} image={ASSETS.townNight.src}>
+  <section class="mx-auto max-w-2xl py-16 text-center">
+    <p class="section-kicker justify-center">404</p>
+    <h1 class="mt-3 text-4xl font-black text-bone md:text-5xl">Page not found</h1>
+    <p class="mt-4 text-fog">
+      That Ashenridge note is not in the archive yet. Start with the verified guide pages.
+    </p>
+    <div class="mt-8 flex justify-center gap-3">
+      <a href="/" class="btn-primary">Home</a>
+      <a href="/romance-guide/" class="btn-secondary">Romance guide</a>
+    </div>
+  </section>
+</Layout>

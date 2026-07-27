@@ -1,0 +1,41 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Romance System - What Is Officially Known';
+const description =
+  'A focused Grave Seasons romance system explainer covering the official 12 romance options, killer overlap risk, and what remains unconfirmed before launch.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Romance System', url: '/romance/' },
+];
+const sources = [SOURCES.steam, SOURCES.blumhouse];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.yuto.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">System explainer</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Grave Seasons Romance System
+    </h1>
+    <div class="prose-page mt-6">
+      <p>
+        The official pages frame romance as part of a wider relationship and murder mystery system. Steam confirms 12 potential romanceable people and warns that a few may have the potential to be the killer.
+      </p>
+      <h2>Known system shape</h2>
+      <ul>
+        <li>Relationship building is a central part of the game pitch.</li>
+        <li>Romance exists alongside farming, foraging, crafting, and investigation.</li>
+        <li>Deaths and survival can unlock different storylines.</li>
+        <li>The selected killer changes the campaign, targets, and murder style.</li>
+      </ul>
+      <h2>Unknown mechanics</h2>
+      <p>
+        The official pages do not yet confirm heart levels, gift tiers, marriage rules, dates, jealousy, breakup behavior, or exact event triggers. The full <a href="/romance-guide/">romance guide</a> will only add those details after direct verification.
+      </p>
+    </div>
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

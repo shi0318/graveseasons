@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SITE } from '../data/site';
+
+const title = 'Privacy Policy - Grave Seasons Guide';
+const description =
+  'Privacy policy for Grave Seasons Guide, including analytics, advertising readiness, cookies, and contact details.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Privacy Policy', url: '/privacy-policy/' },
+];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.steamHeader.src}>
+  <article class="prose-page mx-auto max-w-3xl">
+    <p class="section-kicker">Site policy</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">Privacy Policy</h1>
+    <p>Last updated: {SITE.lastVerified}</p>
+    <h2>Information we collect</h2>
+    <p>
+      This site may collect basic analytics data such as page views, referring pages, browser type, device type, and approximate region. We do not ask visitors to create accounts.
+    </p>
+    <h2>Cookies and advertising</h2>
+    <p>
+      If analytics or advertising is enabled, third-party providers may use cookies or similar technologies to measure traffic and serve ads. Visitors can manage cookies through their browser settings.
+    </p>
+    <h2>External links</h2>
+    <p>
+      This site links to Steam, Blumhouse, PlayStation, Microsoft, and other official or relevant pages. Those websites have their own privacy policies.
+    </p>
+    <h2>Contact</h2>
+    <p>
+      For privacy questions, email <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+    </p>
+  </article>
+</Layout>

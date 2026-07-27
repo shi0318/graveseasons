@@ -1,0 +1,133 @@
+---
+import FaqBlock from '../components/FaqBlock.astro';
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Romance Guide - 12 Options, Killer Risk & Route Tracker';
+const description =
+  'Pre-launch Grave Seasons romance guide built from official Steam and Blumhouse facts: 12 romance options, possible killer risk, and launch-day route tracking.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Romance Guide', url: '/romance-guide/' },
+];
+const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.blumhouseMedia];
+const faqs = [
+  {
+    question: 'How many romance options are confirmed for Grave Seasons?',
+    answer:
+      'Steam states that Grave Seasons lets players romance one of 12 potential folks that capture their heart.',
+  },
+  {
+    question: 'Are gift preferences and heart events officially published?',
+    answer:
+      'No. Gift preferences, event triggers, and exact dialogue routes have not been published by Steam or Blumhouse yet, so this page does not invent them.',
+  },
+  {
+    question: 'Can a romance option be the killer?',
+    answer:
+      'Steam says a few romanceable folks have the potential to be the killer. It also says every playthrough selects a supernatural killer from a pool of candidates.',
+  },
+  {
+    question: 'When will this become a full romance route guide?',
+    answer:
+      'After release, this page should be updated with verified in-game routes, gifts, event triggers, and spoiler-labeled outcomes.',
+  },
+];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.yuto.src}>
+  <article class="mx-auto max-w-4xl">
+    <p class="section-kicker">P0 guide page</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Grave Seasons Romance Guide
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      The romance system is the strongest pre-launch search opportunity, but the game is not out yet. This page tracks what is official now and sets up clean sections for release-day route data.
+    </p>
+
+    <div class="mt-8 grid gap-5 md:grid-cols-[1.2fr_0.8fr] md:items-start">
+      <div class="prose-page">
+        <h2>Confirmed romance facts</h2>
+        <ul>
+          <li>Steam says Grave Seasons includes 12 potential romanceable people.</li>
+          <li>Steam says a few romanceable people may have the potential to be the killer.</li>
+          <li>Steam says every playthrough selects a supernatural killer from a pool of candidates.</li>
+          <li>Steam frames the town as Ashenridge, with 30+ residents and 70+ interiors.</li>
+          <li>Blumhouse describes the game as relationship building and crop harvesting mixed with finding the supernatural serial killer.</li>
+        </ul>
+
+        <h2>What is not confirmed yet</h2>
+        <p>
+          There is no official gift chart, heart-event schedule, dialogue route, marriage route, breakup system, birthday list, or complete resident roster at this time. Any page claiming full routes before launch should be treated as speculative unless it shows direct in-game evidence.
+        </p>
+      </div>
+
+      <figure>
+        <img
+          src={ASSETS.yuto.src}
+          alt={ASSETS.yuto.alt}
+          width={ASSETS.yuto.width}
+          height={ASSETS.yuto.height}
+          class="rounded-md border border-white/10"
+          loading="lazy"
+        />
+        <figcaption class="mt-2 text-xs text-fog">
+          Official Blumhouse gallery caption references Yuto, but does not publish romance route details.
+        </figcaption>
+      </figure>
+    </div>
+
+    <section class="mt-10">
+      <p class="section-kicker">Launch tracker</p>
+      <h2 class="mt-2 text-2xl font-black text-bone">Route data we will verify after release</h2>
+      <div class="mt-5 overflow-x-auto rounded-md border border-white/10">
+        <table class="w-full min-w-[680px] border-collapse text-sm">
+          <thead class="bg-moss/25 text-left text-bone">
+            <tr>
+              <th class="px-4 py-3">Route field</th>
+              <th class="px-4 py-3">Current status</th>
+              <th class="px-4 py-3">Verification method</th>
+            </tr>
+          </thead>
+          <tbody class="text-fog">
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 text-bone">Romanceable resident names</td>
+              <td class="px-4 py-3">Only count is confirmed.</td>
+              <td class="px-4 py-3">In-game roster screenshots plus official credits or store updates.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 text-bone">Preferred gifts</td>
+              <td class="px-4 py-3">Not published.</td>
+              <td class="px-4 py-3">Repeated in-game gift testing with screenshots and version notes.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 text-bone">Heart events</td>
+              <td class="px-4 py-3">Not published.</td>
+              <td class="px-4 py-3">Trigger conditions recorded by season, day, location, and relationship state.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 text-bone">Killer overlap</td>
+              <td class="px-4 py-3">Steam confirms possible overlap.</td>
+              <td class="px-4 py-3">Spoiler-labeled route testing across multiple playthroughs.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="prose-page mt-10">
+      <h2>How to use this page before launch</h2>
+      <p>
+        Use this page as a reliability filter. The confirmed part is the system shape: relationships matter, 12 people are romanceable, and a few may be the killer. The unconfirmed part is the route math. Once the game is playable, this page should become the hub for gifts, dialogue choices, event order, endings, and spoiler-safe route notes.
+      </p>
+      <p>
+        For related context, open the <a href="/characters/">characters tracker</a>, the <a href="/romance/">romance system explainer</a>, and the <a href="/walkthrough/">walkthrough hub</a>.
+      </p>
+    </section>
+
+    <FaqBlock items={faqs} />
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

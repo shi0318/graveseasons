@@ -1,0 +1,142 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { ASSETS } from '../data/assets';
+import { SITE } from '../data/site';
+
+interface Crumb {
+  name: string;
+  url: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  pageType?: 'home' | 'article' | 'collection';
+  canonical?: string;
+  image?: string;
+  breadcrumbs?: Crumb[];
+  fullWidth?: boolean;
+}
+
+const {
+  title,
+  description,
+  pageType = 'article',
+  canonical,
+  image = ASSETS.hero.src,
+  breadcrumbs = [],
+  fullWidth = false,
+} = Astro.props;
+
+const path = Astro.url.pathname;
+const canonicalUrl = canonical ?? new URL(path, SITE.url).href;
+const imageUrl = new URL(image, SITE.url).href;
+
+const organization = {
+  '@type': 'Organization',
+  '@id': `${SITE.url}/#organization`,
+  name: SITE.name,
+  url: `${SITE.url}/`,
+};
+
+const videoGame = {
+  '@type': 'VideoGame',
+  name: SITE.gameName,
+  applicationCategory: 'Game',
+  genre: ['Indie', 'RPG', 'Simulation'],
+  author: { '@type': 'Organization', name: SITE.developer },
+  publisher: { '@type': 'Organization', name: SITE.publisher },
+  gamePlatform: ['PC', 'PlayStation 5', 'Xbox Series X|S'],
+};
+
+const graph: Record<string, unknown>[] = [organization];
+
+if (pageType === 'home') {
+  graph.push({
+    '@type': 'WebSite',
+    '@id': `${SITE.url}/#website`,
+    name: SITE.name,
+    url: `${SITE.url}/`,
+    description: SITE.description,
+    inLanguage: 'en',
+    publisher: { '@id': `${SITE.url}/#organization` },
+    about: videoGame,
+  });
+} else {
+  graph.push({
+    '@type': pageType === 'collection' ? 'CollectionPage' : 'Article',
+    '@id': `${canonicalUrl}#${pageType}`,
+    name: title,
+    headline: title,
+    description,
+    url: canonicalUrl,
+    inLanguage: 'en',
+    image: [imageUrl],
+    publisher: { '@id': `${SITE.url}/#organization` },
+    author: { '@id': `${SITE.url}/#organization` },
+    about: videoGame,
+    dateModified: SITE.lastVerified,
+  });
+}
+
+if (breadcrumbs.length > 0) {
+  graph.push({
+    '@type': 'BreadcrumbList',
+    '@id': `${canonicalUrl}#breadcrumb`,
+    itemListElement: breadcrumbs.map((crumb, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: crumb.name,
+      item: new URL(crumb.url, SITE.url).href,
+    })),
+  });
+}
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': graph,
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content={pageType === 'home' ? 'website' : 'article'} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;650;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} is:inline />
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-wheat focus:px-4 focus:py-2 focus:text-ink">
+      Skip to content
+    </a>
+    <Header />
+    <main id="main" class:list={['flex-1', fullWidth ? '' : 'container py-10']}>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

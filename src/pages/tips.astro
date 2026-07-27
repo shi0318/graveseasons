@@ -1,0 +1,49 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Tips - Spoiler-Safe Pre-Launch Planning';
+const description =
+  'Spoiler-safe Grave Seasons tips based on official facts: farming, foraging, crafting, investigation, seasons, residents, and killer variation.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Tips', url: '/tips/' },
+];
+const sources = [SOURCES.steam, SOURCES.blumhouse];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.farmHarvest.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Pre-launch tips</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Grave Seasons Tips
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      These tips are planning principles based on official descriptions, not final in-game strategy. The practical numbers will be updated after launch.
+    </p>
+
+    <figure class="mt-8">
+      <img src={ASSETS.farmHarvest.src} alt={ASSETS.farmHarvest.alt} width={ASSETS.farmHarvest.width} height={ASSETS.farmHarvest.height} class="rounded-md border border-white/10" loading="lazy" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.farmHarvest.credit}</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>Spoiler-safe starter advice</h2>
+      <ol>
+        <li>Track your decisions. Steam says decisions are checked and autosaved, so assume important branches may not be easy to undo.</li>
+        <li>Separate farm notes from investigation notes. The official pitch mixes farming, crafting, and murder investigation.</li>
+        <li>Watch every resident. Steam confirms 30+ residents and a killer chosen from a pool of candidates.</li>
+        <li>Record season and location. Steam says changing seasons impact the world around you and lists seven major areas.</li>
+        <li>Protect spoiler boundaries. Romance routes and killer identity should be clearly labeled after release.</li>
+      </ol>
+      <h2>What to avoid before launch</h2>
+      <p>
+        Avoid publishing exact crop profit charts, best gifts, murder schedules, or quest outcomes until they are tested in the release build. A fast page can rank, but an inaccurate page loses trust quickly.
+      </p>
+    </div>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

@@ -1,0 +1,82 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Characters - Residents, Yuto, Hari & Romance Tracker';
+const description =
+  'Grave Seasons character guide using only official Steam and Blumhouse facts: 30+ residents, 12 romance options, and official media references to Yuto and Hari.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Characters', url: '/characters/' },
+];
+const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.blumhouseMedia];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.hari.src}>
+  <article class="mx-auto max-w-4xl">
+    <p class="section-kicker">Resident tracker</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Grave Seasons Characters
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Steam confirms 30+ residents and 12 romanceable people, but the full roster is not officially published. This tracker only names characters when an official page or media caption does.
+    </p>
+
+    <div class="mt-8 grid gap-5 md:grid-cols-2">
+      <figure>
+        <img src={ASSETS.yuto.src} alt={ASSETS.yuto.alt} width={ASSETS.yuto.width} height={ASSETS.yuto.height} class="rounded-md border border-white/10" loading="lazy" />
+        <figcaption class="mt-2 text-xs text-fog">Official media caption: talking to Yuto in the grocery store.</figcaption>
+      </figure>
+      <figure>
+        <img src={ASSETS.hari.src} alt={ASSETS.hari.alt} width={ASSETS.hari.width} height={ASSETS.hari.height} class="rounded-md border border-white/10" loading="lazy" />
+        <figcaption class="mt-2 text-xs text-fog">Official media caption: meeting Hari.</figcaption>
+      </figure>
+    </div>
+
+    <section class="mt-10">
+      <p class="section-kicker">Confirmed names</p>
+      <h2 class="mt-2 text-2xl font-black text-bone">Officially referenced residents</h2>
+      <div class="mt-5 overflow-x-auto rounded-md border border-white/10">
+        <table class="w-full min-w-[640px] border-collapse text-sm">
+          <thead class="bg-moss/25 text-left text-bone">
+            <tr>
+              <th class="px-4 py-3">Name</th>
+              <th class="px-4 py-3">Official context</th>
+              <th class="px-4 py-3">Romance status</th>
+            </tr>
+          </thead>
+          <tbody class="text-fog">
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-bold text-bone">Yuto</td>
+              <td class="px-4 py-3">Blumhouse gallery alt text references talking to Yuto in the grocery store.</td>
+              <td class="px-4 py-3">Not confirmed as romanceable.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-bold text-bone">Hari</td>
+              <td class="px-4 py-3">Blumhouse gallery alt text references meeting Hari.</td>
+              <td class="px-4 py-3">Not confirmed as romanceable.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="prose-page mt-10">
+      <h2>What the official pages confirm about the cast</h2>
+      <ul>
+        <li>Ashenridge has 30+ residents.</li>
+        <li>There are 12 potential romanceable people.</li>
+        <li>A few romanceable people may have the potential to be the killer.</li>
+        <li>Characters can have storylines tied to survival and death.</li>
+        <li>Every killer has a campaign, reasoning, kill styles, and targets.</li>
+      </ul>
+      <p>
+        For route information, use the <a href="/romance-guide/">romance guide</a>. For location and first-year sequencing, use the <a href="/walkthrough/">walkthrough hub</a>.
+      </p>
+    </div>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

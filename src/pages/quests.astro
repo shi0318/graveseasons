@@ -1,0 +1,73 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Quests - Investigation & Story Tracker';
+const description =
+  'Grave Seasons quest tracker for investigation, survival branches, Ashenridge locations, and release-day quest guide updates.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Quests', url: '/quests/' },
+];
+const sources = [SOURCES.steam, SOURCES.blumhouse];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.monsterAttack.src}>
+  <article class="mx-auto max-w-4xl">
+    <p class="section-kicker">Quest tracker</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Grave Seasons Quests
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Official pages confirm investigation, hidden town secrets, victim protection, killer campaigns, and consequences. Exact quest names are not public yet, so this page is structured for verification after release.
+    </p>
+
+    <div class="prose-page mt-8">
+      <h2>Confirmed quest themes</h2>
+      <ul>
+        <li>Protect victims from a supernatural serial killer.</li>
+        <li>Discover methods that ward off monsters.</li>
+        <li>Unravel the truth behind supernatural murders.</li>
+        <li>Discover the secrets residents of Ashenridge keep hidden.</li>
+        <li>Unlock stories through both character death and survival.</li>
+      </ul>
+    </div>
+
+    <section class="mt-10">
+      <p class="section-kicker">Release checklist</p>
+      <h2 class="mt-2 text-2xl font-black text-bone">Quest fields to capture</h2>
+      <div class="mt-5 overflow-x-auto rounded-md border border-white/10">
+        <table class="w-full min-w-[620px] border-collapse text-sm">
+          <thead class="bg-moss/25 text-left text-bone">
+            <tr>
+              <th class="px-4 py-3">Field</th>
+              <th class="px-4 py-3">Reason</th>
+            </tr>
+          </thead>
+          <tbody class="text-fog">
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 text-bone">Quest name</td>
+              <td class="px-4 py-3">Use exact in-game wording only.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 text-bone">Start condition</td>
+              <td class="px-4 py-3">Season, day, time, location, and resident state may matter.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 text-bone">Branch outcome</td>
+              <td class="px-4 py-3">Steam confirms decisions have positive and negative consequences.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 text-bone">Spoiler level</td>
+              <td class="px-4 py-3">Killer identity and deaths should be hidden behind spoiler labels.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

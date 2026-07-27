@@ -1,0 +1,17 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  label?: string;
+}
+
+const { href, title, description, label } = Astro.props;
+---
+
+<a href={href} class="surface group flex h-full flex-col p-5 transition hover:border-wheat/35">
+  {label && <span class="text-xs font-black uppercase text-wheat">{label}</span>}
+  <span class="mt-2 text-xl font-black text-bone group-hover:text-wheat">{title}</span>
+  <span class="mt-3 flex-1 text-sm leading-relaxed text-fog">{description}</span>
+  <span class="mt-5 text-sm font-bold text-wheat">Open guide</span>
+</a>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://graveseasonsguide.com/sitemap-index.xml

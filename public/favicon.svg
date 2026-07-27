@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Grave Seasons Guide">
+  <rect width="64" height="64" rx="8" fill="#090806"/>
+  <path d="M12 48h40v4H12z" fill="#526142"/>
+  <path d="M32 10c9 0 16 7 16 16 0 12-16 28-16 28S16 38 16 26c0-9 7-16 16-16z" fill="#a1392b"/>
+  <path d="M24 25h16v5H24zM29 18h6v24h-6z" fill="#efe6d0"/>
+</svg>

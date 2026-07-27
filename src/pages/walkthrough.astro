@@ -1,0 +1,96 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Walkthrough - One-Year Ashenridge Guide';
+const description =
+  'Grave Seasons walkthrough hub for the one-year Ashenridge campaign, seven official locations, investigation planning, and release-day chapter updates.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Walkthrough', url: '/walkthrough/' },
+];
+const sources = [SOURCES.steam, SOURCES.blumhouse];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.townNight.src}>
+  <article class="mx-auto max-w-4xl">
+    <p class="section-kicker">P1 guide page</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Grave Seasons Walkthrough
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      This is the pre-launch walkthrough framework. It covers the official structure Steam has published, then leaves clear slots for verified day-by-day routing after release.
+    </p>
+
+    <figure class="mt-8">
+      <img src={ASSETS.townNight.src} alt={ASSETS.townNight.alt} width={ASSETS.townNight.width} height={ASSETS.townNight.height} class="rounded-md border border-white/10" loading="lazy" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.townNight.credit}</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>Official walkthrough baseline</h2>
+      <p>
+        Steam describes Grave Seasons as a narrative-driven supernatural horror farming and life sim. Players have one year to protect victims, investigate the supernatural murders, discover secrets in Ashenridge, and live with autosaved consequences.
+      </p>
+      <p>
+        The official Steam page says Ashenridge has seven major locations: Your Farm, The Mountainside, The Forest, the Local District of Ashenridge, the Commercial District of Ashenridge, The Coast and Docks, and The Mines.
+      </p>
+
+      <h2>Pre-launch walkthrough map</h2>
+      <ol>
+        <li>Set up your farm economy and note which crops, tools, and buildings are actually available after launch.</li>
+        <li>Document every resident introduction with the current season, time, and location.</li>
+        <li>Track investigation leads separately from romance and farming chores.</li>
+        <li>Record every death, rescue, and story branch with spoiler labels.</li>
+        <li>Repeat playthroughs to identify how the killer pool changes targets, kill styles, and campaigns.</li>
+      </ol>
+
+      <h2>Release-day update slots</h2>
+      <p>
+        When the game is playable, this page should be split into spoiler-light first-week routing and spoiler-heavy investigation routing. The launch version needs chapter or day labels only after those labels are visible in-game.
+      </p>
+    </div>
+
+    <section class="mt-10">
+      <p class="section-kicker">Route table</p>
+      <h2 class="mt-2 text-2xl font-black text-bone">What to verify first</h2>
+      <div class="mt-5 overflow-x-auto rounded-md border border-white/10">
+        <table class="w-full min-w-[680px] border-collapse text-sm">
+          <thead class="bg-moss/25 text-left text-bone">
+            <tr>
+              <th class="px-4 py-3">Priority</th>
+              <th class="px-4 py-3">Walkthrough section</th>
+              <th class="px-4 py-3">Why it matters</th>
+            </tr>
+          </thead>
+          <tbody class="text-fog">
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 text-wheat">1</td>
+              <td class="px-4 py-3 text-bone">Opening hour</td>
+              <td class="px-4 py-3">Players search for first steps immediately after launch.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 text-wheat">2</td>
+              <td class="px-4 py-3 text-bone">First victim protection</td>
+              <td class="px-4 py-3">The core promise is saving victims from the killer.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 text-wheat">3</td>
+              <td class="px-4 py-3 text-bone">Location unlocks</td>
+              <td class="px-4 py-3">Seven major locations need reliable access notes.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 text-wheat">4</td>
+              <td class="px-4 py-3 text-bone">Killer campaign variations</td>
+              <td class="px-4 py-3">Steam confirms killer selection changes the campaign.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

@@ -1,0 +1,41 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { CORE_SOURCES } from '../data/sources';
+import { SITE } from '../data/site';
+
+const title = 'About Grave Seasons Guide';
+const description =
+  'About Grave Seasons Guide, an independent official-source fan guide for romance, walkthrough, characters, quests, and launch updates.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about/' },
+];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.steamHeader.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Trust page</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      About {SITE.name}
+    </h1>
+    <div class="prose-page mt-6">
+      <p>
+        {SITE.name} is an independent fan guide for Grave Seasons. Its job is to help players find romance, walkthrough, character, quest, and tips information without mixing official facts with guesswork.
+      </p>
+      <h2>Editorial rules</h2>
+      <ul>
+        <li>Official-source facts are labeled and linked.</li>
+        <li>Unreleased route details are marked as unconfirmed or launch-tracking.</li>
+        <li>Release dates use current Steam and Blumhouse wording, not outdated planning dates.</li>
+        <li>Launch guides will include game version and spoiler warnings where needed.</li>
+      </ul>
+      <h2>Independence</h2>
+      <p>
+        This site is not affiliated with or endorsed by Perfect Garbage or Blumhouse Games. It uses official public pages for factual references and links users back to official stores.
+      </p>
+    </div>
+    <SourcePanel sources={CORE_SOURCES} />
+  </article>
+</Layout>

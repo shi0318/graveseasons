@@ -1,0 +1,54 @@
+---
+import type { SourceRef } from '../data/sources';
+
+interface Props {
+  sources: readonly SourceRef[];
+  title?: string;
+}
+
+const { sources, title = 'Sources and verification' } = Astro.props;
+
+const statusLabel: Record<SourceRef['status'], string> = {
+  official: 'Official',
+  platform: 'Platform',
+  'official-media': 'Official media',
+};
+---
+
+{sources.length > 0 && (
+  <section class="mt-10" aria-label={title}>
+    <div class="mb-3">
+      <p class="section-kicker">{title}</p>
+      <h2 class="mt-2 text-2xl font-black text-bone">Fact sources</h2>
+    </div>
+    <div class="overflow-x-auto rounded-md border border-white/10">
+      <table class="w-full min-w-[720px] border-collapse text-sm">
+        <thead class="bg-moss/25 text-left text-bone">
+          <tr>
+            <th class="px-4 py-3 font-bold">Status</th>
+            <th class="px-4 py-3 font-bold">Source</th>
+            <th class="px-4 py-3 font-bold">Used for</th>
+            <th class="px-4 py-3 font-bold">Checked</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sources.map((source) => (
+            <tr class="border-t border-white/10 align-top">
+              <td class="px-4 py-3 text-wheat">{statusLabel[source.status]}</td>
+              <td class="px-4 py-3">
+                <a href={source.url} target="_blank" rel="nofollow noopener noreferrer" class="font-bold text-bone underline underline-offset-2 hover:text-wheat">
+                  {source.label}
+                </a>
+                <span class="mt-1 block text-xs text-fog">{source.publisher}</span>
+              </td>
+              <td class="px-4 py-3 text-fog">{source.note}</td>
+              <td class="px-4 py-3 text-fog">
+                <time datetime={source.lastChecked}>{source.lastChecked}</time>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+)}

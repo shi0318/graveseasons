@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { CORE_SOURCES } from '../data/sources';
+import { SITE } from '../data/site';
+
+const title = 'Contact - Grave Seasons Guide';
+const description =
+  'Contact Grave Seasons Guide for corrections, source updates, image concerns, and launch-day guide feedback.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Contact', url: '/contact/' },
+];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.steamHeader.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Contact</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">Contact Grave Seasons Guide</h1>
+    <div class="prose-page mt-6">
+      <p>
+        Send corrections, official source updates, image concerns, or verified launch data to
+        <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+      </p>
+      <h2>What helps most</h2>
+      <ul>
+        <li>A link to the official source or screenshot evidence.</li>
+        <li>The page URL that needs an update.</li>
+        <li>Game version and spoiler level for route or quest data.</li>
+      </ul>
+      <h2>Official links</h2>
+      <ul>
+        {CORE_SOURCES.map((source) => (
+          <li>
+            <a href={source.url} target="_blank" rel="nofollow noopener noreferrer">{source.label}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </article>
+</Layout>
