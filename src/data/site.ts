@@ -135,4 +135,25 @@ export const REQUIRED_GUIDES = [
       'Quest and investigation tracker for release-day updates.',
     priority: 'P2',
   },
+  {
+    href: '/day-and-night/',
+    title: 'Day & Night Cycle',
+    description:
+      'The 24-hour clock, night wandering, and time-as-resource, from the official devlog.',
+    priority: 'P2',
+  },
+  {
+    href: '/map-of-ashenridge/',
+    title: 'Map of Ashenridge',
+    description:
+      'The farm, forest, coast, and the Local and Commercial districts, from the official devlog.',
+    priority: 'P2',
+  },
+  {
+    href: '/character-customization/',
+    title: 'Character Customization',
+    description:
+      '35 wearables, 25 skin tones, and 33 ways to colour 18 hairstyles - official launch numbers.',
+    priority: 'P2',
+  },
 ] as const;

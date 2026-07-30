@@ -1,0 +1,78 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Character Customization - Wearables, Hair & Skin Tones';
+const description =
+  'Grave Seasons character customization confirmed by the official devlog: 35 wearables, 25 skin tones, 14 clothing colours and 33 ways to colour 18 hairstyles.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Character Customization', url: '/character-customization/' },
+];
+const sources = [SOURCES.steamDevlog, SOURCES.steam];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.hari.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Character - official devlog</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Grave Seasons Character Customization
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Perfect Garbage's dev log confirmed exactly how much customization ships at launch. These are
+      official numbers, not estimates.
+    </p>
+
+    <figure class="mt-8">
+      <img src={ASSETS.hari.src} alt={ASSETS.hari.alt} width={ASSETS.hari.width} height={ASSETS.hari.height} class="rounded-md border border-white/10" loading="lazy" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.hari.credit}</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>What you can customize at launch</h2>
+      <p>
+        Everything in Grave Seasons is hand-made pixel art, so customization is not a menu of
+        recoloured presets - each option is drawn and animated by hand. On launch the game will
+        include:
+      </p>
+      <ul>
+        <li><strong>35 unique wearables</strong></li>
+        <li><strong>25 skin tone options</strong></li>
+        <li>A mix-and-match clothing style setup with <strong>14 colour options</strong></li>
+        <li><strong>33 ways to colour 18 different hairstyles</strong></li>
+      </ul>
+
+      <h2>Why it is a big deal (technically)</h2>
+      <p>
+        Because the game animates in <strong>up to 8 directions</strong>, every wearable has to be
+        drawn for each one. The devlog puts real numbers on that effort: each wearable is animated
+        into <strong>70+ sprite sheets</strong>, implemented as <strong>over 400 animations</strong>
+        that can trigger throughout the game - reacting to a murder, sharing a kiss with a lover,
+        passing out from exhaustion. The team even called out their commitment to the "hair bounce."
+      </p>
+
+      <h2>What we do not know yet</h2>
+      <p>
+        The devlog confirms the <em>quantities</em> but not the <em>mechanics</em>: how you unlock
+        wearables, whether appearance can be changed freely after creation, and whether any cosmetics
+        are tied to romance or story progress are all unconfirmed. We will fill those in from the
+        release build rather than guess.
+      </p>
+      <p class="text-sm text-fog">
+        Treat any "best outfit" or unlock-order claim you see elsewhere as speculation until launch.
+      </p>
+
+      <h2>Where this fits</h2>
+      <p>
+        Character customization pairs with the game's heavy narrative focus - 300k+ words and 30+
+        residents to build relationships with. For the residents themselves, see the
+        <a href="/characters/">character tracker</a>; for relationship routes, the
+        <a href="/romance-guide/">romance guide</a>.
+      </p>
+    </div>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

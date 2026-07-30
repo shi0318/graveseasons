@@ -1,0 +1,95 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Day & Night Cycle - How Time Works in Ashenridge';
+const description =
+  'How the Grave Seasons 24-hour day and night cycle works, from the official devlog: no hard bedtime, NPCs who wander at night, and time as a resource.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Day & Night Cycle', url: '/day-and-night/' },
+];
+const sources = [SOURCES.steamDevlog, SOURCES.steam];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.townNight.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Systems - official devlog</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Grave Seasons Day &amp; Night Cycle
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Perfect Garbage's official "Day &amp; Night Cycle" devlog spells out how time works in
+      Ashenridge. This page summarises those confirmed details; where we read into them, it is
+      labelled as such.
+    </p>
+
+    <figure class="mt-8">
+      <img src={ASSETS.townNight.src} alt={ASSETS.townNight.alt} width={ASSETS.townNight.width} height={ASSETS.townNight.height} class="rounded-md border border-white/10" loading="lazy" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.townNight.credit}</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>A full 24-hour clock, with no hard bedtime</h2>
+      <p>
+        Grave Seasons runs on a <strong>24-hour schedule</strong>. Unlike many farming games that
+        force you to sleep at a fixed hour, the developers deliberately chose <strong>not</strong> to
+        put a hard stop on the night. Their reasoning, in their words: some of the most ominous
+        moments in Grave Seasons happen in the dark, and they wanted to embrace that tonal shift as
+        you stay out too late "poking around in your neighbour's stuff."
+      </p>
+
+      <h2>Time is a resource</h2>
+      <p>
+        The devlog frames time itself as a resource. Rest is still needed to engage the full farming
+        loop, but "live" time keeps ticking no matter what you do - so late nights are a trade-off,
+        not a free action. You escaped from prison, and the game lets you use the cover of night to
+        dig into Ashenridge's secrets.
+      </p>
+
+      <h2>NPCs live at night too</h2>
+      <p>
+        A full 24-hour system means the town does not switch off after dark. The devlog confirms
+        <strong>NPCs can wander at night alongside you</strong> - late-night drinking, sitting by the
+        docks at sunset - all feeding into what the team calls "nuanced NPC schedules." That makes
+        nighttime a genuine investigation window, not just a visual filter.
+      </p>
+      <p class="text-sm text-fog">
+        Read into it carefully: the devlog does not say <em>which</em> residents are out at night, so
+        treat any specific "who to watch after dark" claim as unverified until launch.
+      </p>
+
+      <h2>How the look was built</h2>
+      <p>
+        The art team blends early morning into midday, evening and late night rather than snapping
+        between two states. After experimenting with shader lights, normal maps and dynamic shadows -
+        none of which suited the hand-drawn, isometric 2D style - they settled on
+        <strong>look-up tables (LUTs)</strong> and colour-tinting, plus a great deal of hand-painting.
+        The result they cite: <strong>70+ custom LUTs</strong>, hand-painted lighting for just under
+        <strong>70 interiors</strong> (including farm-building upgrades), and per-season tinting, with
+        custom overrides so skin tone and key details stay readable across every condition.
+      </p>
+      <p>
+        Tonally, the lighting pushes the game toward a grounded, <strong>noir</strong> feel at night
+        and a picturesque, <strong>Ghibli-like</strong> warmth by day - the calm, pastoral surface
+        against the creeping dread of a new murder each month.
+      </p>
+
+      <h2>What this means for you</h2>
+      <ul>
+        <li>Plan snooping and evidence-gathering for the hours residents are out and about.</li>
+        <li>Remember the clock never pauses - budget nights against your farming needs.</li>
+        <li>Expect night to look and feel different by design, not just darker.</li>
+      </ul>
+      <p>
+        For spoiler-safe planning built on these systems, see our <a href="/tips/">tips page</a>, and
+        for the town you will be exploring after dark, the <a href="/map-of-ashenridge/">map of
+        Ashenridge</a>.
+      </p>
+    </div>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

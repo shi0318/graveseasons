@@ -1,0 +1,93 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Map of Ashenridge - Grave Seasons Locations & Districts';
+const description =
+  'A guide to the map of Ashenridge in Grave Seasons, from the official devlog: the farm, mountainside, forest and coast, plus the Local and Commercial districts.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Map of Ashenridge', url: '/map-of-ashenridge/' },
+];
+const sources = [SOURCES.steamDevlog, SOURCES.steam];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.farmHarvest.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">World - official devlog</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      The Map of Ashenridge
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Perfect Garbage's "Release News + Dev Log" post gave the first real tour of Ashenridge's
+      layout. This page collects those confirmed locations so you know the lay of the land before
+      launch.
+    </p>
+
+    <figure class="mt-8">
+      <img src={ASSETS.farmHarvest.src} alt={ASSETS.farmHarvest.alt} width={ASSETS.farmHarvest.width} height={ASSETS.farmHarvest.height} class="rounded-md border border-white/10" loading="lazy" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.farmHarvest.credit}</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>A small town that is bigger than it looks</h2>
+      <p>
+        Ashenridge feels small to its locals, but the developers describe it as "quite large" from a
+        bird's-eye view. Your <strong>farm and home</strong> sit at the very top of the mountain, and
+        the surrounding wilds include a <strong>mountainside</strong>, a <strong>forest</strong>, and
+        a <strong>coast</strong> with a quiet dock and a sunny beach.
+      </p>
+
+      <h2>The town's two districts</h2>
+      <p>
+        The town proper is split into two sections, each with its own character:
+      </p>
+      <h3>The Local District</h3>
+      <p>
+        Home to most of Ashenridge's residents and shops. Built by a small community working with the
+        space they had, it is compact and "a little maze-like" - a true local learns the secret
+        shortcuts. Many people live above their shops. The devlog calls out the
+        <strong>Fortune Teller</strong> (who may bear news about the weather), the <strong>Bar</strong>
+        (which might host a raucous birthday party), and the shared <strong>Community Gardens</strong>.
+      </p>
+      <h3>The Commercial District</h3>
+      <p>
+        Mayor Fitch's pride and joy, first envisioned to draw in tourism - and a reminder of just how
+        isolated Ashenridge can be. Here you will find businesses such as <strong>S-Mart</strong>, the
+        corporate general store, and a well-curated <strong>town square</strong> with an artistic
+        <strong>fountain</strong> that anchors multiple events through the year. Fun fact from the
+        team: outside your farm, the Commercial District was the first location they built.
+      </p>
+
+      <h2>Every home is a place you can enter</h2>
+      <p>
+        The devlog confirms <strong>30+ characters</strong>, all living in Ashenridge with unique
+        homes and places to visit - and notes there are "always locations you can break and enter
+        into... just don't get caught." That lines up with the murder-mystery pitch: snooping is a
+        mechanic, with consequences.
+      </p>
+
+      <h2>Scale, in the developers' numbers</h2>
+      <ul>
+        <li><strong>300k+ words</strong> of narrative written for the game.</li>
+        <li><strong>600+ items</strong> to discover.</li>
+        <li><strong>30+ residents</strong>, each with a home you can visit.</li>
+        <li>Seasons visibly change the world, including how snow and ice alter the environment.</li>
+      </ul>
+      <p class="text-sm text-fog">
+        Note: exact building counts and interior maps have not been published as a labelled map yet,
+        so treat district boundaries here as descriptive, not a finished cartographic guide. We will
+        add a proper location map after launch.
+      </p>
+      <p>
+        For how these places feel after dark, see the <a href="/day-and-night/">day &amp; night
+        cycle</a>, and for the people who live in them, the <a href="/characters/">character
+        tracker</a>.
+      </p>
+    </div>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

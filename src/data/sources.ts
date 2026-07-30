@@ -52,6 +52,14 @@ export const SOURCES = {
     lastChecked: LAST_CHECKED,
     note: 'Official screenshots and alt text, including Yuto, Hari, town at night, monster attack, and farm harvest images.',
   },
+  steamDevlog: {
+    label: 'Official Steam devlogs (Perfect Garbage)',
+    url: 'https://store.steampowered.com/news/app/3255110',
+    publisher: 'Perfect Garbage / Blumhouse Games',
+    status: 'official',
+    lastChecked: '2026-07-30',
+    note: 'First-party developer blogs on the Steam news hub for App 3255110: Day & Night Cycle (2026-06-17) and Release News + Dev Log Updates (2026-06-05), covering the 24-hour cycle, the map of Ashenridge, and character customization.',
+  },
 } satisfies Record<string, SourceRef>;
 
 export const CORE_SOURCES = [
