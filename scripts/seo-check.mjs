@@ -20,6 +20,8 @@ const requiredPages = [
   '/residents/',
   '/tips/',
   '/quests/',
+  '/release-date/',
+  '/download/',
   '/about/',
   '/privacy-policy/',
   '/contact/',

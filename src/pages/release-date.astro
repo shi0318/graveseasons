@@ -1,0 +1,157 @@
+---
+import FaqBlock from '../components/FaqBlock.astro';
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+import { SITE } from '../data/site';
+
+const title = 'Grave Seasons Release Date - Fall 2026 Window & Platforms';
+const description =
+  'Grave Seasons release date tracker: Blumhouse lists Fall 2026, Steam lists 2026. Verified platform listings and what is still unannounced.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Release Date', url: '/release-date/' },
+];
+const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.playstation, SOURCES.xbox];
+
+const faqs = [
+  {
+    question: 'When does Grave Seasons come out?',
+    answer:
+      'There is no exact day yet. The official Blumhouse Games page lists Grave Seasons as "Launching Fall 2026", while the Steam store page currently shows only "2026". Both are official, and neither has been narrowed to a date. Anyone publishing a specific day right now is guessing.',
+  },
+  {
+    question: 'Why do Steam and Blumhouse show different release timing?',
+    answer:
+      'They are the same plan at different precision. Blumhouse commits to a Fall 2026 window in its marketing copy; Steam store release fields are often left at the year until a publisher locks a date for wishlist notifications. Treat Fall 2026 as the working window and Steam as the place a firm date will appear first.',
+  },
+  {
+    question: 'What platforms is Grave Seasons releasing on?',
+    answer:
+      'Three official store listings exist: Steam for PC (app id 3255110), a PlayStation Store concept page, and a Microsoft Store product page. Steam appdetails currently reports Windows support. No Nintendo Switch listing is tracked by any official source, so we do not claim one.',
+  },
+  {
+    question: 'Is Grave Seasons coming to Game Pass?',
+    answer:
+      'Unconfirmed. A Microsoft Store product page existing is not the same as a Game Pass commitment, and no official source states Game Pass inclusion. We track this on the platforms page and will only change the wording when Microsoft or Blumhouse publishes it.',
+  },
+  {
+    question: 'Is there a demo, beta, or preorder?',
+    answer:
+      'No demo or beta has been announced, and no preorder or price has been published on any of the three store pages. The only action available today is wishlisting or following on the official store listings.',
+  },
+  {
+    question: 'Could the Fall 2026 window slip?',
+    answer:
+      'Yes. A season-level window with no locked date is exactly the kind of target that moves, and Grave Seasons has not shown a hands-off gameplay build with a date attached. This page records what the official pages say on the date shown, and changes when they change.',
+  },
+];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.steamHeader.src}>
+  <article class="mx-auto max-w-4xl">
+    <p class="section-kicker">Release tracker</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Grave Seasons Release Date
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      <strong class="text-bone">Grave Seasons has no exact release date yet.</strong> Blumhouse Games
+      lists it as launching in <strong class="text-bone">{SITE.releaseWindow}</strong>; the Steam
+      store page currently shows only <strong class="text-bone">{SITE.steamReleaseText}</strong>. Both
+      figures are official, both are still windows rather than dates, and this page is where the
+      narrowing gets recorded — with the source that narrowed it.
+    </p>
+
+    <section class="mt-8 grid gap-4 md:grid-cols-3">
+      <div class="surface p-5">
+        <p class="text-xs font-black uppercase text-wheat">Official window</p>
+        <h2 class="mt-2 text-xl font-black text-bone">{SITE.releaseWindow}</h2>
+        <p class="mt-2 text-sm text-fog">
+          Stated on the Blumhouse Games official game page as "Launching Fall 2026".
+        </p>
+      </div>
+      <div class="surface p-5">
+        <p class="text-xs font-black uppercase text-wheat">Steam field</p>
+        <h2 class="mt-2 text-xl font-black text-bone">{SITE.steamReleaseText}</h2>
+        <p class="mt-2 text-sm text-fog">
+          App {SITE.appId} lists the year only. A firm date usually appears here first.
+        </p>
+      </div>
+      <div class="surface p-5">
+        <p class="text-xs font-black uppercase text-wheat">Team</p>
+        <h2 class="mt-2 text-xl font-black text-bone">{SITE.developer}</h2>
+        <p class="mt-2 text-sm text-fog">
+          Developed by {SITE.developer}, published by {SITE.publisher}.
+        </p>
+      </div>
+    </section>
+
+    <section class="prose-page mt-10">
+      <h2>What is actually confirmed about the launch</h2>
+      <p>
+        Grave Seasons is a narrative farming sim with a supernatural serial killer hidden among the
+        residents of Ashenridge. The Steam page commits to a specific structure: you have
+        <strong>one year</strong> to protect potential victims and work out who is behind the murders,
+        across a town of <strong>30+ residents</strong>, <strong>70+ interiors</strong>, and
+        <strong>seven major locations</strong>. Twelve of those residents are romanceable, and the
+        store copy states outright that some of them may be the killer.
+      </p>
+      <p>
+        The replay hook is that each playthrough picks the killer from a candidate pool, with
+        killer-specific motives, kill styles, and targets. That is the pitch you will be buying into
+        at launch, and it is all sourced from official store copy rather than previews.
+      </p>
+
+      <h2>What is not announced yet</h2>
+      <ul>
+        <li><strong>An exact release date.</strong> Only Fall 2026 and "2026" exist.</li>
+        <li><strong>Price.</strong> No figure on Steam, PlayStation, or Microsoft Store.</li>
+        <li><strong>Editions or preorder bonuses.</strong> Nothing published.</li>
+        <li><strong>A demo or beta.</strong> None announced.</li>
+        <li><strong>Game Pass availability.</strong> Not stated by Microsoft or Blumhouse.</li>
+        <li><strong>A Nintendo Switch version.</strong> No official listing exists.</li>
+        <li><strong>PC system requirements.</strong> Not published on the Steam page.</li>
+      </ul>
+      <p>
+        Leaving these blank is deliberate. A farming-sim launch generates enormous search volume for
+        "release date", "price", and "Game Pass", and the temptation is to fill the gaps with
+        plausible guesses. We would rather say "unannounced" and be right.
+      </p>
+
+      <h2>Where a date will appear first</h2>
+      <p>
+        In practice, publishers lock the Steam release field before or alongside a marketing beat,
+        because wishlist notification emails depend on it. Watching the
+        <a href={SITE.steamUrl} target="_blank" rel="nofollow noopener noreferrer">Steam page</a> for
+        app {SITE.appId} is the highest-signal move. Blumhouse's own
+        <a href={SITE.officialUrl} target="_blank" rel="nofollow noopener noreferrer">game page</a>
+        typically carries the announcement copy, and the
+        <a href="/platforms/">platforms page</a> here tracks all three store listings side by side.
+      </p>
+
+      <h2>How to prepare before launch</h2>
+      <p>
+        The most useful pre-launch reading is the material that will not change when a date is
+        announced: the twelve confirmed romance options and the risk that one of them is the killer
+        (<a href="/romance-guide/">romance guide</a>), the one-year structure the investigation runs
+        on (<a href="/walkthrough/">walkthrough framework</a>), the resident roster
+        (<a href="/residents/">residents</a>), and the planning tips that avoid claiming untested
+        mechanics (<a href="/tips/">tips</a>).
+      </p>
+
+      <h2>How this page is maintained</h2>
+      <p>
+        Every claim above traces to one of the four official sources listed at the bottom of this
+        page, last checked {SITE.lastVerified}. When the window narrows to a date, this page leads
+        with the date, keeps the old window visible so you can see what changed, and updates the
+        source date. If two official sources disagree — as Steam and Blumhouse do right now — both
+        are shown rather than picking the one that reads better.
+      </p>
+    </section>
+
+    <FaqBlock items={faqs} />
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

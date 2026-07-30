@@ -28,6 +28,8 @@ export const NAV = [
   { label: 'Characters', href: '/characters/' },
   { label: 'Tips', href: '/tips/' },
   { label: 'Quests', href: '/quests/' },
+  { label: 'Release Date', href: '/release-date/' },
+  { label: 'Download', href: '/download/' },
 ] as const;
 
 export const OFFICIAL_FACTS = [

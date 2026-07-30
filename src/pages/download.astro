@@ -1,0 +1,167 @@
+---
+import FaqBlock from '../components/FaqBlock.astro';
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+import { SITE } from '../data/site';
+
+const title = 'Grave Seasons Download - Official Store Pages & Wishlist';
+const description =
+  'Where to download Grave Seasons: the official Steam, PlayStation, and Microsoft Store listings, why no demo exists yet, and how to avoid fake installer sites.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Download', url: '/download/' },
+];
+const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.playstation, SOURCES.xbox];
+
+const faqs = [
+  {
+    question: 'Can I download Grave Seasons right now?',
+    answer:
+      'No. Grave Seasons has not released — Blumhouse lists a Fall 2026 window and Steam lists 2026, with no exact date. There is no public build, no demo, and no beta, so there is nothing to download from any source, official or otherwise.',
+  },
+  {
+    question: 'Is there a Grave Seasons demo?',
+    answer:
+      'None has been announced on Steam, PlayStation Store, Microsoft Store, or the Blumhouse Games page. If a demo appears — including a limited-time festival demo — this page gets the official link and the date it went live.',
+  },
+  {
+    question: 'Are the "Grave Seasons free download" sites real?',
+    answer:
+      'No. There is no released build to repack, so any site offering a working download, a torrent, a crack, or a mobile APK for Grave Seasons is distributing something else. The three official store pages linked on this page are the only legitimate channels.',
+  },
+  {
+    question: 'How much space will Grave Seasons need?',
+    answer:
+      'Unpublished. The Steam page does not yet list minimum or recommended PC requirements, and no install size has been given for any platform. Pixel-art farming sims are usually modest, but we are not going to publish a number nobody has stated.',
+  },
+  {
+    question: 'How much will it cost?',
+    answer:
+      'No price is listed on Steam, PlayStation Store, or Microsoft Store. No editions or preorder bonuses have been announced either, which is normal for a title still on a season-level window.',
+  },
+  {
+    question: 'What is the best way to be notified at launch?',
+    answer:
+      'Wishlist on Steam for app 3255110. Steam emails wishlist holders on release day, and publishers lock the Steam date field before launch precisely so that notification fires. Following the PlayStation and Microsoft listings covers the console side.',
+  },
+];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.steamHeader.src}>
+  <article class="mx-auto max-w-4xl">
+    <p class="section-kicker">Download hub</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Grave Seasons Download
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      <strong class="text-bone">Grave Seasons is not out yet, so there is nothing to download.</strong>
+      Blumhouse Games lists a {SITE.releaseWindow} window and Steam lists {SITE.steamReleaseText}, with
+      no exact date. This page does one job: point you at the three official store listings, and be
+      explicit that no demo, beta, or public build exists — because that is the gap fake-installer
+      sites are built to fill.
+    </p>
+
+    <section class="mt-8 grid gap-4 md:grid-cols-3">
+      <a href={SITE.steamUrl} target="_blank" rel="nofollow noopener noreferrer" class="surface p-5">
+        <p class="text-xs font-black uppercase text-wheat">PC — official</p>
+        <h2 class="mt-2 text-xl font-black text-bone">Steam</h2>
+        <p class="mt-2 text-sm text-fog">
+          App {SITE.appId}. Wishlist here to be emailed on release day. Steam lists {SITE.steamReleaseText}.
+        </p>
+      </a>
+      <a href={SITE.playstationUrl} target="_blank" rel="nofollow noopener noreferrer" class="surface p-5">
+        <p class="text-xs font-black uppercase text-wheat">Console — official</p>
+        <h2 class="mt-2 text-xl font-black text-bone">PlayStation Store</h2>
+        <p class="mt-2 text-sm text-fog">
+          A PlayStation Store concept page is live. Follow it for the console release.
+        </p>
+      </a>
+      <a href={SITE.xboxUrl} target="_blank" rel="nofollow noopener noreferrer" class="surface p-5">
+        <p class="text-xs font-black uppercase text-wheat">Console — official</p>
+        <h2 class="mt-2 text-xl font-black text-bone">Microsoft Store</h2>
+        <p class="mt-2 text-sm text-fog">
+          A Microsoft Store product page is live. Game Pass inclusion is not confirmed.
+        </p>
+      </a>
+    </section>
+
+    <section class="prose-page mt-10">
+      <h2>Why this page exists</h2>
+      <p>
+        Searches like "Grave Seasons download" and "Grave Seasons free download" spike for games that
+        are announced but unreleased, and there is no legitimate result to serve them — which is
+        exactly why repack pages, survey-wall "installers", and fake APK listings rank for them. The
+        honest answer is short: there is no build. The useful answer is the three official listings
+        above, plus the detail below so you know what you are waiting for and what it will ask of your
+        machine.
+      </p>
+
+      <h2>What you will be downloading</h2>
+      <p>
+        Grave Seasons is a narrative farming sim built around a supernatural serial killer hidden in
+        Ashenridge. The Steam listing commits to a <strong>one-year</strong> in-game deadline to
+        protect potential victims and identify the murderer, across <strong>30+ residents</strong>,
+        <strong>70+ interiors</strong>, and <strong>seven major locations</strong>, with
+        <strong>12 romanceable characters</strong> — some of whom may be the killer. Each playthrough
+        selects the killer from a candidate pool, with killer-specific motives, methods, and targets.
+      </p>
+      <p>
+        Developed by {SITE.developer} and published by {SITE.publisher}. If you want the systems
+        breakdown before launch, start with the <a href="/romance-guide/">romance guide</a> and the
+        <a href="/walkthrough/">walkthrough framework</a>.
+      </p>
+
+      <h2>System requirements and install size</h2>
+      <p>
+        <strong>Not published.</strong> The Steam page has no minimum or recommended specs listed, and
+        no platform has stated an install size. Steam appdetails currently reports Windows support.
+        Anything beyond that — GPU tiers, RAM, storage, macOS or Linux support, Steam Deck
+        verification — is unannounced, and we will add it here with the source when it appears rather
+        than estimating from comparable games.
+      </p>
+
+      <h2>Price, editions, and preorders</h2>
+      <p>
+        No price is listed on any of the three store pages, and no editions or preorder bonuses have
+        been announced. There is currently no way to pay for Grave Seasons in advance; wishlisting and
+        following are the only actions available. That is normal for a title still sitting on a
+        season-level window rather than a locked date.
+      </p>
+
+      <h2>Console downloads and Game Pass</h2>
+      <p>
+        The PlayStation and Microsoft Store pages establish that console versions are planned and
+        officially listed. They do not establish pricing, editions, preload windows, trophies or
+        achievements, performance modes, or Game Pass inclusion — none of which any official source
+        has published. The <a href="/platforms/">platforms page</a> keeps each of those questions
+        matched to the evidence that does or does not support it.
+      </p>
+
+      <h2>What to do between now and launch</h2>
+      <ol>
+        <li>Wishlist on Steam (app {SITE.appId}) so the release email reaches you.</li>
+        <li>Follow the PlayStation or Microsoft listing if you plan to play on console.</li>
+        <li>Check the <a href="/release-date/">release date tracker</a> for window narrowing.</li>
+        <li>
+          Read the <a href="/romance-guide/">romance guide</a>,
+          <a href="/characters/">characters</a>, and <a href="/tips/">tips</a> — all built from
+          official copy, so none of it becomes wrong when a date is announced.
+        </li>
+      </ol>
+
+      <h2>How this page is maintained</h2>
+      <p>
+        Every statement traces to one of the four official sources listed below, last checked
+        {' '}{SITE.lastVerified}. The moment a demo, a price, a spec sheet, or an install size is
+        published, it lands here with its source and date. Until then, "unannounced" is the accurate
+        answer and the one we publish.
+      </p>
+    </section>
+
+    <FaqBlock items={faqs} />
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>
