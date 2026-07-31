@@ -57,8 +57,8 @@ export const SOURCES = {
     url: 'https://store.steampowered.com/news/app/3255110',
     publisher: 'Perfect Garbage / Blumhouse Games',
     status: 'official',
-    lastChecked: '2026-07-30',
-    note: 'First-party developer blogs on the Steam news hub for App 3255110: Day & Night Cycle (2026-06-17) and Release News + Dev Log Updates (2026-06-05), covering the 24-hour cycle, the map of Ashenridge, and character customization.',
+    lastChecked: '2026-07-31',
+    note: 'First-party developer blogs and announcements on the Steam news hub for App 3255110: The Music of Grave Seasons (2025-09-10), the release-date and platform announcement (2026-03-26), Release News + Dev Log Updates (2026-06-05), and Day & Night Cycle (2026-06-17) - covering the soundtrack, the 24-hour cycle, the map of Ashenridge, and character customization.',
   },
 } satisfies Record<string, SourceRef>;
 

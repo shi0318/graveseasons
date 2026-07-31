@@ -8,18 +8,23 @@ import { SITE } from '../data/site';
 
 const title = 'Grave Seasons Release Date - Fall 2026 Window & Platforms';
 const description =
-  'Grave Seasons release date tracker: Blumhouse lists Fall 2026, Steam lists 2026. Verified platform listings and what is still unannounced.';
+  'Grave Seasons release date: Perfect Garbage moved August 14, 2026 to Fall 2026. Confirmed platforms, Day 1 Game Pass, and what is still unannounced.';
 const breadcrumbs = [
   { name: 'Home', url: '/' },
   { name: 'Release Date', url: '/release-date/' },
 ];
-const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.playstation, SOURCES.xbox];
+const sources = [SOURCES.steamDevlog, SOURCES.steam, SOURCES.blumhouse, SOURCES.playstation, SOURCES.xbox];
 
 const faqs = [
   {
     question: 'When does Grave Seasons come out?',
     answer:
-      'There is no exact day yet. The official Blumhouse Games page lists Grave Seasons as "Launching Fall 2026", while the Steam store page currently shows only "2026". Both are official, and neither has been narrowed to a date. Anyone publishing a specific day right now is guessing.',
+      'Fall 2026, with no exact day. Perfect Garbage originally announced August 14, 2026, then posted on 5 June 2026 that they were "moving the release date of the full game to Fall of this year." Blumhouse lists "Launching Fall 2026" and the Steam store field currently shows only "2026". Anyone publishing a specific day right now is guessing.',
+  },
+  {
+    question: 'Why was Grave Seasons delayed from August 14?',
+    answer:
+      'The studio\'s own 5 June 2026 Steam post moved the full game to Fall 2026 across all announced platforms, and also cancelled the demo that had been planned for June 15. Perfect Garbage framed it as needing more time rather than pointing at any single problem.',
   },
   {
     question: 'Why do Steam and Blumhouse show different release timing?',
@@ -29,22 +34,22 @@ const faqs = [
   {
     question: 'What platforms is Grave Seasons releasing on?',
     answer:
-      'Three official store listings exist: Steam for PC (app id 3255110), a PlayStation Store concept page, and a Microsoft Store product page. Steam appdetails currently reports Windows support. No Nintendo Switch listing is tracked by any official source, so we do not claim one.',
+      'Four, named in the official announcement: PC, Xbox Series X|S, PlayStation 5, and Nintendo Switch. Live store listings currently exist for Steam (app id 3255110), PlayStation Store, and Microsoft Store; a Switch eShop page is not tracked yet even though the platform is confirmed.',
   },
   {
     question: 'Is Grave Seasons coming to Game Pass?',
     answer:
-      'Unconfirmed. A Microsoft Store product page existing is not the same as a Game Pass commitment, and no official source states Game Pass inclusion. We track this on the platforms page and will only change the wording when Microsoft or Blumhouse publishes it.',
+      'Yes. Perfect Garbage stated that Grave Seasons "will also be released on Day 1 for Xbox Game Pass players." The delay post kept all announced platforms, so that commitment stands. Which Game Pass tiers it lands on has not been specified.',
   },
   {
     question: 'Is there a demo, beta, or preorder?',
     answer:
-      'No demo or beta has been announced, and no preorder or price has been published on any of the three store pages. The only action available today is wishlisting or following on the official store listings.',
+      'Not currently. A demo had been planned for June 15, 2026 but was cancelled in the same post that delayed the full game; the studio said it would share more when it had news. No preorder or price has been published on any store page, so wishlisting or following is the only action available.',
   },
   {
     question: 'Could the Fall 2026 window slip?',
     answer:
-      'Yes. A season-level window with no locked date is exactly the kind of target that moves, and Grave Seasons has not shown a hands-off gameplay build with a date attached. This page records what the official pages say on the date shown, and changes when they change.',
+      'Yes. This is already the second date, and a season-level window with no locked day is exactly the kind of target that moves. This page records what the official pages say on the date shown, and changes when they change.',
   },
 ];
 ---
@@ -56,11 +61,13 @@ const faqs = [
       Grave Seasons Release Date
     </h1>
     <p class="mt-4 text-lg leading-relaxed text-fog">
-      <strong class="text-bone">Grave Seasons has no exact release date yet.</strong> Blumhouse Games
-      lists it as launching in <strong class="text-bone">{SITE.releaseWindow}</strong>; the Steam
-      store page currently shows only <strong class="text-bone">{SITE.steamReleaseText}</strong>. Both
-      figures are official, both are still windows rather than dates, and this page is where the
-      narrowing gets recorded — with the source that narrowed it.
+      <strong class="text-bone">Grave Seasons has no exact release date yet - it has a second
+      window.</strong> Perfect Garbage originally announced <strong class="text-bone">August 14,
+      2026</strong>, then posted on <strong class="text-bone">5 June 2026</strong> that they were
+      moving the full game to <strong class="text-bone">{SITE.releaseWindow}</strong>. Blumhouse Games
+      lists that same window; the Steam store field currently shows only
+      <strong class="text-bone">{SITE.steamReleaseText}</strong>. This page is where the narrowing gets
+      recorded — with the source that narrowed it.
     </p>
 
     <section class="mt-8 grid gap-4 md:grid-cols-3">
@@ -68,7 +75,7 @@ const faqs = [
         <p class="text-xs font-black uppercase text-wheat">Official window</p>
         <h2 class="mt-2 text-xl font-black text-bone">{SITE.releaseWindow}</h2>
         <p class="mt-2 text-sm text-fog">
-          Stated on the Blumhouse Games official game page as "Launching Fall 2026".
+          Moved here from August 14, 2026 by Perfect Garbage's 5 June 2026 Steam post.
         </p>
       </div>
       <div class="surface p-5">
@@ -103,14 +110,27 @@ const faqs = [
         at launch, and it is all sourced from official store copy rather than previews.
       </p>
 
+      <h2>The date history, in the studio's own words</h2>
+      <p>
+        On <strong>26 March 2026</strong> Perfect Garbage announced that "Grave Seasons will launch on
+        August 14, 2026 for PC, Xbox Series X|S, PlayStation 5, and Nintendo Switch," and added that it
+        "will also be released on Day 1 for Xbox Game Pass players."
+      </p>
+      <p>
+        On <strong>5 June 2026</strong> the studio posted that it was "moving the release date of the
+        full game to Fall of this year," <strong>across all announced platforms</strong>, and that the
+        demo planned for <strong>June 15</strong> was cancelled. That is the current state: same four
+        platforms, same Game Pass commitment, later window, no demo.
+      </p>
+
       <h2>What is not announced yet</h2>
       <ul>
         <li><strong>An exact release date.</strong> Only Fall 2026 and "2026" exist.</li>
         <li><strong>Price.</strong> No figure on Steam, PlayStation, or Microsoft Store.</li>
         <li><strong>Editions or preorder bonuses.</strong> Nothing published.</li>
-        <li><strong>A demo or beta.</strong> None announced.</li>
-        <li><strong>Game Pass availability.</strong> Not stated by Microsoft or Blumhouse.</li>
-        <li><strong>A Nintendo Switch version.</strong> No official listing exists.</li>
+        <li><strong>A demo or beta.</strong> The June 15 demo was cancelled and not rescheduled.</li>
+        <li><strong>Game Pass tiers.</strong> Day 1 Game Pass is confirmed; which tiers is not.</li>
+        <li><strong>A Switch eShop listing.</strong> The platform is confirmed; the store page is not live yet.</li>
         <li><strong>PC system requirements.</strong> Not published on the Steam page.</li>
       </ul>
       <p>
@@ -142,11 +162,12 @@ const faqs = [
 
       <h2>How this page is maintained</h2>
       <p>
-        Every claim above traces to one of the four official sources listed at the bottom of this
+        Every claim above traces to one of the official sources listed at the bottom of this
         page, last checked {SITE.lastVerified}. When the window narrows to a date, this page leads
         with the date, keeps the old window visible so you can see what changed, and updates the
-        source date. If two official sources disagree — as Steam and Blumhouse do right now — both
-        are shown rather than picking the one that reads better.
+        source date. Where two official sources sit at different precision — as the studio's Fall 2026
+        post and Steam's bare "2026" field do right now — both are shown rather than picking the one
+        that reads better.
       </p>
     </section>
 

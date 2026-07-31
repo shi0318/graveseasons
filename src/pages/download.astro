@@ -13,23 +13,23 @@ const breadcrumbs = [
   { name: 'Home', url: '/' },
   { name: 'Download', url: '/download/' },
 ];
-const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.playstation, SOURCES.xbox];
+const sources = [SOURCES.steamDevlog, SOURCES.steam, SOURCES.blumhouse, SOURCES.playstation, SOURCES.xbox];
 
 const faqs = [
   {
     question: 'Can I download Grave Seasons right now?',
     answer:
-      'No. Grave Seasons has not released — Blumhouse lists a Fall 2026 window and Steam lists 2026, with no exact date. There is no public build, no demo, and no beta, so there is nothing to download from any source, official or otherwise.',
+      'No. Grave Seasons has not released — Perfect Garbage moved it to a Fall 2026 window and Steam lists 2026, with no exact date. There is no public build, no demo, and no beta, so there is nothing to download from any source, official or otherwise.',
   },
   {
     question: 'Is there a Grave Seasons demo?',
     answer:
-      'None has been announced on Steam, PlayStation Store, Microsoft Store, or the Blumhouse Games page. If a demo appears — including a limited-time festival demo — this page gets the official link and the date it went live.',
+      'Not any more. A demo had been planned for June 15, 2026, but Perfect Garbage cancelled it in the same 5 June 2026 post that delayed the full game to Fall 2026, and it has not been rescheduled. If a demo returns — including a limited-time festival demo — this page gets the official link and the date it went live.',
   },
   {
     question: 'Are the "Grave Seasons free download" sites real?',
     answer:
-      'No. There is no released build to repack, so any site offering a working download, a torrent, a crack, or a mobile APK for Grave Seasons is distributing something else. The three official store pages linked on this page are the only legitimate channels.',
+      'No. There is no released build to repack, so any site offering a working download, a torrent, a crack, or a mobile APK for Grave Seasons is distributing something else. The official store pages linked on this page are the only legitimate channels.',
   },
   {
     question: 'How much space will Grave Seasons need?',
@@ -39,7 +39,7 @@ const faqs = [
   {
     question: 'How much will it cost?',
     answer:
-      'No price is listed on Steam, PlayStation Store, or Microsoft Store. No editions or preorder bonuses have been announced either, which is normal for a title still on a season-level window.',
+      'No price is listed on Steam, PlayStation Store, or Microsoft Store. No editions or preorder bonuses have been announced either, which is normal for a title still on a season-level window. Xbox Game Pass subscribers get it at no extra cost on day one.',
   },
   {
     question: 'What is the best way to be notified at launch?',
@@ -57,10 +57,11 @@ const faqs = [
     </h1>
     <p class="mt-4 text-lg leading-relaxed text-fog">
       <strong class="text-bone">Grave Seasons is not out yet, so there is nothing to download.</strong>
-      Blumhouse Games lists a {SITE.releaseWindow} window and Steam lists {SITE.steamReleaseText}, with
-      no exact date. This page does one job: point you at the three official store listings, and be
-      explicit that no demo, beta, or public build exists — because that is the gap fake-installer
-      sites are built to fill.
+      Perfect Garbage moved the full game to a {SITE.releaseWindow} window and Steam lists
+      {' '}{SITE.steamReleaseText}, with no exact date. This page does one job: point you at the
+      official store listings, and be explicit that no demo, beta, or public build exists — the demo
+      that had been planned for June 15 was cancelled — because that is the gap fake-installer sites
+      are built to fill.
     </p>
 
     <section class="mt-8 grid gap-4 md:grid-cols-3">
@@ -82,7 +83,7 @@ const faqs = [
         <p class="text-xs font-black uppercase text-wheat">Console — official</p>
         <h2 class="mt-2 text-xl font-black text-bone">Microsoft Store</h2>
         <p class="mt-2 text-sm text-fog">
-          A Microsoft Store product page is live. Game Pass inclusion is not confirmed.
+          A Microsoft Store product page is live. Day 1 Xbox Game Pass is confirmed by the studio.
         </p>
       </a>
     </section>
@@ -132,11 +133,13 @@ const faqs = [
 
       <h2>Console downloads and Game Pass</h2>
       <p>
-        The PlayStation and Microsoft Store pages establish that console versions are planned and
-        officially listed. They do not establish pricing, editions, preload windows, trophies or
-        achievements, performance modes, or Game Pass inclusion — none of which any official source
-        has published. The <a href="/platforms/">platforms page</a> keeps each of those questions
-        matched to the evidence that does or does not support it.
+        The confirmed console list is <strong>PlayStation 5, Xbox Series X|S, and Nintendo
+        Switch</strong>, named directly in Perfect Garbage's official announcement, and Grave Seasons
+        is stated to arrive <strong>on Xbox Game Pass on day one</strong>. Live store pages currently
+        exist for PlayStation and Microsoft; a Switch eShop listing is not tracked yet. What none of
+        that establishes is pricing, editions, preload windows, trophies or achievements, performance
+        modes, or which Game Pass tiers are included. The <a href="/platforms/">platforms page</a>
+        keeps each of those questions matched to the evidence that does or does not support it.
       </p>
 
       <h2>What to do between now and launch</h2>
@@ -153,7 +156,7 @@ const faqs = [
 
       <h2>How this page is maintained</h2>
       <p>
-        Every statement traces to one of the four official sources listed below, last checked
+        Every statement traces to one of the official sources listed below, last checked
         {' '}{SITE.lastVerified}. The moment a demo, a price, a spec sheet, or an install size is
         published, it lands here with its source and date. Until then, "unannounced" is the accurate
         answer and the one we publish.

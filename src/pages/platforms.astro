@@ -5,14 +5,14 @@ import { ASSETS } from '../data/assets';
 import { SOURCES } from '../data/sources';
 import { SITE } from '../data/site';
 
-const title = 'Grave Seasons Platforms - PC, PlayStation, Xbox & Store Links';
+const title = 'Grave Seasons Platforms - PC, PS5, Xbox, Switch & Game Pass';
 const description =
-  'Official-source Grave Seasons platforms guide comparing Steam, PlayStation Store, and Microsoft Store availability without inventing unconfirmed Game Pass or edition details.';
+  'Grave Seasons is confirmed for PC, PS5, Xbox Series X|S and Nintendo Switch, with Day 1 Xbox Game Pass. Official store links and what is unannounced.';
 const breadcrumbs = [
   { name: 'Home', url: '/' },
   { name: 'Platforms', url: '/platforms/' },
 ];
-const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.playstation, SOURCES.xbox];
+const sources = [SOURCES.steamDevlog, SOURCES.steam, SOURCES.blumhouse, SOURCES.playstation, SOURCES.xbox];
 ---
 
 <Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.steamHeader.src}>
@@ -22,7 +22,7 @@ const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.playstation, SOURCES.
       Grave Seasons Platforms
     </h1>
     <p class="mt-4 text-lg leading-relaxed text-fog">
-      This page tracks where Grave Seasons is officially listed. The current verified sources are Steam, Blumhouse, PlayStation Store, and Microsoft Store. It does not claim Game Pass, Switch, editions, pricing, preload timing, or performance modes unless an official platform page publishes those details.
+      Perfect Garbage's official Steam announcement names four platforms - <strong>PC, Xbox Series X|S, PlayStation 5, and Nintendo Switch</strong> - and confirms Grave Seasons arrives on <strong>Xbox Game Pass on day one</strong>. This page tracks that announcement plus the live store listings, and still refuses to guess at editions, pricing, preload timing, or performance modes.
     </p>
 
     <section class="mt-8 grid gap-4 md:grid-cols-3">
@@ -39,17 +39,17 @@ const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.playstation, SOURCES.
       <a href={SITE.xboxUrl} target="_blank" rel="nofollow noopener noreferrer" class="surface p-5">
         <p class="text-xs font-black uppercase text-wheat">Console listing</p>
         <h2 class="mt-2 text-xl font-black text-bone">Xbox / Microsoft Store</h2>
-        <p class="mt-2 text-sm text-fog">A Microsoft Store product page is live; Game Pass availability is not confirmed here.</p>
+        <p class="mt-2 text-sm text-fog">A Microsoft Store product page is live, and the studio has confirmed Grave Seasons joins Xbox Game Pass on day one.</p>
       </a>
     </section>
 
     <section class="prose-page mt-10">
       <h2>Official platform baseline</h2>
       <p>
-        Blumhouse lists Grave Seasons as launching in Fall 2026, while Steam currently lists 2026. Steam, PlayStation Store, and Microsoft Store pages give the site enough evidence to maintain platform-specific URLs before launch, but not enough to publish store comparison claims that have not been announced.
+        Two first-party Steam posts do the work here. The <strong>26 March 2026</strong> announcement stated that "Grave Seasons will launch on August 14, 2026 for PC, Xbox Series X|S, PlayStation 5, and Nintendo Switch," and added that it "will also be released on Day 1 for Xbox Game Pass players." The follow-up on <strong>5 June 2026</strong> then moved the launch to <strong>Fall 2026</strong> - explicitly "across all announced platforms," so the four-platform list and the Game Pass commitment still stand. Steam's storefront text currently just reads 2026.
       </p>
       <p>
-        This matters for search because players often look for "Grave Seasons PS5", "Grave Seasons Xbox", "Grave Seasons PC", and "Grave Seasons Game Pass" before a release date is final. The right answer today is a verified store-link hub, with unconfirmed questions explicitly marked as unconfirmed.
+        What that leaves unanswered is everything commercial: no price, no editions, no preload window, no per-platform performance modes, and no Switch store listing yet even though the platform is confirmed. Searches for "Grave Seasons PS5", "Grave Seasons Switch", and "Grave Seasons Game Pass" now have real answers; the store details do not.
       </p>
     </section>
 
@@ -68,23 +68,28 @@ const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.playstation, SOURCES.
           <tbody class="text-fog">
             <tr class="border-t border-white/10">
               <td class="px-4 py-3 font-bold text-bone">Grave Seasons PC</td>
-              <td class="px-4 py-3">Steam store page</td>
-              <td class="px-4 py-3">Steam listing is live; Steam currently shows a 2026 release text.</td>
+              <td class="px-4 py-3">Steam store page + official announcement</td>
+              <td class="px-4 py-3">Confirmed platform. Steam listing is live; storefront text currently shows 2026.</td>
             </tr>
             <tr class="border-t border-white/10">
-              <td class="px-4 py-3 font-bold text-bone">Grave Seasons PlayStation</td>
-              <td class="px-4 py-3">PlayStation Store concept page</td>
-              <td class="px-4 py-3">PlayStation Store page is live; exact launch details should be checked on the store.</td>
+              <td class="px-4 py-3 font-bold text-bone">Grave Seasons PlayStation 5</td>
+              <td class="px-4 py-3">Official announcement + PlayStation Store concept page</td>
+              <td class="px-4 py-3">Confirmed for PS5 by name. Store page is live; no price or edition data yet.</td>
             </tr>
             <tr class="border-t border-white/10">
-              <td class="px-4 py-3 font-bold text-bone">Grave Seasons Xbox</td>
-              <td class="px-4 py-3">Microsoft Store product page</td>
-              <td class="px-4 py-3">Microsoft Store page is live; Game Pass is not confirmed by this evidence alone.</td>
+              <td class="px-4 py-3 font-bold text-bone">Grave Seasons Xbox Series X|S</td>
+              <td class="px-4 py-3">Official announcement + Microsoft Store page</td>
+              <td class="px-4 py-3">Confirmed for Series X|S. No Xbox One version has been announced.</td>
+            </tr>
+            <tr class="border-t border-white/10">
+              <td class="px-4 py-3 font-bold text-bone">Grave Seasons Game Pass</td>
+              <td class="px-4 py-3">Official announcement (26 March 2026)</td>
+              <td class="px-4 py-3">Confirmed: released on Xbox Game Pass on day one. Which tiers is not stated.</td>
             </tr>
             <tr class="border-t border-white/10">
               <td class="px-4 py-3 font-bold text-bone">Grave Seasons Switch</td>
-              <td class="px-4 py-3">No tracked official listing</td>
-              <td class="px-4 py-3">Do not claim a Switch release until Nintendo, Blumhouse, or another official page lists it.</td>
+              <td class="px-4 py-3">Official announcement (26 March 2026)</td>
+              <td class="px-4 py-3">Confirmed for Nintendo Switch. No eShop listing is tracked yet, and Switch 2 has not been mentioned.</td>
             </tr>
           </tbody>
         </table>

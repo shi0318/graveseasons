@@ -1,0 +1,146 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Soundtrack - Composer, Themes & Instruments';
+const description =
+  'The Grave Seasons soundtrack from the official devlog: composer Gisula, Suvi Savikko, day and night seasonal themes, and 100% live instrumentation.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Soundtrack', url: '/soundtrack/' },
+];
+const sources = [SOURCES.steamDevlog, SOURCES.blumhouseMedia, SOURCES.steam];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.farmHarvest.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Audio - official devlog</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      The Grave Seasons Soundtrack
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Perfect Garbage's first behind-the-scenes devlog was about the music, and it is one of the most
+      concrete things the studio has published about the game. Everything on this page comes from
+      that first-party post.
+    </p>
+
+    <figure class="mt-8">
+      <img src={ASSETS.farmHarvest.src} alt={ASSETS.farmHarvest.alt} width={ASSETS.farmHarvest.width} height={ASSETS.farmHarvest.height} class="rounded-md border border-white/10" loading="lazy" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.farmHarvest.credit} - the daytime farming loop that the seasonal day themes score.</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>Who writes the music</h2>
+      <p>
+        Two people. <strong>Suvi Savikko</strong> is Grave Seasons' <strong>Art &amp; Audio
+        Director</strong>, and <strong>Gisula</strong> is the game's <strong>composer</strong>. The
+        devlog frames the pairing as a deliberate clash of backgrounds: "We all come from different
+        musical backgrounds. We're all making farming sim music, but we're making music that we like,
+        and that's what's making this soundtrack special."
+      </p>
+      <p>
+        Note that Savikko holds <em>both</em> art and audio direction, which is unusual and explains
+        why the score and the pixel art pull in the same tonal direction - cozy on the surface, wrong
+        underneath.
+      </p>
+
+      <h2>The Main Theme came first</h2>
+      <p>
+        The <strong>Main Theme</strong> is described as the team's "meatiest and most difficult track
+        to date," and it was the <strong>very first piece composed</strong>. Perfect Garbage say it
+        embodies the whole journey of the game, pulling on its design philosophy, folklore and story.
+      </p>
+      <p>
+        Gisula's approach to structure is worth quoting because it explains why the soundtrack is not
+        wall-to-wall intensity: "I'm a very visual person when I'm composing. Imagine this as a story
+        structure, right? You have the climax of it there and you have to have your little ebbs and
+        flows. If the song is big the whole time, then you don't really feel the impact."
+      </p>
+
+      <h2>Every season has a day version and a night version</h2>
+      <p>
+        This is the most useful structural detail in the devlog. The <strong>seasonal themes</strong>
+        are split in two, and the split is also a split between composers:
+      </p>
+      <ul>
+        <li><strong>Daytime themes</strong> - composed by Gisula.</li>
+        <li>
+          <strong>Nighttime themes</strong> - composed by Suvi Savikko, riffing on the daytime
+          version's key or chord progression and putting a darker spin on it.
+        </li>
+      </ul>
+      <p>
+        Savikko's stated intent for the night versions: "You want to create the impression that
+        things are a little less safe now...a little more ambiguous. You're no longer in that sweet
+        and safe farming sim territory. You're in uncharted waters."
+      </p>
+      <p>
+        That lines up exactly with what the studio confirmed about the
+        <a href="/day-and-night/">day and night cycle</a> - there is no forced bedtime, and the game
+        wants you out after dark. The music is built to tell you that you have crossed a line.
+      </p>
+
+      <figure class="mt-8">
+        <img src={ASSETS.townNight.src} alt={ASSETS.townNight.alt} width={ASSETS.townNight.width} height={ASSETS.townNight.height} class="rounded-md border border-white/10" loading="lazy" />
+        <figcaption class="mt-2 text-xs text-fog">{ASSETS.townNight.credit} - the night versions of each seasonal theme score scenes like this one.</figcaption>
+      </figure>
+
+      <h2>It is mostly live instrumentation</h2>
+      <p>
+        The devlog is specific about how the tracks were recorded, and the answer is "with actual
+        instruments." Gisula's figure: many tracks are
+        <strong>"90-95% live, 100% live instrumentation and mostly acoustic, so that we get that
+        really organic feel to it."</strong> The stated goal was groundedness - making the world feel
+        real rather than sampled.
+      </p>
+      <p>Confirmed experiments listed in the post:</p>
+      <ul>
+        <li><strong>Nylon</strong> and <strong>steel-string</strong> guitars.</li>
+        <li><strong>Layered live percussion.</strong></li>
+        <li>Blended <strong>electric and acoustic cello</strong> textures.</li>
+      </ul>
+
+      <h2>Two Easter eggs the studio told on themselves</h2>
+      <ul>
+        <li>
+          At least one seasonal theme <strong>spells out the name of its season in Morse code</strong>,
+          layered into the track.
+        </li>
+        <li>
+          Gisula recorded <strong>live bird ambience in Nashville</strong> and layered it in - the
+          devlog's joke being that all birds there sing in perfect key.
+        </li>
+      </ul>
+      <p>
+        If you like hunting that kind of thing, the Morse-code detail is a genuine listening target at
+        launch. The devlog does not say <em>which</em> season it applies to, so treat any specific
+        claim about that as unverified.
+      </p>
+
+      <h2>What is not confirmed</h2>
+      <p>
+        The devlog previewed <strong>four tracks</strong> in an accompanying video, but Perfect Garbage
+        have <strong>not</strong> published a track list, a total runtime, or any plan for a separate
+        soundtrack release on Steam, Bandcamp or streaming services. There is also no statement about
+        whether music is diegetic anywhere in Ashenridge, or how combat and murder-mystery beats are
+        scored.
+      </p>
+      <p class="text-sm text-fog">
+        Anything you see claiming a full Grave Seasons OST track list before launch is not coming from
+        the developers.
+      </p>
+
+      <h2>Where this fits</h2>
+      <p>
+        The music is the clearest expression of the game's whole design bet: a farming sim that keeps
+        the comfort and then quietly removes it. For the visual half of the same idea, see the
+        <a href="/map-of-ashenridge/">map of Ashenridge</a>; for the systems the night themes are
+        scoring, the <a href="/day-and-night/">day and night cycle</a>.
+      </p>
+    </div>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

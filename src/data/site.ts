@@ -35,8 +35,9 @@ export const NAV = [
 export const OFFICIAL_FACTS = [
   {
     label: 'Release window',
-    value: 'Blumhouse lists "Launching Fall 2026"; Steam currently lists "2026".',
-    source: SOURCES.blumhouse,
+    value:
+      'Perfect Garbage moved the August 14, 2026 date to "Fall of this year"; Blumhouse lists "Launching Fall 2026" and Steam lists "2026".',
+    source: SOURCES.steamDevlog,
   },
   {
     label: 'Developer / publisher',
@@ -73,8 +74,8 @@ export const OFFICIAL_FACTS = [
   {
     label: 'Platforms',
     value:
-      'Steam, PlayStation Store, and Microsoft Store pages are live; Steam appdetails currently lists Windows support.',
-    source: SOURCES.blumhouse,
+      'Officially announced for PC, Xbox Series X|S, PlayStation 5, and Nintendo Switch, plus Day 1 Xbox Game Pass.',
+    source: SOURCES.steamDevlog,
   },
 ] as const;
 
@@ -154,6 +155,13 @@ export const REQUIRED_GUIDES = [
     title: 'Character Customization',
     description:
       '35 wearables, 25 skin tones, and 33 ways to colour 18 hairstyles - official launch numbers.',
+    priority: 'P2',
+  },
+  {
+    href: '/soundtrack/',
+    title: 'Soundtrack',
+    description:
+      'Composer Gisula, Suvi Savikko, day and night seasonal themes, and live instrumentation.',
     priority: 'P2',
   },
 ] as const;
