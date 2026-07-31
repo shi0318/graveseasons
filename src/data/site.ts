@@ -19,7 +19,7 @@ export const SITE = {
   playstationUrl: SOURCES.playstation.url,
   xboxUrl: SOURCES.xbox.url,
   contactEmail: 'nmlkareem161@gmail.com',
-  lastVerified: '2026-07-27',
+  lastVerified: '2026-07-31',
 } as const;
 
 export const NAV = [
