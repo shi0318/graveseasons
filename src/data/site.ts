@@ -164,4 +164,11 @@ export const REQUIRED_GUIDES = [
       'Composer Gisula, Suvi Savikko, day and night seasonal themes, and live instrumentation.',
     priority: 'P2',
   },
+  {
+    href: '/art-style/',
+    title: 'Art Style',
+    description:
+      'The horror mood board, pixel art as a dread tool, and the devlog line about a world that changes.',
+    priority: 'P2',
+  },
 ] as const;

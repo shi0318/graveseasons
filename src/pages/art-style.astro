@@ -1,0 +1,182 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Art Style - How Pixel Art Makes It Scary';
+const description =
+  'Perfect Garbage\'s official art devlog on Grave Seasons: the horror mood board, why pixel art limits help the dread, and Elliott\'s warning that the world changes.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Art Style', url: '/art-style/' },
+];
+const sources = [SOURCES.steamDevlog, SOURCES.blumhouseMedia, SOURCES.steam];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.monsterAttack.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Art - official devlog</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      The Art of Grave Seasons
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Perfect Garbage published a devlog called "The Art of Grave Seasons" in which four members of
+      the art team explain how they make isometric pixel art unsettling. It contains one line that is
+      arguably a gameplay tip in disguise. Everything on this page comes from that devlog and the
+      official media gallery.
+    </p>
+
+    <figure class="mt-8">
+      <img src={ASSETS.monsterAttack.src} alt={ASSETS.monsterAttack.alt} width={ASSETS.monsterAttack.width} height={ASSETS.monsterAttack.height} class="rounded-md border border-white/10" loading="lazy" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.monsterAttack.credit}</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>Who makes the art</h2>
+      <p>
+        The devlog names four members of the art team directly:
+      </p>
+      <ul>
+        <li><strong>Mima</strong> - Lead Pixel Artist</li>
+        <li><strong>Elliott</strong> - Pixel Art Direction</li>
+        <li><strong>Liz</strong> - Animation Lead</li>
+        <li><strong>Suvi</strong> - Art and Audio Direction</li>
+      </ul>
+      <p>
+        Suvi's dual art-and-audio role is worth noting, because it lines up with the
+        <a href="/soundtrack/">soundtrack</a>, where Suvi Savikko is credited on the music side too.
+        The same person is shaping how Ashenridge looks and how it sounds.
+      </p>
+
+      <h2>The horror mood board was crowdsourced from the team</h2>
+      <p>
+        This is the most concrete production detail in the post. To find the right kind of dread, the
+        team was asked to submit <strong>the most upsetting moments they had ever experienced in
+        horror media</strong> - films, games, anything that genuinely stuck with them. Suvi sorted
+        through the whole pile, and the result was what the studio calls "a disturbingly lovely mood
+        board."
+      </p>
+      <p>
+        So the horror in Grave Seasons is not sourced from a single reference work. It is assembled
+        from whatever individually frightened the people making it, which is a reasonable explanation
+        for why the tone is described as eerie rather than as an homage to any one thing.
+      </p>
+
+      <h2>Why cozy first, horror second</h2>
+      <p>
+        Perfect Garbage describe themselves as "huge fans of farming sims," and the pitch was to take
+        the genre's traditional brightness - "sunshine, smiles, and cozy cottages" - and layer
+        something darker underneath, "something that makes you second guess what may be hiding beneath
+        the surface."
+      </p>
+      <p>
+        Mima puts the contrast plainly: <em>"You wouldn't expect something eerie happening in a nice
+        little village with cute round chickens, you know?"</em>
+      </p>
+      <p>
+        That is the design thesis in one sentence. The cuteness is not decoration applied on top of a
+        horror game; it is the mechanism that makes the horror land.
+      </p>
+
+      <h2>Pixel art as a horror advantage, not a compromise</h2>
+      <p>
+        The team frames the medium's limits as the point. Mima again: <em>"One of my favorite things
+        about working in pixel art is the limitation of the medium. Fitting all of the concepts of
+        creepiness in just a tiny space is very fascinating."</em>
+      </p>
+      <p>
+        The reasoning the devlog gives is that small canvases <strong>invite your imagination to fill
+        the gaps</strong>. The example they use: catching a glimpse of a shadowy figure and being
+        unable to tell what it is - a ghost, a curtain, or the light playing tricks. They are
+        deliberately building that uncertainty into the art so your own mind supplies the fear.
+      </p>
+      <p class="text-sm text-fog">
+        Worth being precise: this is the team describing intent. Whether a given shadow in the
+        finished game is a real threat or set dressing is exactly what they are declining to tell you,
+        and we are not going to pretend to know either.
+      </p>
+
+      <figure class="mt-8">
+        <img src={ASSETS.hari.src} alt={ASSETS.hari.alt} width={ASSETS.hari.width} height={ASSETS.hari.height} class="rounded-md border border-white/10" loading="lazy" />
+        <figcaption class="mt-2 text-xs text-fog">{ASSETS.hari.credit}</figcaption>
+      </figure>
+
+      <h2>The line that reads like a gameplay hint</h2>
+      <p>
+        Elliott, on pixel art direction, says this:
+      </p>
+      <blockquote>
+        <p>
+          "You should certainly be keeping an eye on the world and remembering what it looked like
+          yesterday, because it's not always going to stay the same."
+        </p>
+      </blockquote>
+      <p>
+        Read that as an art-direction comment and it is a note about environmental storytelling. Read
+        it as advice and it is the closest thing to an official investigation tip that has been
+        published: <strong>the environment changes between days, and noticing the change is on you</strong>.
+      </p>
+      <p>
+        It fits what is already confirmed elsewhere. Steam states a murder happens each month across a
+        one-year run, and the <a href="/day-and-night/">day and night cycle</a> devlog confirms there is
+        no forced bedtime, so you can be out in the world at hours when it looks different. A world
+        that visibly changes day to day is the kind of system that rewards paying attention rather than
+        following a checklist.
+      </p>
+      <p class="text-sm text-fog">
+        What Elliott does <em>not</em> say: what changes, how often, whether the changes are clues,
+        or whether they are tied to the killer. Any guide claiming to list "environmental clues to
+        watch" before launch is inventing them.
+      </p>
+
+      <h2>Ashenridge is described as watching you</h2>
+      <p>
+        The devlog closes on the village itself. Ashenridge is called "our little seaside village at
+        the heart of it all," and the team say it is "more than just a setting to us - it's alive,
+        breathing, and quietly watching."
+      </p>
+      <p>
+        The seaside detail is consistent with the <a href="/map-of-ashenridge/">map of Ashenridge</a>,
+        which covers the coast alongside the farm, the forest, and the town's two districts.
+      </p>
+
+      <h2>What this changes about how you play</h2>
+      <ul>
+        <li>
+          Treat the art as information. The team's stated goal is that ambiguity in a small sprite does
+          the scaring, so a shape you cannot identify is a deliberate design choice.
+        </li>
+        <li>
+          Compare days. Elliott's line is the only official encouragement to track how the world looked
+          previously, and it came from the art team rather than a systems post.
+        </li>
+        <li>
+          Expect the cozy surface to stay cozy. The stated approach is contrast, not a mid-game tonal
+          switch - the chickens keep being cute while something is wrong underneath.
+        </li>
+      </ul>
+
+      <h2>Confirmed vs not confirmed</h2>
+      <p>
+        <strong>Confirmed:</strong> the four named art-team members and their roles; the team-sourced
+        horror mood board and Suvi's role compiling it; the studio's stated intent to use pixel art
+        ambiguity for horror; Elliott's statement that the world does not always stay the same;
+        Ashenridge as a seaside village described as alive and watching.
+      </p>
+      <p>
+        <strong>Not confirmed:</strong> what specifically changes in the world or how often; whether
+        those changes are investigative clues; any link between visual changes and the killer; the
+        full size of the art team beyond the four people named.
+      </p>
+      <p>
+        For the systems these visuals sit on, see the <a href="/day-and-night/">day and night cycle</a>
+        and <a href="/character-customization/">character customization</a>, which covers the sprite and
+        animation workload behind every wearable. For spoiler-safe preparation, see our
+        <a href="/tips/">tips page</a>.
+      </p>
+    </div>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>
