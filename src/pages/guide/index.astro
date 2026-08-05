@@ -1,0 +1,46 @@
+---
+import GuideCard from '../../components/GuideCard.astro';
+import Layout from '../../layouts/Layout.astro';
+import { LATEST_GUIDES, REQUIRED_GUIDES, SITE } from '../../data/site';
+
+const title = 'Grave Seasons Guide — Farming, Investigation & Walkthrough';
+const description =
+  'Browse every Grave Seasons guide in one place, including the latest farming, crafting, investigation, killer, romance, walkthrough, and character planning pages.';
+const latestHrefs = new Set<string>(LATEST_GUIDES.map((guide) => guide.href));
+const olderGuides = REQUIRED_GUIDES.filter((guide) => !latestHrefs.has(guide.href));
+---
+
+<Layout title={title} description={description} pageType="collection">
+  <header class="mb-10">
+    <p class="section-kicker">Guide directory</p>
+    <h1 class="section-title">Every Grave Seasons guide</h1>
+    <p class="mt-4 max-w-3xl text-lg leading-relaxed text-fog">
+      Keep the newest source-tracked planning pages at the top, then browse the complete
+      Ashenridge guide map below.
+    </p>
+  </header>
+
+  <section class="latest-guides mb-12" aria-label="Latest guides">
+    <p class="section-kicker">Latest guides first</p>
+    <h2 class="mt-2 text-2xl font-black text-bone">New and recently updated</h2>
+    <div class="mt-6 grid gap-5 md:grid-cols-2">
+      {LATEST_GUIDES.map((guide) => (
+        <GuideCard href={guide.href} title={guide.title} description={guide.description} label={guide.priority} />
+      ))}
+    </div>
+  </section>
+
+  <section aria-label="All Grave Seasons guides">
+    <p class="section-kicker">Browse the full map</p>
+    <h2 class="mt-2 text-2xl font-black text-bone">All guide topics</h2>
+    <div class="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {olderGuides.map((guide) => (
+        <GuideCard href={guide.href} title={guide.title} description={guide.description} label={guide.priority} />
+      ))}
+    </div>
+  </section>
+
+  <p class="mt-12 border-t border-white/10 pt-6 text-sm text-fog">
+    The guide directory is maintained from the official-source tracker for {SITE.gameName}; release-day findings will be added to the relevant topic page.
+  </p>
+</Layout>

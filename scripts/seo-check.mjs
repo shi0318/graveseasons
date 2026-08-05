@@ -12,6 +12,7 @@ const requiredSourceUrls = [
 
 const requiredPages = [
   '/',
+  '/guide/',
   '/romance-guide/',
   '/walkthrough/',
   '/characters/',

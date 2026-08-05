@@ -23,6 +23,7 @@ export const SITE = {
 } as const;
 
 export const NAV = [
+  { label: 'Guide', href: '/guide/' },
   { label: 'Romance Guide', href: '/romance-guide/' },
   { label: 'Walkthrough', href: '/walkthrough/' },
   { label: 'Characters', href: '/characters/' },
@@ -32,6 +33,23 @@ export const NAV = [
   { label: 'Quests', href: '/quests/' },
   { label: 'Release Date', href: '/release-date/' },
   { label: 'Download', href: '/download/' },
+] as const;
+
+export const LATEST_GUIDES = [
+  {
+    href: '/farming-crafting-investigation/',
+    title: 'Farming, Crafting & Investigation',
+    description:
+      'A spoiler-safe daily and seasonal planning loop for farming, crafting, clues, and investigation.',
+    priority: 'New',
+  },
+  {
+    href: '/killer-decisions-and-replay/',
+    title: 'Killer, Decisions & Replay',
+    description:
+      'How to log choices, resident risk, romance decisions, and changing killer scenarios across runs.',
+    priority: 'New',
+  },
 ] as const;
 
 export const OFFICIAL_FACTS = [
