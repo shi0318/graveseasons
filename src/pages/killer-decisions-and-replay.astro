@@ -1,0 +1,101 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Killer, Decisions and Replay Guide';
+const description =
+  'A spoiler-safe Grave Seasons guide to the killer candidate pool, autosave decisions, resident observation, romance risk, and replay planning.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Killer, Decisions & Replay', url: '/killer-decisions-and-replay/' },
+];
+const sources = [SOURCES.steam, SOURCES.steamDevlog, SOURCES.blumhouse];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.townNight.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Spoiler-safe investigation guide</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Killer, Decisions & Replay Planning
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Grave Seasons is built to make a second investigation meaningful. This page explains the official replay structure and gives you a way to record choices without revealing a killer identity that the pre-release material has not confirmed.
+    </p>
+
+    <figure class="mt-8">
+      <img src={ASSETS.townNight.src} alt={ASSETS.townNight.alt} width={ASSETS.townNight.width} height={ASSETS.townNight.height} class="rounded-md border border-white/10" loading="lazy" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.townNight.credit}</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>The confirmed replay structure</h2>
+      <p>
+        Steam says every playthrough chooses a supernatural serial killer from a pool of candidates. The selected killer can change the campaign's reasoning, kill style, and targets. The same listing also says decisions are checked and autosaved, so you should treat important choices as persistent until the finished game proves that a branch can be undone.
+      </p>
+      <p>
+        This is not a promise that every outcome is permanently missable. It is a practical rule for a game whose central mystery changes from run to run: write down what happened instead of reloading on instinct.
+      </p>
+
+      <h2>Keep a spoiler-safe suspect ledger</h2>
+      <p>Use one row per resident with only observations in the first pass:</p>
+      <table>
+        <thead>
+          <tr><th>Field</th><th>Record</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Identity</td><td>Name, home, work, and any confirmed relationship.</td></tr>
+          <tr><td>Routine</td><td>Where and when you saw the resident, including season.</td></tr>
+          <tr><td>Evidence</td><td>Direct clue, second-hand statement, or only a suspicious coincidence.</td></tr>
+          <tr><td>Decision</td><td>What you chose and the immediate result.</td></tr>
+          <tr><td>Confidence</td><td>Confirmed fact, observed event, interpretation, or unknown.</td></tr>
+        </tbody>
+      </table>
+      <p>
+        Keep interpretation in its own column. A resident being absent from a location is an observation; calling that absence proof of guilt is a theory. This distinction will make a second run much easier to compare.
+      </p>
+
+      <h2>Log decisions before the result</h2>
+      <p>
+        Before selecting a major dialogue option, note the date, location, people present, and the question you are trying to answer. After the scene, add the result. Because the game advertises checked and autosaved decisions, this record is more useful than a series of reloads that hides the branch logic.
+      </p>
+      <ul>
+        <li>Mark whether the choice changed a relationship, a clue, a location, or only the dialogue.</li>
+        <li>Use a separate tag for romance decisions; do not assume romance and investigation outcomes are independent.</li>
+        <li>Capture the season and time of day. The 24-hour clock and changing seasons can alter what you can observe next.</li>
+        <li>When a case closes, list the unanswered questions before starting another route.</li>
+      </ul>
+
+      <h2>Romance without losing the mystery</h2>
+      <p>
+        The official store page lists 12 potential romanceable people and warns that a few may be the killer. That makes relationship progress a source of character context, but also a spoiler boundary. Keep a romance notebook separate from the public suspect summary, and label any guide screenshot that reveals a route or outcome.
+      </p>
+      <p>
+        Pre-release material does not confirm which romance options belong to which killer scenario, how affection is earned, or whether a relationship can be repaired after a decision. The [romance guide](/romance-guide/) tracks confirmed scope and will need launch-build route testing.
+      </p>
+
+      <h2>Compare runs instead of chasing one perfect run</h2>
+      <ol>
+        <li>Finish a first run while recording observations, not spoilers.</li>
+        <li>Copy the farm, season, and resident baseline into a new sheet.</li>
+        <li>Compare only changed clues, targets, routines, and decision results.</li>
+        <li>Test one hypothesis at a time so a new killer scenario is not confused with a changed dialogue choice.</li>
+      </ol>
+      <p>
+        The useful replay question is not "what is the universal best route?" It is "which evidence and decisions changed this case?" The official design intentionally makes the answer variable.
+      </p>
+
+      <h2>Known unknowns</h2>
+      <p>
+        Killer identities, candidate names, exact target schedules, murder scenes, route locks, and the number of distinct outcomes are not published in the official sources checked for this page. Do not use a fan theory as a confirmed spoiler until the release build or a first-party source supports it.
+      </p>
+      <p>
+        For the time pressure behind this system, read [Grave Seasons Tips](/tips/). For the town's official scope, see [Residents](/residents/) and [Characters](/characters/).
+      </p>
+    </div>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>
+

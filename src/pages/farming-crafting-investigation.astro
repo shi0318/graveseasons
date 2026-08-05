@@ -1,0 +1,95 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Farming, Crafting and Investigation Guide';
+const description =
+  'A spoiler-safe Grave Seasons planning guide for farming, foraging, crafting, residents, seasons, locations, and the one-year investigation clock.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Farming, Crafting & Investigation', url: '/farming-crafting-investigation/' },
+];
+const sources = [SOURCES.steam, SOURCES.steamDevlog, SOURCES.blumhouseMedia];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.farmHarvest.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Pre-launch planning guide</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Farming, Crafting & Investigation
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Grave Seasons combines a farm routine with a supernatural murder investigation. The official material gives us the shape of that routine, but not the final crop values or quest solutions. Use this page to prepare a useful notebook without turning guesses into walkthrough facts.
+    </p>
+
+    <figure class="mt-8">
+      <img src={ASSETS.farmHarvest.src} alt={ASSETS.farmHarvest.alt} width={ASSETS.farmHarvest.width} height={ASSETS.farmHarvest.height} class="rounded-md border border-white/10" loading="lazy" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.farmHarvest.credit}</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>What the official game loop confirms</h2>
+      <p>
+        Steam describes Ashenridge as a farming and investigation game with one year to protect victims and uncover the murders. Its listed activities include planting, foraging, crafting, exploring, talking to residents, and investigating crime scenes. The town has 30+ residents, 70+ interiors, and seven major locations, while seasons change the world around you.
+      </p>
+      <p>
+        That combination makes time management the useful pre-launch problem. We know the categories of work; we do not yet know the final energy costs, shop inventory, crop sell prices, or the order of every investigation step.
+      </p>
+
+      <h2>Use a four-column daily log</h2>
+      <p>Keep one line per in-game day with these four columns:</p>
+      <ol>
+        <li><strong>Farm:</strong> what was planted, harvested, watered, or left for another season.</li>
+        <li><strong>Town:</strong> residents seen, indoor locations opened, and anything that changed after a conversation.</li>
+        <li><strong>Evidence:</strong> crime-scene clues, suspicious behaviour, and the location where each observation happened.</li>
+        <li><strong>Time:</strong> the hour you started and stopped each activity, including the night route back home.</li>
+      </ol>
+      <p>
+        The last column matters because the official devlog confirms a 24-hour day and night cycle. Treat the clock as a planning constraint until the release build proves otherwise; do not assume that every shop, resident, or location uses the same schedule.
+      </p>
+
+      <h2>Plan work in seasonal passes</h2>
+      <p>
+        At the start of a season, make a pass through the farm, then a pass through the nearest town district, and only then commit to a longer investigation trip. The official map material identifies a farm, forest, coast, Local district, and Commercial district, so location grouping should reduce wasted travel even before we know the final fast-travel rules.
+      </p>
+      <ul>
+        <li><strong>Morning:</strong> complete farm actions and note any time-sensitive change.</li>
+        <li><strong>Daylight:</strong> collect, talk, shop, or investigate in one nearby cluster.</li>
+        <li><strong>Evening:</strong> return to a safe route, sort materials, and write down unresolved leads.</li>
+        <li><strong>Season change:</strong> preserve notes and screenshots before assuming an old route remains available.</li>
+      </ul>
+
+      <h2>Separate resources from evidence</h2>
+      <p>
+        Farming and foraging produce items; crafting turns some of them into useful objects; investigation produces explanations. Keep those categories separate in your notes. A material that looks important may be a crafting ingredient, a gift, or a clue, and the official pages do not publish a final item taxonomy yet.
+      </p>
+      <p>
+        A practical label system is <strong>FARM</strong>, <strong>CRAFT</strong>, <strong>GIFT</strong>, and <strong>CASE</strong>. Add the location and season to each item. This avoids the common mistake of selling a resource before you know whether a quest, recipe, or resident route needs it.
+      </p>
+
+      <h2>Resident observation is part of the investigation</h2>
+      <p>
+        The Steam listing says the killer is selected from a pool of candidates and that each playthrough can have a different killer, victims, reasoning, and murder style. Since there are 30+ residents, write observations instead of relying on memory. Record where a resident was seen, who they spoke with, and whether the event was ordinary or tied to a case.
+      </p>
+      <p>
+        Do not publish an exact suspect chart before launch. The confirmed design supports observation; it does not confirm which resident is guilty in any particular seed.
+      </p>
+
+      <h2>What remains unverified</h2>
+      <ul>
+        <li>Crop growth times, sell prices, stamina costs, and crafting recipes.</li>
+        <li>Exact opening hours for every shop, resident, and interior.</li>
+        <li>Whether every clue can be missed or only changes the route presentation.</li>
+        <li>Final quest outcomes, killer identities, and the most efficient money route.</li>
+      </ul>
+      <p>
+        Those are launch-day testing tasks. Until then, the [official-source tips page](/tips/) is the safe companion to this planning framework, while [Day & Night](/day-and-night/) and [Map of Ashenridge](/map-of-ashenridge/) provide the underlying official facts.
+      </p>
+    </div>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>
+

@@ -27,6 +27,8 @@ export const NAV = [
   { label: 'Walkthrough', href: '/walkthrough/' },
   { label: 'Characters', href: '/characters/' },
   { label: 'Tips', href: '/tips/' },
+  { label: 'Farming Plan', href: '/farming-crafting-investigation/' },
+  { label: 'Investigation', href: '/killer-decisions-and-replay/' },
   { label: 'Quests', href: '/quests/' },
   { label: 'Release Date', href: '/release-date/' },
   { label: 'Download', href: '/download/' },
@@ -36,7 +38,7 @@ export const OFFICIAL_FACTS = [
   {
     label: 'Release window',
     value:
-      'Perfect Garbage moved the August 14, 2026 date to "Fall of this year"; Blumhouse lists "Launching Fall 2026" and Steam lists "2026".',
+      'Perfect Garbage moved the originally announced date to "Fall of this year"; Blumhouse lists "Launching Fall 2026" and Steam lists "2026".',
     source: SOURCES.steamDevlog,
   },
   {
@@ -127,6 +129,20 @@ export const REQUIRED_GUIDES = [
     title: 'Tips',
     description:
       'Pre-release planning tips that avoid claiming unverified mechanics.',
+    priority: 'P2',
+  },
+  {
+    href: '/farming-crafting-investigation/',
+    title: 'Farming & Investigation',
+    description:
+      'A spoiler-safe daily and seasonal planning loop for Ashenridge.',
+    priority: 'P2',
+  },
+  {
+    href: '/killer-decisions-and-replay/',
+    title: 'Killer & Replay Planning',
+    description:
+      'How to log decisions, residents, romance risk, and changing killer scenarios.',
     priority: 'P2',
   },
   {
