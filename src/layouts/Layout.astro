@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import AmbientParticles from '../components/AmbientParticles.astro';
 import { ASSETS } from '../data/assets';
 import { SITE } from '../data/site';
 
@@ -143,6 +144,7 @@ const schema = {
     <script type="application/ld+json" set:html={JSON.stringify(schema)} is:inline />
   </head>
   <body class="flex min-h-screen flex-col">
+    <AmbientParticles />
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-wheat focus:px-4 focus:py-2 focus:text-ink">
       Skip to content
     </a>
