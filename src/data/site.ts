@@ -37,6 +37,13 @@ export const NAV = [
 
 export const LATEST_GUIDES = [
   {
+    href: '/occult-items-victim-protection/',
+    title: 'Occult Items & Victim Protection',
+    description:
+      'Official Steam facts on occult crafting, warding monsters, potential victims, and the details still unknown before launch.',
+    priority: 'New',
+  },
+  {
     href: '/farming-crafting-investigation/',
     title: 'Farming, Crafting & Investigation',
     description:
@@ -100,6 +107,13 @@ export const OFFICIAL_FACTS = [
 ] as const;
 
 export const REQUIRED_GUIDES = [
+  {
+    href: '/occult-items-victim-protection/',
+    title: 'Occult Items & Victim Protection',
+    description:
+      'Source-tracked preparation for the official occult-item and potential-victim systems.',
+    priority: 'P1',
+  },
   {
     href: '/romance-guide/',
     title: 'Romance Guide',

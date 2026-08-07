@@ -1,0 +1,76 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Occult Items & Victim Protection Guide';
+const description =
+  'What the official Grave Seasons Steam page confirms about occult crafting, warding off monsters, saving potential victims, and the systems still unknown before launch.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Occult Items & Victim Protection', url: '/occult-items-victim-protection/' },
+];
+const sources = [SOURCES.steam, SOURCES.blumhouseMedia];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.monsterAttack.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Official-source preparation guide</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Occult Items & Victim Protection
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      The official Steam description confirms that crafting is not only about farm upgrades: players can make mysterious occult items that <em>could</em> save potential victims. It does not yet publish a recipe list, item effects, or a guaranteed rescue route. This page keeps that line clear.
+    </p>
+
+    <figure class="mt-8">
+      <img src={ASSETS.monsterAttack.src} alt={ASSETS.monsterAttack.alt} width={ASSETS.monsterAttack.width} height={ASSETS.monsterAttack.height} class="rounded-md border border-white/10" loading="lazy" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.monsterAttack.credit}. The image is context for the official monster-warding premise, not evidence for a specific item location.</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>What Steam has actually confirmed</h2>
+      <p>
+        The Steam page gives the game a one-year objective: protect victims from the supernatural killer. It says farming, foraging, crafting, and investigation are used to discover methods that ward off monsters. It separately says that recipes can be crafted in the kitchen or shed, including mysterious occult items that could save potential victims.
+      </p>
+      <p>
+        Those are the confirmed connections: crafting exists, occult items exist, and victim protection is part of the campaign. The page does not say that every crafted item is protective, that an item works on every killer, or that a victim can always be saved.
+      </p>
+
+      <h2>A useful launch-day evidence log</h2>
+      <p>
+        Treat each possible protection item as an evidence record until its effect is visible in the release build. A simple worksheet prevents a recipe name, a rumour, and a verified rescue from being mixed together.
+      </p>
+      <ol>
+        <li><strong>Record the item:</strong> exact name, recipe source, ingredient list, and whether it was crafted in the kitchen or shed.</li>
+        <li><strong>Record the trigger:</strong> victim, location, season, time, killer campaign, and the event that made the item usable.</li>
+        <li><strong>Record the result:</strong> no visible change, delayed result, warding event, rescue, or an outcome that needs a replay check.</li>
+        <li><strong>Keep the save context:</strong> Steam says decisions are checked and autosaved, so do not assume a test can be repeated from a convenient manual save.</li>
+      </ol>
+
+      <h2>Keep resource claims separate</h2>
+      <p>
+        Steam also says players can collect, discover, or craft more than 600 items, and that fishing and mining can reveal ingredients useful to the town mystery. That total is not an occult-item count. Until the finished game identifies ingredients and recipes, label a material as <strong>unverified for protection</strong> rather than selling it or presenting it as a confirmed ward component.
+      </p>
+
+      <h2>Why survival matters</h2>
+      <p>
+        The official description says deaths unlock new stories while survival reveals other storylines. It also says each playthrough selects a supernatural killer from a candidate pool, with its own campaign, reasoning, kill styles, and targets. That means a protection result needs its campaign context; a successful outcome in one run is not evidence of a universal solution in another.
+      </p>
+
+      <h2>What remains unpublished</h2>
+      <ul>
+        <li>The names, recipes, costs, and effects of occult items.</li>
+        <li>Which victims can be protected and whether any rescue is mandatory or missable.</li>
+        <li>Exact investigation requirements, deadlines, and failure states.</li>
+        <li>Whether a ward changes a killer route, only a scene outcome, or a later story branch.</li>
+      </ul>
+      <p>
+        Those details need release-build evidence. For the broader one-year route, use the <a href="/walkthrough/">walkthrough framework</a>; for daily resource planning, use <a href="/farming-crafting-investigation/">Farming, Crafting & Investigation</a>.
+      </p>
+    </div>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>
