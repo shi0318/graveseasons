@@ -27,9 +27,13 @@ export const NAV = [
   { label: 'Romance Guide', href: '/romance-guide/' },
   { label: 'Walkthrough', href: '/walkthrough/' },
   { label: 'Characters', href: '/characters/' },
-  { label: 'Tips', href: '/tips/' },
   { label: 'Farming Plan', href: '/farming-crafting-investigation/' },
   { label: 'Investigation', href: '/killer-decisions-and-replay/' },
+] as const;
+
+export const FOOTER_NAV = [
+  ...NAV,
+  { label: 'Tips', href: '/tips/' },
   { label: 'Quests', href: '/quests/' },
   { label: 'Release Date', href: '/release-date/' },
   { label: 'Download', href: '/download/' },

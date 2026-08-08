@@ -82,6 +82,26 @@ if (existsSync(distIndex)) {
 const builtHeader = existsSync(distIndex) ? readFileSync(distIndex, 'utf8') : '';
 assert(!builtHeader.includes('href="/romance/"'), 'Deprecated /romance/ link is still present in rendered homepage.');
 
+const headerMarkup = builtHeader.match(/<header[\s\S]*?<\/header>/i)?.[0] ?? '';
+const footerMarkup = builtHeader.match(/<footer[\s\S]*?<\/footer>/i)?.[0] ?? '';
+const primaryNavigation = [
+  '/guide/',
+  '/romance-guide/',
+  '/walkthrough/',
+  '/characters/',
+  '/farming-crafting-investigation/',
+  '/killer-decisions-and-replay/',
+];
+const footerOnlyNavigation = ['/tips/', '/quests/', '/release-date/', '/download/'];
+
+for (const href of primaryNavigation) {
+  assert(headerMarkup.includes(`href="${href}"`), `Primary navigation is missing ${href}.`);
+}
+for (const href of footerOnlyNavigation) {
+  assert(!headerMarkup.includes(`href="${href}"`), `Primary navigation must not include ${href}.`);
+  assert(footerMarkup.includes(`href="${href}"`), `Footer navigation is missing ${href}.`);
+}
+
 const redirectsPath = join(root, 'public', '_redirects');
 assert(existsSync(redirectsPath), 'Cloudflare Pages redirect file is missing.');
 if (existsSync(redirectsPath)) {
