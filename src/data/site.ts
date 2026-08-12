@@ -217,6 +217,12 @@ export const REQUIRED_GUIDES = [
     priority: 'P2',
   },
   {
+    href: '/demo-status/',
+    title: 'Demo Status',
+    description: 'Current answer on the cancelled June demo, the Fall 2026 window, and where official access will appear.',
+    priority: 'New',
+  },
+  {
     href: '/art-style/',
     title: 'Art Style',
     description:

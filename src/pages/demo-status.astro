@@ -1,0 +1,48 @@
+---
+import FaqBlock from '../components/FaqBlock.astro';
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Demo Status - Is There a Demo?';
+const description = 'Grave Seasons demo status: the planned June 15 demo was cancelled, the game moved to Fall 2026, and no replacement demo is announced.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Demo Status', url: '/demo-status/' },
+];
+const sources = [SOURCES.steamDevlog, SOURCES.steam, SOURCES.blumhouse, SOURCES.blumhouseMedia];
+const faqs = [
+  { question: 'Is there a Grave Seasons demo?', answer: 'The planned June 15, 2026 demo was cancelled in the official June 5 update. No replacement public demo is announced in the sources checked on August 12, 2026.' },
+  { question: 'When does Grave Seasons release?', answer: 'The current official window is Fall 2026. Perfect Garbage moved the earlier August 14 date to Fall, while Steam lists 2026.' },
+];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.townNight.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Playable status</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">Does Grave Seasons Have a Demo?</h1>
+    <p class="mt-5 text-lg leading-relaxed text-fog">The planned June 15, 2026 demo was cancelled. As of August 12, 2026, no replacement public demo or beta is announced, and the full game remains scheduled for Fall 2026.</p>
+    <figure class="mt-8 overflow-hidden rounded-md border border-white/10">
+      <img src={ASSETS.townNight.src} alt={ASSETS.townNight.alt} width={ASSETS.townNight.width} height={ASSETS.townNight.height} loading="eager" decoding="async" />
+      <figcaption class="border-t border-white/10 bg-soil px-4 py-3 text-xs text-fog">{ASSETS.townNight.credit}. This image is official media, not a playable demo capture.</figcaption>
+    </figure>
+    <section class="prose-page mt-10">
+      <h2>What happened to the Grave Seasons demo?</h2>
+      <p>Perfect Garbage first announced a demo planned for June 15, 2026. In the official June 5 Steam update, the studio said the demo was cancelled and that the full-game release was moving from August 14 to Fall 2026. No replacement demo date is listed in the current first-party sources.</p>
+      <h2>Can you download Grave Seasons now?</h2>
+      <p>There is no official demo download link to provide at this time. Steam lists Grave Seasons as coming soon, while the official Blumhouse page carries the Fall 2026 window. Avoid third-party installers claiming to be a playable demo; this site never hosts game files.</p>
+      <h2>What can you prepare for without a demo?</h2>
+      <p>The official Steam description confirms a narrative farming sim in Ashenridge with farming, romance, investigation, a day-and-night cycle, 30+ residents, 70+ interiors, seven major locations, and a supernatural serial-killer structure. It also says each playthrough can select a killer from a candidate pool. These facts support planning pages, but they do not provide a walkthrough for a build that is not publicly playable.</p>
+      <ul>
+        <li>Read the <a href="/release-date/">release-date page</a> for the current Fall 2026 window.</li>
+        <li>Use the <a href="/farming-crafting-investigation/">farming and investigation guide</a> for the confirmed systems.</li>
+        <li>Check the official <a href={SOURCES.steamDevlog.url} target="_blank" rel="nofollow noopener noreferrer">Steam news hub</a> for a future demo announcement.</li>
+      </ul>
+      <h2>Current status table</h2>
+      <table><thead><tr><th>Question</th><th>Official answer</th></tr></thead><tbody><tr><td>Public demo</td><td>Planned June 15 demo cancelled; no replacement announced.</td></tr><tr><td>Full release</td><td>Fall 2026; Steam currently shows 2026.</td></tr><tr><td>Platforms</td><td>PC, Xbox Series X|S, PlayStation 5, and Nintendo Switch announced.</td></tr><tr><td>Day-one Game Pass</td><td>Announced; specific tier details are not published.</td></tr></tbody></table>
+    </section>
+    <FaqBlock items={faqs} />
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>
