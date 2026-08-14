@@ -1,5 +1,6 @@
 ---
 import GuideCard from '../../components/GuideCard.astro';
+import Pagination from '../../components/Pagination.astro';
 import Layout from '../../layouts/Layout.astro';
 import { LATEST_GUIDES, REQUIRED_GUIDES, SITE } from '../../data/site';
 
@@ -8,6 +9,13 @@ const description =
   'Browse every Grave Seasons guide in one place, including the latest farming, crafting, investigation, killer, romance, walkthrough, and character planning pages.';
 const latestHrefs = new Set<string>(LATEST_GUIDES.map((guide) => guide.href));
 const olderGuides = REQUIRED_GUIDES.filter((guide) => !latestHrefs.has(guide.href));
+// Manual page data has no frontmatter dates. LATEST_GUIDES is the maintained newest-first queue;
+// the remaining entries follow it in the existing editorial order until page dates are recorded.
+const orderedGuides = [...LATEST_GUIDES, ...olderGuides];
+const PAGE_SIZE = 9;
+const currentPage = 1;
+const totalPages = Math.ceil(orderedGuides.length / PAGE_SIZE);
+const visibleGuides = orderedGuides.slice(0, PAGE_SIZE);
 ---
 
 <Layout title={title} description={description} pageType="collection">
@@ -20,24 +28,15 @@ const olderGuides = REQUIRED_GUIDES.filter((guide) => !latestHrefs.has(guide.hre
     </p>
   </header>
 
-  <section class="latest-guides mb-12" aria-label="Latest guides">
+  <section class="latest-guides" aria-label="Latest guides">
     <p class="section-kicker">Latest guides first</p>
     <h2 class="mt-2 text-2xl font-black text-bone">New and recently updated</h2>
-    <div class="mt-6 grid gap-5 md:grid-cols-2">
-      {LATEST_GUIDES.map((guide) => (
-        <GuideCard href={guide.href} title={guide.title} description={guide.description} label={guide.priority} />
-      ))}
-    </div>
-  </section>
-
-  <section aria-label="All Grave Seasons guides">
-    <p class="section-kicker">Browse the full map</p>
-    <h2 class="mt-2 text-2xl font-black text-bone">All guide topics</h2>
     <div class="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-      {olderGuides.map((guide) => (
+      {visibleGuides.map((guide) => (
         <GuideCard href={guide.href} title={guide.title} description={guide.description} label={guide.priority} />
       ))}
     </div>
+    <Pagination currentPage={currentPage} totalPages={totalPages} basePath="/guide/" />
   </section>
 
   <p class="mt-12 border-t border-white/10 pt-6 text-sm text-fog">

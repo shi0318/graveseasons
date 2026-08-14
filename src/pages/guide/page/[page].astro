@@ -1,0 +1,33 @@
+---
+import GuideCard from '../../../components/GuideCard.astro';
+import Pagination from '../../../components/Pagination.astro';
+import Layout from '../../../layouts/Layout.astro';
+import { LATEST_GUIDES, REQUIRED_GUIDES } from '../../../data/site';
+
+const latestHrefs = new Set<string>(LATEST_GUIDES.map((guide) => guide.href));
+const orderedGuides = [...LATEST_GUIDES, ...REQUIRED_GUIDES.filter((guide) => !latestHrefs.has(guide.href))];
+const PAGE_SIZE = 9;
+
+export function getStaticPaths() {
+  const PAGE_SIZE = 9;
+  const latestHrefs = new Set<string>(LATEST_GUIDES.map((guide) => guide.href));
+  const orderedGuides = [...LATEST_GUIDES, ...REQUIRED_GUIDES.filter((guide) => !latestHrefs.has(guide.href))];
+  const totalPages = Math.ceil(orderedGuides.length / PAGE_SIZE);
+  return Array.from({ length: Math.max(0, totalPages - 1) }, (_, i) => {
+    const page = i + 2;
+    return { params: { page: String(page) }, props: { page, totalPages } };
+  });
+}
+
+const { page, totalPages } = Astro.props;
+const visibleGuides = orderedGuides.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+const title = `Grave Seasons Guide — Page ${page}`;
+const description = 'More Grave Seasons guides, kept in the site’s maintained newest-first editorial order.';
+---
+<Layout title={title} description={description} pageType="collection">
+  <header class="mb-10"><p class="section-kicker">Guide directory</p><h1 class="section-title">Grave Seasons guides — page {page}</h1><p class="mt-4 max-w-3xl text-lg leading-relaxed text-fog">Page {page} of {totalPages}; the newest maintained guide entries appear first.</p></header>
+  <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+    {visibleGuides.map((guide) => <GuideCard href={guide.href} title={guide.title} description={guide.description} label={guide.priority} />)}
+  </div>
+  <Pagination currentPage={page} totalPages={totalPages} basePath="/guide/" />
+</Layout>
