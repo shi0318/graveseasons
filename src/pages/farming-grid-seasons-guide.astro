@@ -1,0 +1,92 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Farming Grid & Seasons Guide';
+const description =
+  'Official Grave Seasons farming guide covering the visible grid, four seasons, 45+ seeds, and Arid, Regular, and Wet plots before launch.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Farming Grid & Seasons Guide', url: '/farming-grid-seasons-guide/' },
+];
+const sources = [SOURCES.steamDevlog, SOURCES.steam, SOURCES.blumhouseMedia];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.farmHarvest.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Farming systems - official devlog</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Grave Seasons Farming Grid &amp; Seasons Guide
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Perfect Garbage's official <strong>Farming Systems &amp; Grids</strong> devlog gives the most
+      useful pre-release answer to “how does farming work in Grave Seasons?” This page records the
+      published grid rules and keeps crop prices, growth times, and optimal-profit routes open until
+      the game is playable.
+    </p>
+
+    <figure class="mt-8">
+      <img src={ASSETS.farmHarvest.src} alt={ASSETS.farmHarvest.alt} width={ASSETS.farmHarvest.width} height={ASSETS.farmHarvest.height} class="rounded-md border border-white/10" loading="lazy" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.farmHarvest.credit}</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>Four seasons shape the farm</h2>
+      <p>
+        The devlog confirms a four-season cycle: <strong>Spring, Summer, Autumn, and Winter</strong>.
+        The post also says the game has <strong>more than 45 seeds</strong>. It does not publish a
+        complete seed catalogue, crop price table, growth timer, or season-by-season profit route,
+        so those are launch-day data tasks rather than facts to fill in now.
+      </p>
+
+      <h2>Three official farming plot types</h2>
+      <p>
+        Grave Seasons uses three kinds of farming plots. The important practical difference is
+        whether a plot needs watering:
+      </p>
+      <ul>
+        <li><strong>Arid plots</strong> are one of the named plot types in the official grid system.</li>
+        <li><strong>Regular plots</strong> are the standard named plot type.</li>
+        <li><strong>Wet plots</strong> do not require watering according to the devlog.</li>
+      </ul>
+      <p>
+        The source does not provide a crop-to-plot compatibility chart. Do not assume that every
+        seed can grow in every plot or that Wet plots are always the best choice until an in-game
+        build confirms those relationships.
+      </p>
+
+      <h2>How the visible grid works</h2>
+      <p>
+        The team describes a <strong>visible farming grid</strong> alongside an invisible grid used
+        by the wider world. The grid layers include <strong>Items, Crops, NPCs, Objects, Farm Plots,
+        and Doors</strong>. That distinction explains why a placement can look free while still
+        being constrained by another game object.
+      </p>
+
+      <h2>NPCs and the nearby nine squares</h2>
+      <p>
+        The devlog says NPC interaction checks the surrounding <strong>nine squares</strong>. It also
+        explains that farming and foraging mainly check the player's <strong>three squares directly
+        in front</strong>. These are the confirmed interaction ranges described by the source; they
+        are not a promise of a universal three-tile tool range for every action in the finished game.
+      </p>
+
+      <h2>What to record after launch</h2>
+      <ol>
+        <li>Seed name and the season shown in the live build.</li>
+        <li>Plot type and whether the crop asks for watering.</li>
+        <li>Growth result, harvest amount, and any quality or price information.</li>
+        <li>Version, day, and weather conditions for any farming test.</li>
+      </ol>
+      <p>
+        This evidence standard keeps a real Grave Seasons crop guide useful after balance updates.
+        The current official information is enough to plan around seasons, grid layers, and Wet plot
+        watering rules, but not enough to publish a “best crop” spreadsheet.
+      </p>
+    </div>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

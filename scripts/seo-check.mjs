@@ -157,8 +157,10 @@ const forbiddenClaims = [
 for (const file of sourceFiles) {
   if (!existsSync(file)) continue;
   const text = readFileSync(file, 'utf8');
+  // Verification timestamps are editorial metadata, not release-date claims.
+  const claimText = text.replace(/(?:lastChecked|lastVerified|LAST_CHECKED)\s*[:=]\s*['"][^'"]+['"]/g, '');
   for (const claim of forbiddenClaims) {
-    assert(!text.includes(claim), `Unverified release-date claim found in ${file}: ${claim}`);
+    assert(!claimText.includes(claim), `Unverified release-date claim found in ${file}: ${claim}`);
   }
 }
 

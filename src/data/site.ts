@@ -19,7 +19,7 @@ export const SITE = {
   playstationUrl: SOURCES.playstation.url,
   xboxUrl: SOURCES.xbox.url,
   contactEmail: 'nmlkareem161@gmail.com',
-  lastVerified: '2026-07-31',
+  lastVerified: '2026-08-14',
 } as const;
 
 export const NAV = [
@@ -40,6 +40,13 @@ export const FOOTER_NAV = [
 ] as const;
 
 export const LATEST_GUIDES = [
+  {
+    href: '/farming-grid-seasons-guide/',
+    title: 'Farming Grid & Seasons Guide',
+    description:
+      'Official farming-grid rules, four seasons, 45+ seeds, and Arid, Regular, and Wet plot facts before launch.',
+    priority: 'New',
+  },
   {
     href: '/occult-items-victim-protection/',
     title: 'Occult Items & Victim Protection',
@@ -111,6 +118,13 @@ export const OFFICIAL_FACTS = [
 ] as const;
 
 export const REQUIRED_GUIDES = [
+  {
+    href: '/farming-grid-seasons-guide/',
+    title: 'Farming Grid & Seasons Guide',
+    description:
+      'The official grid layers, seasons, seed count, and plot types, with crop prices left for launch-day testing.',
+    priority: 'New',
+  },
   {
     href: '/occult-items-victim-protection/',
     title: 'Occult Items & Victim Protection',
