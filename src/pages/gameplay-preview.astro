@@ -1,0 +1,92 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Gameplay Preview: Farming, Investigation & Replay';
+const description =
+  'A source-tracked Grave Seasons gameplay preview covering farming grids, the one-year investigation, romance risk, Ashenridge, and replayable killer scenarios.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Gameplay Preview', url: '/gameplay-preview/' },
+];
+const sources = [SOURCES.steam, SOURCES.steamDevlog, SOURCES.blumhouse, SOURCES.blumhouseMedia];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.farmHarvest.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Gameplay preview - official sources</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">Grave Seasons Gameplay Preview: Farming, Investigation &amp; Replay</h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Searching for <strong>Grave Seasons gameplay</strong> before release usually means asking how
+      the farming loop connects to the murder investigation. Official Steam, Blumhouse, and Perfect
+      Garbage material gives us the structure, but not a final quest route, crop price table, or
+      universal killer solution.
+    </p>
+
+    <figure class="mt-8">
+      <img src={ASSETS.farmHarvest.src} alt={ASSETS.farmHarvest.alt} width={ASSETS.farmHarvest.width} height={ASSETS.farmHarvest.height} class="rounded-md border border-white/10" loading="eager" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.farmHarvest.credit}</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>What the official gameplay loop confirms</h2>
+      <p>
+        Steam describes Grave Seasons as a farming simulation in Ashenridge where a supernatural
+        serial killer is active. The player has <strong>one year</strong> to protect potential victims
+        and uncover the murders. The store page lists more than <strong>30 residents</strong>, more than
+        <strong>70 interiors</strong>, and <strong>seven major locations</strong>.
+      </p>
+
+      <h2>Farming is part of the investigation plan</h2>
+      <p>
+        The official farming devlog describes four seasons—Spring, Summer, Autumn, and Winter—and
+        more than <strong>45 seeds</strong>. It also names Arid, Regular, and Wet plot types, with Wet
+        plots not requiring watering in the published system explanation. The visible and invisible
+        grids include Items, Crops, NPCs, Objects, Farm Plots, and Doors.
+      </p>
+      <p>
+        That is enough to plan a calendar and a clean evidence sheet. It is not enough to claim the
+        most profitable crop, exact growth days, a crop-to-plot compatibility chart, or a best early
+        farm layout before the game is playable.
+      </p>
+
+      <h2>How the one-year investigation changes the guide</h2>
+      <p>
+        Because the official premise gives the player a one-year window, a launch walkthrough should
+        connect date, resident, location, clue, and consequence. Track the in-game day and time for
+        every observation. Keep an official resident or location name separate from a guessed schedule
+        or quest trigger.
+      </p>
+      <ul>
+        <li>Log the source for each resident name or location caption.</li>
+        <li>Record whether a clue was found before or after a farming or social action.</li>
+        <li>Note the exact day, time, weather, and outcome in the playable build.</li>
+        <li>Keep a separate list for optional events and possible victim protection.</li>
+      </ul>
+
+      <h2>Replayability means there is no single killer route</h2>
+      <p>
+        Steam says each playthrough selects a supernatural killer from a candidate pool, with
+        killer-specific campaigns, reasoning, kill styles, and targets. It also lists 12 potential
+        romanceable people, with a few potentially being the killer. That makes a decision log more
+        useful than a one-run “correct answers” page before launch.
+      </p>
+      <p>
+        Romance is therefore not safe to treat as a spoiler-free checklist of guaranteed partners.
+        Mark a relationship as confirmed only when the game or a first-party source shows it, and
+        record which run or killer scenario produced the result.
+      </p>
+
+      <h2>What remains unverified</h2>
+      <p>
+        Official sources do not yet publish the final quest order, crop prices, growth timers, daily
+        schedules for every resident, complete killer roster, victim outcomes, or the optimal farm
+        layout. Those are valuable launch-day search topics, but filling them now would turn a preview
+        into fiction.
+      </p>
+    </div>
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

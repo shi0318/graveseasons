@@ -1,0 +1,103 @@
+---
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+
+const title = 'Grave Seasons Pre-Launch Investigation Checklist';
+const description =
+  'A source-tracked Grave Seasons pre-launch checklist covering the one-year investigation, killer scenarios, Ashenridge, romance, and demo status.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Pre-Launch Investigation Checklist', url: '/pre-launch-investigation-checklist/' },
+];
+const sources = [SOURCES.steam, SOURCES.steamDevlog, SOURCES.blumhouse, SOURCES.blumhouseMedia];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.townNight.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Pre-launch planning - official sources</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">Grave Seasons Pre-Launch Investigation Checklist</h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      If you are searching for a Grave Seasons walkthrough before release, the useful answer is a
+      preparation checklist rather than a fabricated route. Official Steam and Blumhouse material
+      confirms the investigation frame, but not the final killer solution, quest order, or crop values.
+    </p>
+
+    <figure class="mt-8">
+      <img src={ASSETS.townNight.src} alt={ASSETS.townNight.alt} width={ASSETS.townNight.width} height={ASSETS.townNight.height} class="rounded-md border border-white/10" loading="eager" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.townNight.credit}</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>What the investigation is confirmed to involve</h2>
+      <p>
+        Steam describes Grave Seasons as a farming simulation where a supernatural serial killer is
+        active in Ashenridge. The player has <strong>one year</strong> to protect potential victims and
+        uncover the murders. The store page also lists more than <strong>30 residents</strong>, more than
+        <strong>70 interiors</strong>, and <strong>seven major locations</strong>.
+      </p>
+
+      <h2>Build a resident and location checklist</h2>
+      <p>
+        Before launch, record every official resident name, relationship clue, and location caption
+        separately. The town is large enough that a useful live guide will need to connect residents,
+        interiors, the farm, forest, coast, and the Local and Commercial districts. Do not turn a
+        screenshot appearance into a confirmed quest or schedule.
+      </p>
+      <ul>
+        <li>Track the resident name and the source where it is officially shown.</li>
+        <li>Keep location names separate from unconfirmed room or quest labels.</li>
+        <li>After launch, add the in-game day, time, trigger, and outcome for every tested clue.</li>
+      </ul>
+
+      <h2>Expect replay differences, not one universal killer route</h2>
+      <p>
+        The Steam description says each playthrough selects a supernatural killer from a candidate
+        pool, with killer-specific reasoning, kill styles, and targets. That means a single “best
+        walkthrough” written before release would be misleading. The launch guide should branch by
+        the killer scenario actually observed in the save, then label any missable result with a
+        tested day and version.
+      </p>
+
+      <h2>Romance is part of the risk calculation</h2>
+      <p>
+        Steam lists <strong>12 potential romanceable folks</strong> and warns that a few may also be
+        the killer. Treat romance pages as relationship tracking, not proof of a safe route. The
+        practical launch checklist is to record the choice, resident, date, relationship result, and
+        whether the playthrough changes the candidate pool.
+      </p>
+
+      <h2>Use the day-and-night cycle as a planning constraint</h2>
+      <p>
+        The official developer material describes a 24-hour cycle and a world that can change. Until
+        the game is playable, the safe advice is to plan short evidence-based loops: farm or forage,
+        review clues, speak with residents, and leave time for investigation. No exact stamina,
+        shop-hour, crop-growth, or murder-timer number has been published here.
+      </p>
+
+      <h2>What is and is not available before launch</h2>
+      <p>
+        Perfect Garbage announced that the planned June 15 demo was cancelled when the full game was
+        moved to <strong>Fall 2026</strong>. Steam currently shows the year only. There is no legitimate
+        pre-release download to recommend, so wishlisting the official store page is the reliable way
+        to receive a launch notification.
+      </p>
+      <p>
+        The final release is officially planned for PC, Xbox Series X|S, PlayStation 5, and Nintendo
+        Switch, with Day 1 Xbox Game Pass support announced. A specific day has not been published;
+        this page will be updated when an official store or developer announcement narrows the window.
+      </p>
+
+      <h2>Launch-day evidence sheet</h2>
+      <ol>
+        <li>Write down the build version and the in-game date before testing.</li>
+        <li>Map the clue, resident, location, and time without assuming an outcome.</li>
+        <li>Separate confirmed triggers from observations that happened only once.</li>
+        <li>Repeat important choices in a second run before calling them universal.</li>
+      </ol>
+    </div>
+
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

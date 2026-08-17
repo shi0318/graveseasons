@@ -41,6 +41,20 @@ export const FOOTER_NAV = [
 
 export const LATEST_GUIDES = [
   {
+    href: '/gameplay-preview/',
+    title: 'Grave Seasons Gameplay Preview',
+    description:
+      'Official gameplay facts on farming, the one-year investigation, romance risk, Ashenridge, and replayable killer scenarios before launch.',
+    priority: 'New',
+  },
+  {
+    href: '/pre-launch-investigation-checklist/',
+    title: 'Pre-Launch Investigation Checklist',
+    description:
+      'What the official one-year investigation, Ashenridge map, killer pool, romance system, and cancelled demo mean before launch.',
+    priority: 'New',
+  },
+  {
     href: '/farming-grid-seasons-guide/',
     title: 'Farming Grid & Seasons Guide',
     description:
@@ -118,6 +132,20 @@ export const OFFICIAL_FACTS = [
 ] as const;
 
 export const REQUIRED_GUIDES = [
+  {
+    href: '/gameplay-preview/',
+    title: 'Grave Seasons Gameplay Preview',
+    description:
+      'A source-tracked gameplay preview for farming, investigation, romance risk, Ashenridge, and replayable killer scenarios.',
+    priority: 'New',
+  },
+  {
+    href: '/pre-launch-investigation-checklist/',
+    title: 'Pre-Launch Investigation Checklist',
+    description:
+      'A source-tracked checklist for the one-year investigation, killer scenarios, residents, romance, and the Fall 2026 launch window.',
+    priority: 'New',
+  },
   {
     href: '/farming-grid-seasons-guide/',
     title: 'Farming Grid & Seasons Guide',

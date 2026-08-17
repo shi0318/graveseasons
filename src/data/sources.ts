@@ -17,7 +17,7 @@ export const SOURCES = {
     url: 'https://store.steampowered.com/app/3255110/Grave_Seasons/',
     publisher: 'Valve / Steam',
     status: 'platform',
-    lastChecked: '2026-08-07',
+    lastChecked: '2026-08-17',
     note: 'App id 3255110, developer, publisher, release text, genres, categories, languages, screenshots, and Steam description.',
   },
   blumhouse: {
