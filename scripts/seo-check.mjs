@@ -13,6 +13,7 @@ const requiredSourceUrls = [
 const requiredPages = [
   '/',
   '/guide/',
+  '/multiplayer-co-op-status/',
   '/romance-guide/',
   '/walkthrough/',
   '/characters/',
@@ -101,6 +102,7 @@ for (const href of footerOnlyNavigation) {
   assert(!headerMarkup.includes(`href="${href}"`), `Primary navigation must not include ${href}.`);
   assert(footerMarkup.includes(`href="${href}"`), `Footer navigation is missing ${href}.`);
 }
+assert(!headerMarkup.includes('href="/multiplayer-co-op-status/"'), 'Multiplayer page must stay out of primary navigation.');
 
 const redirectsPath = join(root, 'public', '_redirects');
 assert(existsSync(redirectsPath), 'Cloudflare Pages redirect file is missing.');
@@ -114,6 +116,20 @@ if (existsSync(sitemapPath)) {
   const sitemap = readFileSync(sitemapPath, 'utf8');
   assert(sitemap.includes('https://graveseasonsguide.com/about/'), 'Sitemap must include /about/.');
   assert(sitemap.includes('https://graveseasonsguide.com/contact/'), 'Sitemap must include /contact/.');
+  assert(sitemap.includes('<loc>https://graveseasonsguide.com/multiplayer-co-op-status/</loc><lastmod>2026-08-31T00:00:00.000Z</lastmod>'), 'Sitemap must include the multiplayer page with the 2026-08-31 lastmod.');
+}
+
+const multiplayerPath = join(root, 'dist', 'multiplayer-co-op-status', 'index.html');
+if (existsSync(multiplayerPath)) {
+  const multiplayerText = readFileSync(multiplayerPath, 'utf8');
+  const articleMarkup = multiplayerText.match(/<article[\s\S]*?<\/article>/i)?.[0] ?? '';
+  assert(multiplayerText.includes('<title>Grave Seasons Multiplayer and Co-op Status</title>'), 'Multiplayer page title is missing the complete game name.');
+  assert(multiplayerText.includes('name="description" content="Grave Seasons multiplayer and co-op status:'), 'Multiplayer page description is missing the complete game name.');
+  assert(articleMarkup.includes('<h1'), 'Multiplayer page H1 is missing.');
+  assert(articleMarkup.includes('Grave Seasons Multiplayer and Co-op Status'), 'Multiplayer page H1 is missing the complete game name.');
+  assert(articleMarkup.includes('/images/grave-seasons-town-night.webp'), 'Multiplayer page is missing its town-night image.');
+  assert(!articleMarkup.includes('Fact sources') && !articleMarkup.includes('Sources and verification'), 'Multiplayer page must not render a source panel.');
+  assert(!articleMarkup.includes('store.steampowered.com') && !articleMarkup.includes('blumhouse.com'), 'Multiplayer article body must not display source links.');
 }
 
 const charactersPath = join(root, 'dist', 'characters', 'index.html');

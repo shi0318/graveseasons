@@ -41,6 +41,13 @@ export const FOOTER_NAV = [
 
 export const LATEST_GUIDES = [
   {
+    href: '/multiplayer-co-op-status/',
+    title: 'Grave Seasons Multiplayer and Co-op Status',
+    description:
+      'What is currently confirmed about Grave Seasons multiplayer, co-op, shared farms, and the Fall 2026 plan.',
+    priority: 'New',
+  },
+  {
     href: '/gameplay-preview/',
     title: 'Grave Seasons Gameplay Preview',
     description:
@@ -132,6 +139,13 @@ export const OFFICIAL_FACTS = [
 ] as const;
 
 export const REQUIRED_GUIDES = [
+  {
+    href: '/multiplayer-co-op-status/',
+    title: 'Grave Seasons Multiplayer and Co-op Status',
+    description:
+      'Current Grave Seasons multiplayer, co-op, shared-farm, and Fall 2026 status, without assuming an unannounced feature.',
+    priority: 'New',
+  },
   {
     href: '/gameplay-preview/',
     title: 'Grave Seasons Gameplay Preview',

@@ -1,5 +1,6 @@
 // Add a path only after that page has had a material, verifiable update.
 const PAGE_LASTMOD = {
+  '/multiplayer-co-op-status/': '2026-08-31',
   '/gameplay-preview/': '2026-08-17',
   '/demo-status/': '2026-08-12',
   '/farming-grid-seasons-guide/': '2026-08-14',
