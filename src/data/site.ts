@@ -41,6 +41,27 @@ export const FOOTER_NAV = [
 
 export const LATEST_GUIDES = [
   {
+    href: '/steam-date-versus-fall-window/',
+    title: 'Steam Date vs the Fall 2026 Window',
+    description:
+      'Steam lists March 9, 2027. Blumhouse still says Fall 2026. How to read both before launch.',
+    priority: 'New',
+  },
+  {
+    href: '/platforms-and-game-pass/',
+    title: 'Platforms and Day 1 Game Pass',
+    description:
+      'PC, Xbox Series, PS5, and Switch are announced, plus Day 1 Xbox Game Pass. Steam itself is Windows only.',
+    priority: 'New',
+  },
+  {
+    href: '/price-and-file-size/',
+    title: 'Price and File Size',
+    description:
+      'No US price and no install size are on the Steam coming-soon page. Do not use a leaked number.',
+    priority: 'New',
+  },
+  {
     href: '/multiplayer-co-op-status/',
     title: 'Grave Seasons Multiplayer and Co-op Status',
     description:

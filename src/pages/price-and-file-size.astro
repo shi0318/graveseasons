@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+
+const title = 'Grave Seasons Price and File Size';
+const description =
+  'Grave Seasons has no US Steam price and no published install size. The listing is still coming soon.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Price', url: '/price-and-file-size/' },
+];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.hero.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Pre-release</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">No price. No file size.</h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Steam App 3255110 does not list a US price and does not list an install size. The page is still
+      coming soon. A leaked dollar amount or a GB screenshot is not a store field.
+    </p>
+    <figure class="mt-8">
+      <img src={ASSETS.hero.src} alt={ASSETS.hero.alt} width={ASSETS.hero.width} height={ASSETS.hero.height} class="rounded-md border border-white/10" loading="eager" />
+    </figure>
+    <div class="mt-8 space-y-4 leading-relaxed text-fog">
+      <h2 class="text-2xl font-black text-bone">What the listing does say</h2>
+      <ul class="list-disc space-y-2 pl-5">
+        <li>Single-player. Steam Achievements. Full controller support. Family Sharing.</li>
+        <li>Languages listed: English, Japanese, Portuguese (Brazil), Simplified Chinese, Spanish (Latin America).</li>
+        <li>Perfect Garbage develops it. Blumhouse Games and Solo Game publish it.</li>
+        <li>Day 1 Xbox Game Pass, if you are buying on Xbox, is a subscription row, not a Steam price.</li>
+      </ul>
+      <p>Download and demo status stay on <a class="text-wheat underline" href="/download/">download</a> and <a class="text-wheat underline" href="/demo-status/">demo status</a>.</p>
+    </div>
+  </article>
+</Layout>

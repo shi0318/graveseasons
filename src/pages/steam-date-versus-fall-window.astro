@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+
+const title = 'Grave Seasons Release Date: Steam vs Fall 2026';
+const description =
+  'Grave Seasons Steam lists March 9, 2027. Blumhouse still says Fall 2026. Both dates stay visible until one source replaces the other.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Release window', url: '/steam-date-versus-fall-window/' },
+];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.hero.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Pre-release</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">Steam date and the Fall 2026 window are not the same sentence</h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Steam App 3255110 currently lists <strong>March 9, 2027</strong> and still marks the game coming soon.
+      Blumhouse and the studio materials tracked on this site still say <strong>Fall 2026</strong>.
+      This page does not pick a winner.
+    </p>
+    <figure class="mt-8">
+      <img src={ASSETS.hero.src} alt={ASSETS.hero.alt} width={ASSETS.hero.width} height={ASSETS.hero.height} class="rounded-md border border-white/10" loading="eager" />
+    </figure>
+    <div class="mt-8 space-y-4 leading-relaxed text-fog">
+      <h2 class="text-2xl font-black text-bone">How to read the two rows</h2>
+      <ul class="list-disc space-y-2 pl-5">
+        <li>Fall 2026 is the publisher window already on the <a class="text-wheat underline" href="/release-date/">release date</a> page.</li>
+        <li>March 9, 2027 is the date field on the Steam coming-soon page checked October 17, 2026.</li>
+        <li>A store date can move without a trailer. A publisher window can move without a Steam edit. Quote the source you mean.</li>
+      </ul>
+      <p>
+        Perfect Garbage develops it. Blumhouse Games and Solo Game publish it. Windows is the Steam platform.
+        No US price is listed. Do not turn either date into a preload hour.
+      </p>
+    </div>
+  </article>
+</Layout>

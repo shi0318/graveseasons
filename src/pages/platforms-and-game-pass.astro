@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+
+const title = 'Grave Seasons Platforms and Xbox Game Pass';
+const description =
+  'Grave Seasons is announced for PC, Xbox Series, PS5, and Switch, plus Day 1 Xbox Game Pass. Steam lists Windows only.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Platforms', url: '/platforms-and-game-pass/' },
+];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.hero.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Pre-release</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">Four announced platforms. Steam is the Windows row.</h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Official materials announce <strong>PC, Xbox Series X|S, PlayStation 5, and Nintendo Switch</strong>,
+      plus <strong>Day 1 Xbox Game Pass</strong>. Steam App 3255110 lists Windows only. Those two facts
+      can both be true. Steam is not the console card.
+    </p>
+    <figure class="mt-8">
+      <img src={ASSETS.hero.src} alt={ASSETS.hero.alt} width={ASSETS.hero.width} height={ASSETS.hero.height} class="rounded-md border border-white/10" loading="eager" />
+    </figure>
+    <div class="mt-8 space-y-4 leading-relaxed text-fog">
+      <h2 class="text-2xl font-black text-bone">What is not a platform promise</h2>
+      <ul class="list-disc space-y-2 pl-5">
+        <li>Steam does not list Mac or Linux.</li>
+        <li>Day 1 Game Pass is an Xbox announcement, not a Steam Deck badge and not a shared-farm mode.</li>
+        <li>Co-op is still unconfirmed. See <a class="text-wheat underline" href="/multiplayer-co-op-status/">multiplayer status</a>.</li>
+        <li>Switch on the announcement is not a file size and not a performance mode.</li>
+      </ul>
+      <p>The existing <a class="text-wheat underline" href="/platforms/">platforms</a> page stays the hub. This page is the Game Pass sentence next to the Steam row.</p>
+    </div>
+  </article>
+</Layout>
