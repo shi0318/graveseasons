@@ -12,7 +12,7 @@ export const SITE = {
   developer: 'Perfect Garbage',
   publisher: 'Blumhouse Games',
   releaseWindow: 'Fall 2026',
-  steamReleaseText: '2026',
+  steamReleaseText: 'March 9, 2027',
   appId: '3255110',
   steamUrl: SOURCES.steam.url,
   officialUrl: SOURCES.blumhouse.url,
@@ -116,7 +116,7 @@ export const OFFICIAL_FACTS = [
   {
     label: 'Release window',
     value:
-      'Perfect Garbage moved the originally announced date to "Fall of this year"; Blumhouse lists "Launching Fall 2026" and Steam lists "2026".',
+      'Blumhouse still lists "Launching Fall 2026". Steam App 3255110, checked October 18, 2026, lists March 9, 2027 and is still coming soon.',
     source: SOURCES.steamDevlog,
   },
   {
