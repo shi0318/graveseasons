@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+
+const title = 'Grave Seasons Is Still Coming Soon';
+const description =
+  'Grave Seasons is still coming soon. Steam App 3255110 lists March 9, 2027. Blumhouse still says Fall 2026. No US price.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Coming soon', url: '/still-coming-soon/' },
+];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.hero.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Checked October 26, 2026</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">Still coming soon. Two dates.</h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Steam App 3255110, checked October 26, 2026, still marks Grave Seasons as coming soon and still
+      lists <strong>March 9, 2027</strong>. Blumhouse still lists Fall 2026. Neither date is a walkthrough.
+    </p>
+    <figure class="mt-8">
+      <img src={ASSETS.hero.src} alt={ASSETS.hero.alt} width={ASSETS.hero.width} height={ASSETS.hero.height} class="rounded-md border border-white/10" loading="eager" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.hero.credit}</figcaption>
+    </figure>
+    <div class="mt-8 space-y-4 leading-relaxed text-fog">
+      <h2 class="text-2xl font-black text-bone">What the October 26 check printed</h2>
+      <ul class="list-disc space-y-2 pl-5">
+        <li>Coming soon. Release field: March 9, 2027. No US price on the app details.</li>
+        <li>Windows only on that Steam row. Mac and Linux are not listed.</li>
+        <li>Single-player. Steam Achievements. Full controller support. Family Sharing.</li>
+        <li>The minimum OS line is still TBD. That is not a hardware chart.</li>
+      </ul>
+      <h2 class="text-2xl font-black text-bone">What this page will not invent</h2>
+      <p>
+        A killer route, a crop calendar, and a romance unlock are not on the store page. The one-year
+        investigation, 12 romanceable folks, and 30-plus residents stay on the
+        <a class="text-wheat underline" href="/pre-launch-investigation-checklist/">checklist</a>.
+        The two dates stay on <a class="text-wheat underline" href="/steam-date-versus-fall-window/">Steam versus Fall 2026</a>.
+      </p>
+      <p>
+        Wishlist if you want the notification. Do not pay a number this page did not print. A leaked
+        dollar amount is not the button.
+      </p>
+    </div>
+  </article>
+</Layout>

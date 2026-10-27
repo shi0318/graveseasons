@@ -41,6 +41,20 @@ export const FOOTER_NAV = [
 
 export const LATEST_GUIDES = [
   {
+    href: '/still-coming-soon/',
+    title: 'Still Coming Soon on October 26',
+    description:
+      'Steam App 3255110 still lists March 9, 2027 and coming soon. Blumhouse still says Fall 2026. No US price.',
+    priority: 'New',
+  },
+  {
+    href: '/no-price-before-the-farm/',
+    title: 'No Price Before the Farm',
+    description:
+      'The October 26 check printed no US price. Do not plan crops, romance, or a killer from a leak.',
+    priority: 'New',
+  },
+  {
     href: '/steam-date-versus-fall-window/',
     title: 'Steam Date vs the Fall 2026 Window',
     description:

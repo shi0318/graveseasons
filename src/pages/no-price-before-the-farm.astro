@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+
+const title = 'Do Not Farm Grave Seasons Before the Price';
+const description =
+  'Grave Seasons has no US price on the October 26 Steam check. Do not plan a farm, a romance, or a killer route from a leak.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'No price yet', url: '/no-price-before-the-farm/' },
+];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.steamHeader.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Checked October 26, 2026</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">No price. No farm plan.</h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      The October 26, 2026 US check of Steam App 3255110 did not print a price. The page is still
+      coming soon, dated March 9, 2027. A spreadsheet of crop days is not a substitute for that button.
+    </p>
+    <figure class="mt-8">
+      <img src={ASSETS.steamHeader.src} alt={ASSETS.steamHeader.alt} width={ASSETS.steamHeader.width} height={ASSETS.steamHeader.height} class="rounded-md border border-white/10" loading="eager" />
+      <figcaption class="mt-2 text-xs text-fog">Steam header for Grave Seasons.</figcaption>
+    </figure>
+    <div class="mt-8 space-y-4 leading-relaxed text-fog">
+      <h2 class="text-2xl font-black text-bone">What you can record now</h2>
+      <ul class="list-disc space-y-2 pl-5">
+        <li>The pitch: a narrative farming sim in Ashenridge, with a supernatural serial killer.</li>
+        <li>One year to protect victims. Farming, foraging, crafting, and investigation are the named tools.</li>
+        <li>Genres on the listing: Indie, RPG, Simulation. The 12 romance names stay on their own page.</li>
+      </ul>
+      <h2 class="text-2xl font-black text-bone">What you cannot record</h2>
+      <p>
+        Stamina, shop hours, seed prices, and which resident is safe are not published. Day 1 Xbox
+        Game Pass is a subscription row, not a Steam price. File size is still on
+        <a class="text-wheat underline" href="/price-and-file-size/">price and file size</a>.
+      </p>
+      <p>
+        When the button prints a number, buy or wait. Until then, the useful pre-launch act is a
+        resident list with a source, not a fake day-one route.
+      </p>
+    </div>
+  </article>
+</Layout>
