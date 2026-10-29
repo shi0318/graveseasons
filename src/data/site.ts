@@ -41,6 +41,13 @@ export const FOOTER_NAV = [
 
 export const LATEST_GUIDES = [
   {
+    href: '/resident-investigation-tracker/',
+    title: 'Resident Investigation Tracker',
+    description:
+      'A pre-launch template for tracking Ashenridge residents, clues, locations, and separate killer scenarios without guessing unknown details.',
+    priority: 'New',
+  },
+  {
     href: '/still-coming-soon/',
     title: 'Still Coming Soon on October 26',
     description:
@@ -174,6 +181,13 @@ export const OFFICIAL_FACTS = [
 ] as const;
 
 export const REQUIRED_GUIDES = [
+  {
+    href: '/resident-investigation-tracker/',
+    title: 'Resident Investigation Tracker',
+    description:
+      'A pre-launch template for tracking Ashenridge residents, clues, locations, and separate killer scenarios without guessing unknown details.',
+    priority: 'New',
+  },
   {
     href: '/multiplayer-co-op-status/',
     title: 'Grave Seasons Multiplayer and Co-op Status',

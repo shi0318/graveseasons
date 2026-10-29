@@ -1,0 +1,153 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+
+const title = 'Grave Seasons Resident Investigation Tracker — Pre-Launch Guide';
+const description =
+  'Prepare a spoiler-safe Grave Seasons resident tracker for Ashenridge. Record confirmed observations and mark schedules, clues, and suspects as unknown until tested.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Guide', url: '/guide/' },
+  { name: 'Resident Investigation Tracker', url: '/resident-investigation-tracker/' },
+];
+---
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.yuto.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Pre-launch preparation</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">
+      Grave Seasons Resident Investigation Tracker
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      Grave Seasons places a supernatural murder mystery inside Ashenridge, a town with more than
+      30 residents. Before launch, there is no verified suspect list, daily schedule, or universal
+      killer route. This tracker helps you organize observations after release without turning a
+      screenshot, rumor, or one-run outcome into a confirmed fact.
+    </p>
+
+    <figure class="mt-8">
+      <img src={ASSETS.yuto.src} alt="Official Grave Seasons screenshot captioned as talking to Yuto in the grocery store" width={ASSETS.yuto.width} height={ASSETS.yuto.height} class="rounded-md border border-white/10" loading="lazy" />
+      <figcaption class="mt-2 text-xs text-fog">{ASSETS.yuto.credit}. The image identifies a conversation setting, not a confirmed schedule or clue.</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>What the confirmed premise gives you</h2>
+      <p>
+        Grave Seasons is described as a narrative farming game set in Ashenridge, where a supernatural
+        serial killer is active. The store description frames the goal as protecting potential victims
+        and uncovering the murders over one year. It lists more than 30 residents, more than 70
+        interiors, and seven major locations. It also describes a replayable killer selection, with
+        different reasoning, targets, and kill styles across playthroughs.
+      </p>
+      <p>
+        Those facts are enough to design a note-taking system, but not enough to name a culprit or
+        predict an event. A resident appearing in a screenshot is not evidence that they are a suspect.
+        A romantic option is not automatically safe. A location count does not tell us where a clue or
+        event will appear. Keep the tracker ready, then fill it from the playable game.
+      </p>
+
+      <h2>Make one record per observed resident</h2>
+      <p>
+        Create a separate line for each person you actually meet. Record the resident's displayed name
+        exactly as shown, the date and time in your save, the location, and what happened. Avoid a
+        vague note such as “seemed suspicious.” Write the visible action instead: a conversation,
+        arrival, departure, item handoff, clue reaction, or other event the game makes clear.
+      </p>
+      <ul>
+        <li><strong>Name:</strong> copy the in-game spelling; leave blank until the game identifies them.</li>
+        <li><strong>When:</strong> record the in-game day, season, and clock time if visible.</li>
+        <li><strong>Where:</strong> use the displayed location name and note whether it was indoors or outdoors.</li>
+        <li><strong>Observation:</strong> describe only what you saw or what dialogue explicitly stated.</li>
+        <li><strong>Evidence:</strong> note the clue or quest entry that supports an interpretation.</li>
+        <li><strong>Confidence:</strong> label it confirmed, repeated, untested, or disproved in this save.</li>
+      </ul>
+      <p>
+        This format separates an event from your theory about it. If a resident leaves a location after
+        a conversation, the event is “left the location after conversation.” The interpretation that
+        they were avoiding the player belongs in a separate theory note until another observation
+        supports it.
+      </p>
+
+      <h2>Track locations without assuming a schedule</h2>
+      <p>
+        Ashenridge has many interiors and several major areas. Group observations by the names the game
+        uses rather than inventing a route map before you can inspect the town. Mark a place as “visited”
+        only after entering it, and record whether the game showed a new clue, resident, or interaction
+        there. This will make it easier to revisit a location after a season changes.
+      </p>
+      <p>
+        The official material describes a 24-hour day-and-night cycle and says the world changes with
+        the seasons. It does not publish each resident's timetable, shop hours, or whether every
+        interior remains open all day. Treat a missed meeting as an observation to investigate, not
+        proof of a specific schedule. Return at another time and record what changed.
+      </p>
+
+      <h2>Separate evidence from suspicion</h2>
+      <p>
+        A useful investigation tracker has two layers. The evidence layer records the clue and where it
+        came from. The theory layer records what you think it might mean. This is especially important
+        when the game can select different killers between runs: an outcome in one campaign may not
+        describe the next campaign's identity, target, or reasoning.
+      </p>
+      <ol>
+        <li>Write down the exact clue wording or the visible event.</li>
+        <li>Attach its in-game day, location, season, and any quest name.</li>
+        <li>List which residents it directly mentions, if any.</li>
+        <li>Keep interpretations in a separate column and mark them unconfirmed.</li>
+        <li>After a replay, compare the same event rather than merging two runs together.</li>
+      </ol>
+
+      <h2>Use a run label for each campaign</h2>
+      <p>
+        Because each playthrough can vary, create a short campaign label before your first notes, such
+        as “Run A — first save.” Do not use a guessed killer name as the label. Keep the date, major
+        decisions, visible victim events, and quest progress under that run. If you begin again, create
+        Run B rather than overwriting the earlier record.
+      </p>
+      <p>
+        This also protects spoiler boundaries. If you share notes, label a confirmed late-game result
+        clearly and leave unresolved residents out of a “killer” heading. A guide can then say “this
+        run's evidence points to…” without claiming that the answer applies to every player.
+      </p>
+
+      <h2>Do not assume romance status answers the case</h2>
+      <p>
+        The game description lists 12 potential romanceable residents and says a few may also be the
+        killer. That warning makes romance a reason to keep notes carefully, not a shortcut to a suspect
+        answer. Record the resident, dialogue choice, date, and visible relationship result. Do not
+        infer that a romance choice protects someone, makes them guilty, or changes the investigation
+        unless the game shows that result.
+      </p>
+
+      <h2>A printable quick template</h2>
+      <p>Use one row for every event worth checking later:</p>
+      <ul>
+        <li><strong>Run:</strong> A, B, or another label</li>
+        <li><strong>Day and season:</strong> as displayed in the save</li>
+        <li><strong>Time:</strong> exact clock time if visible; otherwise “unknown”</li>
+        <li><strong>Resident:</strong> displayed name or “not identified”</li>
+        <li><strong>Location:</strong> exact area or interior label</li>
+        <li><strong>Event:</strong> factual description of what happened</li>
+        <li><strong>Clue or quest:</strong> exact entry, or “none shown”</li>
+        <li><strong>Interpretation:</strong> hypothesis, clearly marked unconfirmed</li>
+        <li><strong>Retest:</strong> what you need to check on another day or run</li>
+      </ul>
+
+      <h2>Details that remain unknown before launch</h2>
+      <p>
+        This is a preparation guide, not a solved route. The public game description does not provide
+        the complete resident roster, exact schedules, a fixed culprit, clue order, suspect scoring,
+        romance consequences, or a universal way to save each potential victim. It also does not say
+        that every branch can be reversed or that every event can be repeated from a convenient save.
+        Steam describes decisions as checked and autosaved, so record choices instead of assuming a
+        manual undo is available.
+      </p>
+      <p>
+        After release, update this page only when a resident, clue, or schedule is observed in the game.
+        Include the run and version context for behavior that may vary. Until then, the safest advice is
+        simple: keep names, events, clues, and theories in separate fields, and leave unknown details
+        marked unknown.
+      </p>
+    </div>
+  </article>
+</Layout>
