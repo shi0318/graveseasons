@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+const title = 'Grave Seasons Pre-Launch One-Year Planner: Farming and Investigation';
+const description = 'Prepare for Grave Seasons with a spoiler-safe one-year plan for Ashenridge farming, resident notes, victim protection, and confirmed pre-release facts.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Guides', url: '/guides/' },
+  { name: 'Pre-Launch One-Year Planner', url: '/grave-seasons-prelaunch-one-year-planner/' },
+];
+---
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.townNight.src}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Pre-launch planning · Ashenridge</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">Grave Seasons Pre-Launch One-Year Planner</h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">Grave Seasons combines a farming routine with a murder investigation in Ashenridge. Before the game is available, the most useful walkthrough is a preparation framework built around confirmed information—not a guessed crop calendar or a fabricated killer solution. The central premise gives the player one year to protect potential victims and investigate the supernatural serial killer.</p>
+    <figure class="mt-8"><img src={ASSETS.townNight.src} alt={ASSETS.townNight.alt} width={ASSETS.townNight.width} height={ASSETS.townNight.height} class="rounded-md border border-white/10" loading="eager" /><figcaption class="mt-2 text-xs text-fog">Ashenridge is the shared setting for the town, farming routine, and investigation.</figcaption></figure>
+    <div class="prose-page mt-8">
+      <h2>What the one-year premise means for your first plan</h2>
+      <p>The confirmed one-year investigation window gives the story a clock, but it does not disclose how days advance, whether festivals pause the clock, or how many actions fit in a day. Do not convert “one year” into a made-up number of playable days. When you start the game, inspect the calendar and journal, then note the date shown before and after a normal activity. That simple observation will tell you whether conversations, travel, farming, or sleep consume time in the released build.</p>
+      <p>Plan the first in-game week as a learning period. Identify the farm entrance, the town square, the places residents gather, and the routes between them. Record only what the game itself shows: a named location, an opening time, a quest marker, or a clue entry. Avoid spending the whole day testing several unknown systems at once. One controlled activity and a journal check make it easier to understand the calendar before you decide whether a day is being lost.</p>
+      <h2>Keep the farm productive without inventing crop values</h2>
+      <p>The game is described as a farming simulation, so crops and daily care are part of its identity. Public pre-release information does not establish a final seed list, growth duration, yield, sale price, watering requirement, or best-profit route. Those details should be recorded from the released interface rather than borrowed from another farming game. At the beginning, write down each seed name exactly as displayed and capture its tooltip, season label, and any visible cost before planting.</p>
+      <p>Use a small test plot instead of committing every available tile. Plant a single row of one crop, leave an adjacent space open, and note what the game says about watering and growth. Check at the next visit and update the record only when you see a real state change. If a crop fails, preserve the date and conditions; the cause may be season, watering, a quest state, or an interaction you missed. A single failure is not proof of a universal rule, and a screenshot of a mature crop does not reveal its growth time.</p>
+      <p>Keep farm tasks connected to the investigation schedule. If watering or harvesting uses time, you will want to know that before spending the entire day on chores. If it does not, the correct routine may be different. Use the in-game clock and journal to build a repeatable morning route after the opening tutorial explains the controls. This gives future players useful tested guidance while avoiding promises about an unpublished optimal crop rotation.</p>
+      <h2>Build a resident notebook for more than thirty townspeople</h2>
+      <p>The store description lists more than thirty residents and more than seventy interiors. That scale makes a written notebook more useful than relying on memory. Create one entry per named resident with the exact spelling, the first place you met them, the time of day, their visible schedule clue, and any dialogue that changes after a quest. Mark an empty field as unknown rather than filling it with a theory. A resident seen once near a shop may have another schedule elsewhere.</p>
+      <p>Separate facts from deductions. “The character was at the clinic on Tuesday morning” is an observation. “They work there every morning” is a pattern that needs repeated checks. “They may be a target” is a theory, not a guide fact. This difference matters because an investigation can make a harmless schedule change look suspicious. Keep screenshots or journal entries beside your notes so you can revisit the evidence if a later scene changes what you thought you knew.</p>
+      <p>With more than seventy interiors, prioritize places connected to active clues rather than trying to enter every building in one route. Record whether an interior is open, locked, or gated by a quest, then return when the journal supplies a reason. This prevents wasted time and reduces accidental spoilers. The announced count signals that Ashenridge has substantial exploration depth; it does not reveal a complete floor plan or guarantee that every interior is available from the first day.</p>
+      <h2>Use the seven major locations as a route index</h2>
+      <p>Public descriptions identify seven major locations, but a complete release map, travel costs, and the final order of access have not been published. Keep a simple index with each location’s displayed name, the first route that reaches it, any visible travel time, and the objective that brought you there. Do not invent compass directions or distances from artwork. A useful map can begin as a list and become a route only after the playable version confirms the connections.</p>
+      <p>When you leave the farm, decide on one primary errand and one nearby secondary task. If the journal points to a resident, visit that person before taking a long detour. If a location appears tied to a clue, record what changes after you inspect it and whether the game advances the day. A route that is safe for one chapter may not stay efficient after schedules or quests change, so mark the save point and story state in your notes.</p>
+      <h2>Protect potential victims without spoiling the mystery</h2>
+      <p>The core premise asks the player to protect potential victims while uncovering the killer. That is enough to prepare a decision log, but not enough to name the killer, prescribe a final accusation, or publish an exact victim order before evidence exists. For each warning, record the source of the information, the resident it concerns, the deadline shown by the game, and the action options offered. Preserve the original wording in the journal before you act.</p>
+      <p>When a choice has consequences, make a separate save if the game allows it and the system’s instructions permit that approach. Test one branch at a time and note whether time advances, the character’s status changes, or a new clue appears. Do not assume every suspicious resident is a victim or that every unusual event is caused by the central killer. A mystery guide should help readers evaluate evidence, not flatten the story into an unsupported checklist of suspects.</p>
+      <h2>Make crafting and conversations serve the same schedule</h2>
+      <p>Crafting, foraging, and conversations are expected parts of a farming mystery, but exact recipes and unlock requirements should be recorded from the actual menus. Start a recipe notebook with ingredients, the station used, any time cost displayed, and whether the result is needed for a quest. Keep duplicate entries when the same recipe is learned from different sources only if the interface distinguishes them. This helps separate a real unlock condition from a rumor repeated in community posts.</p>
+      <p>Before a conversation, check whether you have a relevant clue or item. If the response changes, record the condition and test it later with one variable changed. Avoid spending the entire day repeating dialogue that has not changed; use a journal update or a new story event as the reason to return. The same approach works for crafting: use small batches until you know whether ingredients are consumed on failure, whether the output is deterministic, and whether the item can be sold or only used for progression.</p>
+      <h2>A practical first-session checklist</h2>
+      <ul>
+        <li>Read the tutorial and journal before leaving the farm.</li>
+        <li>Record the calendar display and the time cost of one ordinary task.</li>
+        <li>Plant a small, clearly labeled test plot and preserve the seed information.</li>
+        <li>Start a resident notebook with observations separated from suspicions.</li>
+        <li>Index major locations as they become accessible instead of guessing the full map.</li>
+        <li>Log victim warnings and choice wording before acting on them.</li>
+        <li>Capture crafting recipes and unlock conditions from the live interface.</li>
+        <li>Update your notes with the game version so later patches do not inherit stale values.</li>
+      </ul>
+      <p>That preparation respects what Grave Seasons has actually established: a farming life in Ashenridge, a large resident and location network, and a one-year effort to solve murders and protect people. When the game launches, replace each unknown with a repeatable observation. Until then, this framework gives you a useful place to begin without spoiling an answer the available evidence has not revealed.</p>
+    </div>
+  </article>
+</Layout>

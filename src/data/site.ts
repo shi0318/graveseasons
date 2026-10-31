@@ -41,6 +41,12 @@ export const FOOTER_NAV = [
 
 export const LATEST_GUIDES = [
   {
+    href: '/grave-seasons-prelaunch-one-year-planner/',
+    title: 'Grave Seasons Pre-Launch One-Year Planner',
+    description: 'A spoiler-safe preparation guide for Ashenridge farming, resident notes, victim protection, and the confirmed one-year investigation window.',
+    priority: 'New',
+  },
+  {
     href: '/resident-investigation-tracker/',
     title: 'Resident Investigation Tracker',
     description:
