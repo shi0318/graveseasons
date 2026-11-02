@@ -11,7 +11,7 @@ export const SITE = {
   gameName: 'Grave Seasons',
   developer: 'Perfect Garbage',
   publisher: 'Blumhouse Games',
-  releaseWindow: 'Fall 2026',
+  releaseWindow: 'March 9, 2027',
   steamReleaseText: 'March 9, 2027',
   appId: '3255110',
   steamUrl: SOURCES.steam.url,
@@ -19,7 +19,7 @@ export const SITE = {
   playstationUrl: SOURCES.playstation.url,
   xboxUrl: SOURCES.xbox.url,
   contactEmail: 'nmlkareem161@gmail.com',
-  lastVerified: '2026-08-14',
+  lastVerified: '2026-11-01',
 } as const;
 
 export const NAV = [
@@ -40,6 +40,7 @@ export const FOOTER_NAV = [
 ] as const;
 
 export const LATEST_GUIDES = [
+  { href: '/controller-and-crowbar-gameplay-preview/', title: 'Controller Farming and Crowbar Exploration', description: 'A pre-release look at isometric farming controls, the crowbar, exploration, and the March 9, 2027 launch plan.', priority: 'New' },
   {
     href: '/grave-seasons-prelaunch-one-year-planner/',
     title: 'Grave Seasons Pre-Launch One-Year Planner',
@@ -57,7 +58,7 @@ export const LATEST_GUIDES = [
     href: '/still-coming-soon/',
     title: 'Still Coming Soon on October 26',
     description:
-      'Steam App 3255110 still lists March 9, 2027 and coming soon. Blumhouse still says Fall 2026. No US price.',
+      'Steam App 3255110 still lists March 9, 2027 and coming soon. The previous Fall 2026 window is superseded. No US price.',
     priority: 'New',
   },
   {
@@ -71,7 +72,7 @@ export const LATEST_GUIDES = [
     href: '/steam-date-versus-fall-window/',
     title: 'Steam Date vs the Fall 2026 Window',
     description:
-      'Steam lists March 9, 2027. Blumhouse still says Fall 2026. How to read both before launch.',
+      'Steam lists March 9, 2027. The previous Fall 2026 window is superseded. How to read both before launch.',
     priority: 'New',
   },
   {
@@ -92,7 +93,7 @@ export const LATEST_GUIDES = [
     href: '/multiplayer-co-op-status/',
     title: 'Grave Seasons Multiplayer and Co-op Status',
     description:
-      'What is currently confirmed about Grave Seasons multiplayer, co-op, shared farms, and the Fall 2026 plan.',
+      'What is currently confirmed about Grave Seasons multiplayer, co-op, shared farms, and the revised March 2027 plan.',
     priority: 'New',
   },
   {
@@ -143,7 +144,7 @@ export const OFFICIAL_FACTS = [
   {
     label: 'Release window',
     value:
-      'Blumhouse still lists "Launching Fall 2026". Steam App 3255110, checked October 18, 2026, lists March 9, 2027 and is still coming soon.',
+      'The September 30 developer announcement and current Steam listing give March 9, 2027. Not yet released.',
     source: SOURCES.steamDevlog,
   },
   {
@@ -198,7 +199,7 @@ export const REQUIRED_GUIDES = [
     href: '/multiplayer-co-op-status/',
     title: 'Grave Seasons Multiplayer and Co-op Status',
     description:
-      'Current Grave Seasons multiplayer, co-op, shared-farm, and Fall 2026 status, without assuming an unannounced feature.',
+      'Current Grave Seasons multiplayer, co-op, shared-farm, and current release status, without assuming an unannounced feature.',
     priority: 'New',
   },
   {
@@ -212,7 +213,7 @@ export const REQUIRED_GUIDES = [
     href: '/pre-launch-investigation-checklist/',
     title: 'Pre-Launch Investigation Checklist',
     description:
-      'A source-tracked checklist for the one-year investigation, killer scenarios, residents, romance, and the Fall 2026 launch window.',
+      'A source-tracked checklist for the one-year investigation, killer scenarios, residents, romance, and the revised March 2027 launch date.',
     priority: 'New',
   },
   {
@@ -330,7 +331,7 @@ export const REQUIRED_GUIDES = [
   {
     href: '/demo-status/',
     title: 'Demo Status',
-    description: 'Current answer on the cancelled June demo, the Fall 2026 window, and where official access will appear.',
+    description: 'Current answer on the cancelled June demo, the revised March 2027 launch, and where official access will appear.',
     priority: 'New',
   },
   {

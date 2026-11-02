@@ -1,5 +1,8 @@
 // Add a path only after that page has had a material, verifiable update.
 const PAGE_LASTMOD = {
+  '/controller-and-crowbar-gameplay-preview/': '2026-11-01',
+  '/': '2026-11-01',
+  '/release-date/': '2026-11-01',
   '/still-coming-soon/': '2026-10-26',
   '/no-price-before-the-farm/': '2026-10-26',
   '/multiplayer-co-op-status/': '2026-08-31',
