@@ -40,6 +40,7 @@ export const FOOTER_NAV = [
 ] as const;
 
 export const LATEST_GUIDES = [
+  { href: '/mines-roguelike-preview/', title: 'Mines Preview: Roguelike Levels and Energy', description: 'What the November 4 devlog confirms about generated mine levels, no enemies, time and energy pressure, rest rooms, and what is still unknown.', priority: 'New' },
   { href: '/controller-and-crowbar-gameplay-preview/', title: 'Controller Farming and Crowbar Exploration', description: 'A pre-release look at isometric farming controls, the crowbar, exploration, and the March 9, 2027 launch plan.', priority: 'New' },
   {
     href: '/grave-seasons-prelaunch-one-year-planner/',

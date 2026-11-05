@@ -1,5 +1,6 @@
 // Add a path only after that page has had a material, verifiable update.
 const PAGE_LASTMOD = {
+  '/mines-roguelike-preview/': '2026-11-04',
   '/controller-and-crowbar-gameplay-preview/': '2026-11-01',
   '/': '2026-11-01',
   '/release-date/': '2026-11-01',
