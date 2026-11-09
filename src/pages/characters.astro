@@ -6,12 +6,12 @@ import { SOURCES } from '../data/sources';
 
 const title = 'Grave Seasons Characters - Confirmed Cast Overview, Yuto & Hari';
 const description =
-  'Grave Seasons character overview using only official Steam and Blumhouse facts, with confirmed references to Yuto and Hari and links to the deeper resident tracker.';
+  'Grave Seasons character overview using only official Steam and Blumhouse facts: Yuto and Hari, 30+ residents, 12 romance options, and the killer-candidate pool.';
 const breadcrumbs = [
   { name: 'Home', url: '/' },
   { name: 'Characters', url: '/characters/' },
 ];
-const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.blumhouseMedia];
+const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.blumhouseMedia, SOURCES.steamDevlog];
 ---
 
 <Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.hari.src}>
@@ -21,7 +21,7 @@ const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.blumhouseMedia];
       Grave Seasons Characters
     </h1>
     <p class="mt-4 text-lg leading-relaxed text-fog">
-      This is the short confirmed-name overview for Grave Seasons characters. It highlights official cast references such as Yuto and Hari, while the deeper <a href="/residents/" class="text-wheat underline underline-offset-4">residents tracker</a> owns the 30+ NPC roster framework, schedules, romance overlap, death outcomes, and investigation fields.
+      This is the short confirmed-name overview for Grave Seasons characters. Ashenridge has 30+ residents, but only a few names have appeared in official media so far, including Yuto and Hari. For logging residents, clues, and schedules once the game is out on March 9, 2027, use the <a href="/killer-decisions-and-replay/" class="text-wheat underline underline-offset-4">investigation notes guide</a>.
     </p>
 
     <div class="mt-8 grid gap-5 md:grid-cols-2">
@@ -64,9 +64,9 @@ const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.blumhouseMedia];
     </section>
 
     <div class="prose-page mt-10">
-      <h2>What belongs on the characters page</h2>
+      <h2>Why only two names are listed</h2>
       <p>
-        The characters page should answer broad cast questions: who has been officially named, which screenshots or captions support those names, and how the cast connects to romance and the murder mystery at a high level. It should stay spoiler-light and avoid becoming the place for every schedule, gift, route, or death-state row.
+        Yuto and Hari are named in captions on the official Blumhouse media gallery: one screenshot shows the player talking to Yuto in the grocery store, another shows the player meeting Hari. Neither caption says whether they are romanceable, a potential victim, or a killer candidate, so the table above leaves those fields unconfirmed. Other names that circulate before launch without an official caption or store text behind them are not listed here.
       </p>
       <h2>What the official pages confirm about the cast</h2>
       <ul>
@@ -77,7 +77,16 @@ const sources = [SOURCES.steam, SOURCES.blumhouse, SOURCES.blumhouseMedia];
         <li>Every killer has a campaign, reasoning, kill styles, and targets.</li>
       </ul>
       <p>
-        For route information, use the <a href="/romance-guide/">romance guide</a>. For the 30+ NPC framework, use the <a href="/residents/">residents tracker</a>. For location and first-year sequencing, use the <a href="/walkthrough/">walkthrough hub</a>.
+        That combination is what makes the cast matter: because each run picks the killer from a candidate pool, and each killer has its own targets, a resident you befriend or court may play a different role from one playthrough to the next. The developer's day-and-night devlog adds that residents keep their own schedules after dark, so where and when you meet someone is part of the investigation.
+      </p>
+      <h2>Tracking residents when the game launches</h2>
+      <ul>
+        <li>Write each name exactly as the game displays it, with the place and time you first met them.</li>
+        <li>Keep observed events separate from suspicions; a resident seen once near a crime scene is an observation, not a verdict.</li>
+        <li>Label each record with the playthrough, since the killer and targets can change between runs.</li>
+      </ul>
+      <p>
+        For route information, use the <a href="/romance-guide/">romance guide</a>. For a full note-taking template, use the <a href="/killer-decisions-and-replay/">investigation notes guide</a>. For location and first-year sequencing, use the <a href="/grave-seasons-prelaunch-one-year-planner/">one-year planner</a> and the <a href="/map-of-ashenridge/">map of Ashenridge</a>.
       </p>
     </div>
 

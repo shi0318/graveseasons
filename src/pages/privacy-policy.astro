@@ -5,30 +5,92 @@ import { SITE } from '../data/site';
 
 const title = 'Privacy Policy - Grave Seasons Guide';
 const description =
-  'Privacy policy for Grave Seasons Guide, including analytics, advertising readiness, cookies, and contact details.';
+  'Privacy policy for Grave Seasons Guide: Google Analytics, Google AdSense advertising cookies, how to opt out, external links, and contact details.';
 const breadcrumbs = [
   { name: 'Home', url: '/' },
   { name: 'Privacy Policy', url: '/privacy-policy/' },
 ];
+const lastUpdated = 'November 9, 2026';
 ---
 
 <Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.steamHeader.src}>
   <article class="prose-page mx-auto max-w-3xl">
     <p class="section-kicker">Site policy</p>
     <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">Privacy Policy</h1>
-    <p>Last updated: {SITE.lastVerified}</p>
+    <p>Last updated: {lastUpdated}</p>
+    <p>
+      This policy explains what information {SITE.name} ({SITE.url.replace('https://', '')}) collects when you visit,
+      how it is used, and the choices you have. The site is an independent fan guide; see the
+      <a href="/terms/">Terms of Use</a> for the rules that apply to using it.
+    </p>
+
     <h2>Information we collect</h2>
     <p>
-      This site may collect basic analytics data such as page views, referring pages, browser type, device type, and approximate region. We do not ask visitors to create accounts.
+      We do not ask visitors to create accounts, and the site has no comment forms or sign-ups. The only personal
+      information we receive directly is what you choose to send by email. Like most websites, the services described
+      below automatically collect technical data such as pages viewed, referring pages, browser and device type,
+      approximate location derived from your IP address, and the time of your visit.
     </p>
-    <h2>Cookies and advertising</h2>
+
+    <h2>Google Analytics</h2>
     <p>
-      If analytics or advertising is enabled, third-party providers may use cookies or similar technologies to measure traffic and serve ads. Visitors can manage cookies through their browser settings.
+      This site uses Google Analytics (a service of Google LLC) to understand how visitors use the site, for example
+      which guides are read most and how people arrive here. Google Analytics uses cookies and similar technologies to
+      collect usage data, which Google processes under its own privacy policy. We use these reports in aggregate to
+      improve the guide; we do not use them to identify individual visitors. You can learn more at
+      <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="nofollow noopener noreferrer">How Google uses information from sites that use its services</a>,
+      and you can opt out with the
+      <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="nofollow noopener noreferrer">Google Analytics opt-out browser add-on</a>.
     </p>
+
+    <h2>Advertising and Google AdSense</h2>
+    <p>
+      We use, or may use, Google AdSense to show advertisements on this site. Third-party vendors, including Google,
+      use cookies to serve ads based on your prior visits to this website or other websites. Google's use of
+      advertising cookies enables it and its partners to serve ads to you based on your visits to this site and/or
+      other sites on the internet.
+    </p>
+    <ul>
+      <li>
+        You can opt out of personalized advertising by visiting
+        <a href="https://adssettings.google.com" target="_blank" rel="nofollow noopener noreferrer">Google Ads Settings</a>.
+      </li>
+      <li>
+        You can opt out of some third-party vendors' use of cookies for personalized advertising by visiting
+        <a href="https://www.aboutads.info/choices/" target="_blank" rel="nofollow noopener noreferrer">www.aboutads.info</a>.
+      </li>
+      <li>
+        Google's advertising practices are described in
+        <a href="https://policies.google.com/technologies/ads" target="_blank" rel="nofollow noopener noreferrer">How Google uses cookies in advertising</a>.
+      </li>
+    </ul>
+    <p>
+      If you opt out, you may still see ads, but they will not be personalized based on your browsing.
+    </p>
+
+    <h2>Managing cookies</h2>
+    <p>
+      Most browsers let you block or delete cookies in their settings. Blocking cookies will not stop you from reading
+      the guide, though analytics and ad personalization will not work as described above.
+    </p>
+
     <h2>External links</h2>
     <p>
-      This site links to Steam, Blumhouse, PlayStation, Microsoft, and other official or relevant pages. Those websites have their own privacy policies.
+      This site links to Steam, Blumhouse, PlayStation, Microsoft, and other official or relevant pages. Those websites
+      have their own privacy policies, and we are not responsible for how they handle your data.
     </p>
+
+    <h2>Children's privacy</h2>
+    <p>
+      This site is not directed at children under 13, and we do not knowingly collect personal information from them.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      We may update this policy when the services we use change. The "Last updated" date above shows when it was last
+      revised.
+    </p>
+
     <h2>Contact</h2>
     <p>
       For privacy questions, email <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.

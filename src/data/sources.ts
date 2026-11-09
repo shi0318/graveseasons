@@ -17,8 +17,8 @@ export const SOURCES = {
     url: 'https://store.steampowered.com/app/3255110/Grave_Seasons/',
     publisher: 'Valve / Steam',
     status: 'platform',
-    lastChecked: '2026-08-17',
-    note: 'App id 3255110, developer, publisher, release text, genres, categories, languages, screenshots, and Steam description.',
+    lastChecked: '2026-11-09',
+    note: 'App id 3255110, developer, publisher, the March 9, 2027 release date, price and demo status (none shown), features (Single-player, Steam Achievements, Family Sharing), screenshots, and Steam description.',
   },
   blumhouse: {
     label: 'Blumhouse official game page',
@@ -26,7 +26,7 @@ export const SOURCES = {
     publisher: 'Blumhouse Games',
     status: 'official',
     lastChecked: LAST_CHECKED,
-    note: 'Official Grave Seasons page, Fall 2026 launch window, platform links, developer, summary, and image gallery.',
+    note: 'Official Grave Seasons page: platform links, developer, summary, and image gallery. Its release wording reflected the Fall 2026 window when last checked; the current date comes from the Steam sources.',
   },
   playstation: {
     label: 'PlayStation Store concept page',
@@ -57,8 +57,8 @@ export const SOURCES = {
     url: 'https://store.steampowered.com/news/app/3255110',
     publisher: 'Perfect Garbage / Blumhouse Games',
     status: 'official',
-    lastChecked: LAST_CHECKED,
-    note: 'First-party developer blogs and announcements on the Steam news hub for App 3255110: The Music of Grave Seasons (2025-09-10), the release-date and platform announcement (2026-03-26), Release News + Dev Log Updates (2026-06-05), and Day & Night Cycle (2026-06-17) - covering the soundtrack, the 24-hour cycle, the map of Ashenridge, and character customization.',
+    lastChecked: '2026-11-09',
+    note: 'First-party developer blogs and announcements on the Steam news hub for App 3255110, including SGF Trailer & Release Year! (2025-06-09), The Music of Grave Seasons (2025-09-10), Summer 2026! (2026-03-03), the release-date and platform announcement (2026-03-26), Release News + Dev Log Updates (2026-06-05), Day & Night Cycle (2026-06-17), the March 9, 2027 launch-date post (2026-09-30), and Devlog: The Mines! (2026-11-04) - covering release dates, platforms, the demo, the soundtrack, the 24-hour cycle, the map of Ashenridge, character customization, and the mines.',
   },
 } satisfies Record<string, SourceRef>;
 

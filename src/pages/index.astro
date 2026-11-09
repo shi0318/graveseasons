@@ -7,34 +7,34 @@ import { ASSETS } from '../data/assets';
 import { CORE_SOURCES } from '../data/sources';
 import { OFFICIAL_FACTS, REQUIRED_GUIDES, SITE } from '../data/site';
 
-const title = 'Grave Seasons Guide - Romance, Walkthrough & Characters';
+const title = 'Grave Seasons Guide - Release Date, Romance & Characters';
 const description =
-  'Official-source Grave Seasons guide for romance, walkthrough, characters, quests, and tips. Built from Steam and Blumhouse data, with launch-day updates clearly separated.';
+  'Official-source Grave Seasons guide: the March 9, 2027 release date, romance, characters, farming, investigation, and tips. Built from Steam and developer posts, with launch-day updates clearly separated.';
 const homeFaqs = [
   {
     question: 'When does Grave Seasons release?',
     answer:
-      'Not released. The September 30 developer announcement moved launch to March 9, 2027, matching the current Steam listing. The earlier Fall 2026 window has been superseded.',
+      'Grave Seasons is scheduled for March 9, 2027 and is not released yet. Perfect Garbage set that date on September 30, 2026, and the Steam page still showed it on November 9, 2026. Earlier plans - August 14, 2026 (announced March 26, 2026) and then a Fall 2026 window (announced June 5, 2026) - have been superseded.',
   },
   {
     question: 'Is Grave Seasons on Game Pass?',
     answer:
-      'Yes. Perfect Garbage stated in their official Steam announcement that Grave Seasons will also be released on Day 1 for Xbox Game Pass players, alongside the four-platform launch list. The September 30 announcement moved launch to March 9, 2027; check current platform listings for subscription access details. What has not been specified is which Game Pass tiers are included, whether cloud or PC Game Pass is covered separately, or how long the title stays in the catalogue. The platforms page tracks the exact wording and its date, and will separate launch access from any later preorder, pricing, or edition details rather than blending them into one claim.',
+      'Day 1 Xbox Game Pass availability was announced. Perfect Garbage said in its March 26, 2026 release-date announcement that Grave Seasons would also be released on Day 1 for Xbox Game Pass players, alongside the four-platform launch. The September 30, 2026 post that moved launch to March 9, 2027 does not restate Game Pass, and it does not withdraw it either, so the March announcement is still the latest official word. What has not been specified is which Game Pass tiers are included, whether PC Game Pass or cloud play is covered, or how long the game stays in the catalogue. The release date page keeps the Game Pass wording next to its date, separate from price and edition questions.',
   },
   {
     question: 'How many romance options are in Grave Seasons?',
     answer:
-      'Steam states that Grave Seasons includes 12 potential romanceable people. The same official description also says a few romanceable folks may have the potential to be the killer, which makes the romance system part of the murder mystery rather than a separate side activity. The full route names, gift preferences, heart events, marriage rules, and dialogue choices have not been officially published yet, so the romance guide keeps a verified framework now and will separate launch-day findings from pre-launch facts. After release, each romance route should list version notes and spoiler labels because killer selection can change story context.',
+      'Steam states that Grave Seasons includes 12 potential romanceable people. The same official description also says a few romanceable folks may have the potential to be the killer, which makes the romance system part of the murder mystery rather than a separate side activity. The full route names, gift preferences, heart events, marriage rules, and dialogue choices have not been officially published yet, so the romance guide explains how the changing killer context affects relationship advice and how to judge route claims. A named character in an official screenshot is not automatically a confirmed romance option.',
   },
   {
     question: 'Is Grave Seasons multiplayer?',
     answer:
-      'The official pages checked for this site do not confirm multiplayer, co-op, or online shared-farm features. Steam, Blumhouse, PlayStation, and Microsoft listings are useful for platform and release-window verification, but this guide does not convert missing feature text into a promise either way. Until an official page lists multiplayer support or the released game exposes it directly, the safe SEO answer is that multiplayer status is unconfirmed and the current guide focuses on the confirmed farming, relationship, and murder mystery structure. If feature tags change, this answer should quote the updated platform source rather than paraphrase rumors.',
+      'No multiplayer or co-op mode has been announced. The Steam store page lists Single-player among its features (alongside Steam Achievements and Family Sharing) and shows no multiplayer or co-op tag, and none of the developer posts through November 2026 describe online play or a shared farm. That is not a promise the game will never add one, but nothing official supports it today. Until an official page lists multiplayer support or the released game exposes it directly, plan for a solo game built around farming, relationships, and the murder mystery. The multiplayer status page tracks this question and will quote any updated store feature list rather than repeat rumors.',
   },
   {
     question: 'What platforms is Grave Seasons on?',
     answer:
-      'Four, named directly in Perfect Garbage\'s official announcement: PC, Xbox Series X|S, PlayStation 5, and Nintendo Switch. Live store listings currently exist for Steam, the PlayStation Store, and the Microsoft Store, and Xbox Game Pass access is confirmed for day one. A Nintendo eShop listing is not tracked yet even though the platform itself is confirmed, and no Xbox One or Switch 2 version has been mentioned. The platforms page keeps those official links together and leaves room for store-specific updates when the publisher or platform holders publish more complete launch information. It still declines to guess at release parity, performance modes, or edition details, because none of those has been stated. That keeps platform SEO useful for searchers without turning the site into a rumor mirror.',
+      'Four, named directly in Perfect Garbage\'s official announcement: PC, Xbox Series X|S, PlayStation 5, and Nintendo Switch. Store listings exist for Steam, the PlayStation Store, and the Microsoft Store, and Day 1 Xbox Game Pass was announced in March 2026. A Nintendo eShop listing is not tracked yet even though the platform itself is confirmed, and no Xbox One or Switch 2 version has been mentioned. The September 30, 2026 delay post says the team is working with a porting partner to reach parity across PC, Switch, Xbox, and PlayStation, which is why all four now share the March 9, 2027 date. Performance modes, editions, and prices have not been stated, so the release date page lists them as unannounced instead of guessing.',
   },
 ];
 ---
@@ -72,11 +72,11 @@ const homeFaqs = [
           Grave Seasons Guide
         </h1>
         <p class="mt-5 max-w-2xl text-lg leading-relaxed text-bone">
-          Romance tracking, walkthrough framework, resident notes, quest planning, and spoiler-aware launch updates for Ashenridge.
+          Release date tracking, romance notes, a one-year planner, resident and investigation tools, and spoiler-aware launch updates for Ashenridge.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="/romance-guide/" class="btn-primary">Romance guide</a>
-          <a href="/walkthrough/" class="btn-secondary">Walkthrough hub</a>
+          <a href="/release-date/" class="btn-secondary">Release date</a>
           <a href={SITE.steamUrl} target="_blank" rel="nofollow noopener noreferrer" class="btn-secondary">Steam page</a>
         </div>
       </div>
@@ -88,13 +88,13 @@ const homeFaqs = [
       <p class="section-kicker">Current verified state</p>
       <h2 class="section-title">No route claims until the game data exists</h2>
       <p class="mt-4 max-w-3xl text-fog">
-        Grave Seasons is not released yet. This site uses Steam, Blumhouse, PlayStation, and Microsoft store information for pre-launch pages, then separates launch-day walkthrough updates from confirmed official facts.
+        Grave Seasons is not released yet: it is scheduled for March 9, 2027. This site uses the Steam store page, the developer's Steam posts, and the Blumhouse, PlayStation, and Microsoft pages for pre-launch facts, and will keep launch-day findings separate from those confirmed facts.
       </p>
       <dl class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <div class="surface p-5">
-          <dt class="text-xs font-black uppercase text-wheat">Release window</dt>
+          <dt class="text-xs font-black uppercase text-wheat">Release date</dt>
           <dd class="mt-2 text-xl font-black text-bone">{SITE.releaseWindow}</dd>
-          <dd class="mt-1 text-sm text-fog">Steam currently lists {SITE.steamReleaseText}.</dd>
+          <dd class="mt-1 text-sm text-fog">Set September 30, 2026; Steam lists {SITE.steamReleaseText}.</dd>
         </div>
         <div class="surface p-5">
           <dt class="text-xs font-black uppercase text-wheat">Developer</dt>
@@ -119,10 +119,10 @@ const homeFaqs = [
     <div class="container">
       <div class="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p class="section-kicker">SEO guide map</p>
+          <p class="section-kicker">Guide map</p>
           <h2 class="section-title">Start with the core pages</h2>
         </div>
-        <a href="/characters/" class="text-sm font-bold text-wheat hover:text-bone">Open character tracker</a>
+        <a href="/guide/" class="text-sm font-bold text-wheat hover:text-bone">Browse every guide</a>
       </div>
       <div class="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {REQUIRED_GUIDES.map((guide) => (

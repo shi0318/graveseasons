@@ -7,6 +7,7 @@ const trustLinks = [
   { label: 'About', href: '/about/' },
   { label: 'Contact', href: '/contact/' },
   { label: 'Privacy Policy', href: '/privacy-policy/' },
+  { label: 'Terms of Use', href: '/terms/' },
   { label: 'Sitemap', href: '/sitemap-index.xml' },
 ] as const;
 ---
@@ -70,7 +71,7 @@ const trustLinks = [
         This site is not affiliated with or endorsed by {SITE.developer} or {SITE.publisher}. Grave Seasons, screenshots, names, and trademarks belong to their respective owners.
       </p>
       <p class="mt-2">
-        Pages are last verified against official sources on {SITE.lastVerified}. Contact:
+        Source checks are dated individually in each guide. Contact:
         <a href={`mailto:${SITE.contactEmail}`} class="text-wheat underline underline-offset-2">{SITE.contactEmail}</a>.
       </p>
       <p class="mt-2">&copy; {year} {SITE.name}.</p>

@@ -1,10 +1,253 @@
 ---
-import Layout from "../layouts/Layout.astro";
-const title="Grave Seasons Release Date: March 9, 2027";
-const description="Grave Seasons is planned for March 9, 2027 after its September 30 delay. Review the current launch status and gameplay preview.";
+import FaqBlock from '../components/FaqBlock.astro';
+import SourcePanel from '../components/SourcePanel.astro';
+import Layout from '../layouts/Layout.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES } from '../data/sources';
+import { SITE } from '../data/site';
+
+const title = 'Grave Seasons Release Date: March 9, 2027 - Platforms, Price & Delays';
+const description =
+  'Grave Seasons launches March 9, 2027 on PC, Xbox Series X|S, PS5, and Switch. Full dated delay history, Game Pass, price status, and what content complete means.';
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Release Date', url: '/release-date/' },
+];
+const sources = [SOURCES.steamDevlog, SOURCES.steam, SOURCES.playstation, SOURCES.xbox, SOURCES.blumhouse];
+
+const timeline = [
+  {
+    date: 'June 9, 2025',
+    post: 'SGF Trailer & Release Year!',
+    url: 'https://store.steampowered.com/news/externalpost/steam_community_announcements/1801617199527485',
+    change: 'A Summer Game Fest trailer and a release year. No exact day was attached.',
+  },
+  {
+    date: 'March 3, 2026',
+    post: 'Summer 2026!',
+    url: 'https://store.steampowered.com/news/externalpost/steam_community_announcements/1825727806721282',
+    change: 'Grave Seasons appeared in Nintendo Indie World with a Summer 2026 release window.',
+  },
+  {
+    date: 'March 26, 2026',
+    post: 'Release Date Announcement!',
+    url: 'https://store.steampowered.com/news/externalpost/steam_community_announcements/1827626365771545',
+    change:
+      'First exact date: August 14, 2026 on PC, Xbox Series X|S, PlayStation 5, and Nintendo Switch. Day 1 Xbox Game Pass was announced, an in-person demo was promoted for PAX East (booth #19049), and a Steam demo was planned.',
+  },
+  {
+    date: 'June 5, 2026',
+    post: 'Release News + Dev Log Updates',
+    url: 'https://store.steampowered.com/news/externalpost/steam_community_announcements/1834602721191759',
+    change:
+      'The June 15 Steam demo was cancelled and the August 14 date was dropped; launch moved to a Fall 2026 window. The post also cited 300k+ words of narrative and 600+ items.',
+  },
+  {
+    date: 'September 30, 2026',
+    post: 'Grave Seasons Launch Date: Final Final V2 For Real',
+    url: 'https://store.steampowered.com/news/externalpost/steam_community_announcements/1845383656377737',
+    change:
+      'Launch moved to March 9, 2027 because of console porting work with a porting partner. The game was declared content complete.',
+  },
+  {
+    date: 'November 4, 2026',
+    post: 'Devlog: The Mines!',
+    url: 'https://store.steampowered.com/news/externalpost/steam_community_announcements/1848557880480999',
+    change: 'A design devlog about the mines. It did not change the March 9, 2027 date.',
+  },
+];
+
+const faqs = [
+  {
+    question: 'When does Grave Seasons come out?',
+    answer:
+      'Grave Seasons is scheduled for March 9, 2027. Perfect Garbage set that date in its September 30, 2026 Steam announcement, and the Steam store page still showed March 9, 2027 when we checked it on November 9, 2026. The game is not released yet.',
+  },
+  {
+    question: 'Has Grave Seasons been delayed?',
+    answer:
+      'Yes, twice after an exact date was set. The March 26, 2026 announcement gave August 14, 2026. On June 5, 2026 the launch moved to a Fall 2026 window, and on September 30, 2026 it moved again to March 9, 2027 because of console porting. Older articles that still say August 14 or Fall 2026 are out of date.',
+  },
+  {
+    question: 'Why was Grave Seasons delayed to 2027?',
+    answer:
+      'The September 30, 2026 post says console porting needed more time. The studio is working with a porting partner to reach parity across PC, Switch, Xbox, and PlayStation, and is optimizing for Switch and a wider range of PC specs.',
+  },
+  {
+    question: 'What platforms is Grave Seasons on?',
+    answer:
+      'PC (Steam), Xbox Series X|S, PlayStation 5, and Nintendo Switch. These four were named in the March 26, 2026 announcement, and the September 30, 2026 delay post talks about parity across PC, Switch, Xbox, and PlayStation.',
+  },
+  {
+    question: 'Is Grave Seasons on Xbox Game Pass?',
+    answer:
+      'Day 1 Xbox Game Pass availability was announced in the March 26, 2026 release-date post. The September 30, 2026 delay post does not mention Game Pass either way, and no Game Pass tier has been specified.',
+  },
+  {
+    question: 'How much will Grave Seasons cost?',
+    answer:
+      'No price is shown. The Steam store page listed no price on November 9, 2026, and no editions or pre-orders have been announced in the official posts tracked here.',
+  },
+  {
+    question: 'Is there a Grave Seasons demo?',
+    answer:
+      'Not right now. The March 26, 2026 announcement promoted an in-person PAX East demo, but the planned June 15 Steam demo was cancelled on June 5, 2026 and the Steam store showed no demo on November 9, 2026. The demo status page has the full history.',
+  },
+];
 ---
-<Layout title={title} description={description} pageType="article" image="/images/grave-seasons-town-night.webp"><article class="container max-w-3xl py-10"><h1 class="text-4xl font-black text-bone">{title}</h1><p class="mt-4 text-fog">Grave Seasons has not been released. The developer moved the launch to March 9, 2027 in its September 30 announcement, and Steam currently shows the same date.</p><div class="prose-page mt-8">
-<h2>What changed?</h2><p>The previous Fall 2026 window has been superseded. The team explains that console porting, optimization, controller improvements, and bug fixing need additional time. Older pages or artwork may still show the earlier window; they should not be used as the current launch plan.</p>
-<h2>What does content complete mean?</h2><p>The team says it has stopped adding quests, items, and dialogue while final polish and bug fixing continue. Content complete does not mean the game is publicly playable, nor does it guarantee a bug-free launch.</p>
-<h2>What should you prepare?</h2><p>Follow the current store listing for your platform and review purchase details when available. Our controller and crowbar preview explores the disclosed interface work and exploration design without inventing crop values, schedules, or a killer solution.</p>
-<p><a href="/controller-and-crowbar-gameplay-preview/">Read the new gameplay preparation preview</a>.</p></div></article></Layout>
+
+<Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.townNight.src}>
+  <article class="mx-auto max-w-4xl">
+    <p class="section-kicker">Release tracker - checked November 9, 2026</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">Grave Seasons Release Date: March 9, 2027</h1>
+    <p class="mt-4 text-lg leading-relaxed text-fog">
+      <strong class="text-bone">Grave Seasons is not out yet. It is scheduled for March 9, 2027</strong> on PC,
+      Xbox Series X|S, PlayStation 5, and Nintendo Switch. Perfect Garbage set that date in a September 30, 2026
+      Steam announcement, and the Steam store page (App {SITE.appId}) still showed March 9, 2027 when we rechecked
+      it on November 9, 2026. This page keeps the full dated history in one place, so an older "August 14" or
+      "Fall 2026" headline is easy to place.
+    </p>
+
+    <figure class="mt-8 overflow-hidden rounded-md border border-white/10">
+      <img src={ASSETS.townNight.src} alt={ASSETS.townNight.alt} width={ASSETS.townNight.width} height={ASSETS.townNight.height} loading="eager" decoding="async" />
+      <figcaption class="border-t border-white/10 bg-soil px-4 py-3 text-xs text-fog">{ASSETS.townNight.credit}</figcaption>
+    </figure>
+
+    <section class="mt-10">
+      <p class="section-kicker">At a glance</p>
+      <h2 class="mt-2 text-2xl font-black text-bone">Current launch facts</h2>
+      <div class="mt-5 overflow-x-auto rounded-md border border-white/10">
+        <table class="w-full min-w-[640px] border-collapse text-sm">
+          <tbody class="text-fog">
+            <tr class="border-t border-white/10"><th class="px-4 py-3 text-left text-bone">Release date</th><td class="px-4 py-3">March 9, 2027 (set September 30, 2026; shown on Steam November 9, 2026)</td></tr>
+            <tr class="border-t border-white/10"><th class="px-4 py-3 text-left text-bone">Status</th><td class="px-4 py-3">Unreleased. Content complete; polish, bug fixing, and console ports continue.</td></tr>
+            <tr class="border-t border-white/10"><th class="px-4 py-3 text-left text-bone">Platforms</th><td class="px-4 py-3">PC (Steam), Xbox Series X|S, PlayStation 5, Nintendo Switch</td></tr>
+            <tr class="border-t border-white/10"><th class="px-4 py-3 text-left text-bone">Xbox Game Pass</th><td class="px-4 py-3">Day 1 Game Pass announced March 26, 2026; tier not specified</td></tr>
+            <tr class="border-t border-white/10"><th class="px-4 py-3 text-left text-bone">Price</th><td class="px-4 py-3">Not announced. No price on the Steam page on November 9, 2026.</td></tr>
+            <tr class="border-t border-white/10"><th class="px-4 py-3 text-left text-bone">Demo</th><td class="px-4 py-3">None available. The June 15, 2026 Steam demo was cancelled. See <a class="text-wheat underline" href="/demo-status/">demo status</a>.</td></tr>
+            <tr class="border-t border-white/10"><th class="px-4 py-3 text-left text-bone">Steam features</th><td class="px-4 py-3">Single-player, Steam Achievements, Family Sharing</td></tr>
+            <tr class="border-t border-white/10"><th class="px-4 py-3 text-left text-bone">Developer / publisher</th><td class="px-4 py-3">{SITE.developer} / {SITE.publisher}</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <p class="section-kicker">Dated history</p>
+      <h2 class="mt-2 text-2xl font-black text-bone">Every official release update, in order</h2>
+      <p class="mt-3 leading-relaxed text-fog">
+        All six entries are first-party posts on the Grave Seasons Steam news hub. The date in the left column is
+        when the post went up, not a launch date.
+      </p>
+      <div class="mt-5 overflow-x-auto rounded-md border border-white/10">
+        <table class="w-full min-w-[720px] border-collapse text-sm">
+          <thead class="bg-moss/25 text-left text-bone">
+            <tr>
+              <th class="px-4 py-3">Posted</th>
+              <th class="px-4 py-3">Steam announcement</th>
+              <th class="px-4 py-3">What it changed</th>
+            </tr>
+          </thead>
+          <tbody class="text-fog">
+            {timeline.map((row) => (
+              <tr class="border-t border-white/10 align-top">
+                <td class="whitespace-nowrap px-4 py-3 font-bold text-bone">{row.date}</td>
+                <td class="px-4 py-3"><a href={row.url} target="_blank" rel="noopener noreferrer" class="text-wheat underline">{row.post}</a></td>
+                <td class="px-4 py-3">{row.change}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="prose-page mt-10">
+      <h2>How the date moved from Summer 2026 to March 2027</h2>
+      <p>
+        The first concrete window came on March 3, 2026, when Grave Seasons appeared in Nintendo's Indie World
+        showcase with a Summer 2026 window. Three weeks later, on March 26, the studio named an exact day, August
+        14, 2026, for all four platforms. That same post announced Day 1 Xbox Game Pass, an in-person demo at PAX
+        East, and a Steam demo to follow.
+      </p>
+      <p>
+        On June 5, 2026 the "Release News + Dev Log Updates" post cancelled the June 15 Steam demo and moved the
+        full game off August 14 into a Fall 2026 window. For about four months, Fall 2026 was the official plan.
+        On September 30, 2026 that window was replaced by a firm date, March 9, 2027, in a post titled "Grave
+        Seasons Launch Date: Final Final V2 For Real". Any page, video, or store snippet that still gives August
+        14, 2026 or Fall 2026 as the upcoming launch is repeating a superseded plan.
+      </p>
+
+      <h2>Why the launch moved to March 9, 2027</h2>
+      <p>
+        The September 30 post gives one main reason: console porting. Perfect Garbage says it is working with a
+        porting partner and wants parity across PC, Switch, Xbox, and PlayStation, rather than shipping one
+        version first. The extra months also cover optimization for Switch and for a wider range of PC
+        specifications, plus controller and console changes. Two concrete examples were given: a radial menu for
+        controller users and a hold-to-rotate input for working on farming plots. Our
+        <a href="/controller-and-crowbar-gameplay-preview/">controller and crowbar preview</a> looks at what those
+        changes mean for farming.
+      </p>
+
+      <h2>What "content complete" means</h2>
+      <p>
+        The same post calls Grave Seasons content complete. In practice, the team has locked the content: no new
+        quests, items, or dialogue are being added. The remaining work is polish, bug fixing, and getting the
+        console versions to parity. For players, that means the game's scope is now fixed (the June 5 update had
+        already described 300k+ words of narrative and 600+ items). But content complete is a production milestone, not a public build: nothing is
+        playable yet, and it does not guarantee a bug-free launch.
+      </p>
+
+      <h2>Platforms</h2>
+      <p>
+        Four platforms were named in the March 26, 2026 announcement, and the September 30 post still describes
+        parity across all four:
+      </p>
+      <ul>
+        <li><strong>PC</strong> - the <a href={SITE.steamUrl} target="_blank" rel="nofollow noopener noreferrer">Steam page</a> (App {SITE.appId}) is live and lists March 9, 2027.</li>
+        <li><strong>PlayStation 5</strong> - a <a href={SITE.playstationUrl} target="_blank" rel="nofollow noopener noreferrer">PlayStation Store concept page</a> exists.</li>
+        <li><strong>Xbox Series X|S</strong> - a <a href={SITE.xboxUrl} target="_blank" rel="nofollow noopener noreferrer">Microsoft Store product page</a> exists. No Xbox One version has been announced.</li>
+        <li><strong>Nintendo Switch</strong> - confirmed by name, and the delay post mentions Switch optimization. We do not track an eShop listing yet, and Switch 2 has not been mentioned.</li>
+      </ul>
+      <p>
+        No Mac or Linux version has been announced. Co-op and multiplayer are not confirmed either; the Steam
+        features list shows Single-player. See the <a href="/multiplayer-co-op-status/">multiplayer status page</a>
+        for that question.
+      </p>
+
+      <h2>Xbox Game Pass</h2>
+      <p>
+        Day 1 Xbox Game Pass availability was announced on March 26, 2026, when the launch was still set for August
+        14. The September 30, 2026 delay post does not restate Game Pass, and it does not say anything that changes
+        it. No post names the Game Pass tier, and none says whether PC Game Pass or cloud play is included. Treat
+        the March announcement as the most recent official word.
+      </p>
+
+      <h2>Price, editions, and pre-orders</h2>
+      <p>
+        No price has been announced. The Steam store page showed no price on November 9, 2026, and none of the
+        official posts listed above mention a price, a special edition, or pre-order bonuses. There is currently no
+        way to pay for Grave Seasons in advance. A dollar figure on a third-party site is a guess, not a store
+        price.
+      </p>
+
+      <h2>File size and system requirements</h2>
+      <p>
+        No install size has been published for any platform, and this site does not have a verified figure to
+        share. The September 30 post says the team is optimizing for a wider range of PC specs, but it does not
+        list minimum or recommended hardware. We will add the size and requirements here when an official
+        store page publishes them, rather than estimating from similar farming games.
+      </p>
+
+      <h2>What to do before March 9, 2027</h2>
+      <ol>
+        <li>Wishlist on Steam (App {SITE.appId}) or follow the PlayStation or Microsoft Store page so the store notifies you at launch.</li>
+        <li>Ignore "free download" or installer sites. There is no public build; the <a href="/demo-status/">demo status page</a> explains why.</li>
+        <li>Read up on confirmed systems: the <a href="/farming-grid-seasons-guide/">farming grid and seasons</a>, the <a href="/day-and-night/">24-hour day and night cycle</a>, and the <a href="/mines-roguelike-preview/">roguelike mines</a>.</li>
+        <li>Plan your first year with the <a href="/grave-seasons-prelaunch-one-year-planner/">one-year planner</a>, which avoids invented crop values and killer answers.</li>
+      </ol>
+    </section>
+
+    <FaqBlock items={faqs} />
+    <SourcePanel sources={sources} />
+  </article>
+</Layout>

@@ -4,9 +4,9 @@ import Pagination from '../../components/Pagination.astro';
 import Layout from '../../layouts/Layout.astro';
 import { LATEST_GUIDES, REQUIRED_GUIDES, SITE } from '../../data/site';
 
-const title = 'Grave Seasons Guide — Farming, Investigation & Walkthrough';
+const title = 'Grave Seasons Guide — Farming, Investigation & Release Date';
 const description =
-  'Browse every Grave Seasons guide in one place, including the latest farming, crafting, investigation, killer, romance, walkthrough, and character planning pages.';
+  'Browse every Grave Seasons guide in one place, including the release date, farming, crafting, investigation, killer, romance, and character planning pages.';
 const latestHrefs = new Set<string>(LATEST_GUIDES.map((guide) => guide.href));
 const olderGuides = REQUIRED_GUIDES.filter((guide) => !latestHrefs.has(guide.href));
 // Manual page data has no frontmatter dates. LATEST_GUIDES is the maintained newest-first queue;

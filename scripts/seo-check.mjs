@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const root = process.cwd();
@@ -15,17 +15,13 @@ const requiredPages = [
   '/guide/',
   '/multiplayer-co-op-status/',
   '/romance-guide/',
-  '/walkthrough/',
   '/characters/',
-  '/collectibles/',
-  '/platforms/',
-  '/residents/',
   '/tips/',
-  '/quests/',
   '/release-date/',
-  '/download/',
+  '/demo-status/',
   '/about/',
   '/privacy-policy/',
+  '/terms/',
   '/contact/',
 ];
 
@@ -54,7 +50,22 @@ for (const page of requiredPages) {
   assert(existsSync(outputPath), `Missing built route: ${page}`);
 }
 
-const forbiddenBuiltPages = ['/romance/'];
+const forbiddenBuiltPages = [
+  '/romance/',
+  '/steam-date-versus-fall-window/',
+  '/still-coming-soon/',
+  '/price-and-file-size/',
+  '/no-price-before-the-farm/',
+  '/download/',
+  '/platforms/',
+  '/platforms-and-game-pass/',
+  '/walkthrough/',
+  '/quests/',
+  '/collectibles/',
+  '/residents/',
+  '/resident-investigation-tracker/',
+  '/pre-launch-investigation-checklist/',
+];
 for (const page of forbiddenBuiltPages) {
   const outputPath = join(root, 'dist', page.replace(/^\/|\/$/g, ''), 'index.html');
   assert(!existsSync(outputPath), `Deprecated route should not be built as an indexable page: ${page}`);
@@ -88,12 +99,12 @@ const footerMarkup = builtHeader.match(/<footer[\s\S]*?<\/footer>/i)?.[0] ?? '';
 const primaryNavigation = [
   '/guide/',
   '/romance-guide/',
-  '/walkthrough/',
+  '/grave-seasons-prelaunch-one-year-planner/',
   '/characters/',
   '/farming-crafting-investigation/',
   '/killer-decisions-and-replay/',
 ];
-const footerOnlyNavigation = ['/tips/', '/quests/', '/release-date/', '/download/'];
+const footerOnlyNavigation = ['/tips/', '/release-date/', '/demo-status/'];
 
 for (const href of primaryNavigation) {
   assert(headerMarkup.includes(`href="${href}"`), `Primary navigation is missing ${href}.`);
@@ -109,6 +120,10 @@ assert(existsSync(redirectsPath), 'Cloudflare Pages redirect file is missing.');
 if (existsSync(redirectsPath)) {
   const redirects = readFileSync(redirectsPath, 'utf8');
   assert(redirects.includes('/romance/ /romance-guide/ 301'), 'Deprecated /romance/ route must 301 to /romance-guide/.');
+  for (const page of forbiddenBuiltPages.slice(1)) {
+    assert(redirects.includes(`${page} `), `Removed route ${page} must have a 301 in _redirects.`);
+    assert(redirects.includes(`${page.replace(/\/$/, '')}`), `Removed route ${page} must also redirect without the trailing slash.`);
+  }
 }
 
 const sitemapPath = join(root, 'dist', 'sitemap-0.xml');
@@ -116,7 +131,7 @@ if (existsSync(sitemapPath)) {
   const sitemap = readFileSync(sitemapPath, 'utf8');
   assert(sitemap.includes('https://graveseasonsguide.com/about/'), 'Sitemap must include /about/.');
   assert(sitemap.includes('https://graveseasonsguide.com/contact/'), 'Sitemap must include /contact/.');
-  assert(sitemap.includes('<loc>https://graveseasonsguide.com/multiplayer-co-op-status/</loc><lastmod>2026-08-31T00:00:00.000Z</lastmod>'), 'Sitemap must include the multiplayer page with the 2026-08-31 lastmod.');
+  assert(sitemap.includes('<loc>https://graveseasonsguide.com/multiplayer-co-op-status/</loc><lastmod>2026-11-09T00:00:00.000Z</lastmod>'), 'Sitemap must include the multiplayer page with the 2026-11-09 lastmod.');
 }
 
 const multiplayerPath = join(root, 'dist', 'multiplayer-co-op-status', 'index.html');
@@ -140,22 +155,11 @@ if (existsSync(charactersPath)) {
   assert(!charactersText.includes('Resident tracker'), '/characters/ should not label itself as a resident tracker.');
 }
 
-const residentsPath = join(root, 'dist', 'residents', 'index.html');
-if (existsSync(residentsPath)) {
-  const residentsText = readFileSync(residentsPath, 'utf8');
-  assert(residentsText.includes('deep resident tracking framework'), '/residents/ must be positioned as the deep resident tracking framework.');
-  assert(residentsText.includes('schedule, location, romance, death, and investigation tables'), '/residents/ must own schedule/location/romance/death/investigation tracking.');
-}
-
 const sourceFiles = [
   'src/data/site.ts',
   'src/data/sources.ts',
   'src/pages/romance-guide.astro',
-  'src/pages/walkthrough.astro',
   'src/pages/characters.astro',
-  'src/pages/collectibles.astro',
-  'src/pages/platforms.astro',
-  'src/pages/residents.astro',
 ].map((file) => join(root, file));
 
 for (const sourceUrl of requiredSourceUrls) {
@@ -179,6 +183,52 @@ for (const file of sourceFiles) {
     assert(!claimText.includes(claim), `Unverified release-date claim found in ${file}: ${claim}`);
   }
 }
+
+// Audit every generated page, rather than just the homepage and selected routes.
+const redirectRules = readFileSync(redirectsPath, 'utf8').split(/\r?\n/)
+  .map((line) => line.trim()).filter((line) => line && !line.startsWith('#'))
+  .map((line) => line.split(/\s+/));
+const redirectMap = new Map(redirectRules.map(([from, to, status]) => [from, { to, status }]));
+for (const page of forbiddenBuiltPages) {
+  for (const from of [page, page.replace(/\/$/, '')]) {
+    const rule = redirectMap.get(from);
+    assert(rule?.status === '301', `Missing permanent redirect: ${from}`);
+    if (rule) {
+      assert(!redirectMap.has(rule.to), `Redirect chain: ${from} -> ${rule.to}`);
+      assert(existsSync(join(root, 'dist', rule.to, 'index.html')), `Missing redirect target: ${rule.to}`);
+    }
+  }
+}
+assert(redirectMap.get('/guide/page/4/')?.to === '/guide/', 'Old fourth directory page must redirect to the directory.');
+const builtFiles = readdirSync(join(root, 'dist'), { recursive: true }).filter((file) => file.endsWith('.html'));
+for (const file of builtFiles) {
+  const html = readFileSync(join(root, 'dist', file), 'utf8');
+  for (const match of html.matchAll(/(?:href|src)="([^"<>]+)"/g)) {
+    const raw = match[1];
+    if (!raw.startsWith('/') && !raw.startsWith('https://graveseasonsguide.com/')) continue;
+    const url = new URL(raw, 'https://graveseasonsguide.com');
+    if (url.origin !== 'https://graveseasonsguide.com') continue;
+    const path = decodeURIComponent(url.pathname);
+    assert(!redirectMap.has(path), `Internal link still uses a removed route in ${file}: ${path}`);
+    const target = join(root, 'dist', path);
+    assert(existsSync(target) || existsSync(join(target, 'index.html')), `Broken internal reference in ${file}: ${path}`);
+  }
+  assert(html.includes('href="/terms/"'), `Terms link missing in ${file}`);
+  for (const schema of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
+    try { JSON.parse(schema[1]); } catch { assert(false, `Invalid JSON-LD in ${file}`); }
+  }
+}
+assert(existsSync(sitemapPath), 'Built sitemap is missing.');
+if (existsSync(sitemapPath)) {
+  const sitemap = readFileSync(sitemapPath, 'utf8');
+  for (const entry of sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
+    const loc = entry[1].match(/<loc>(.*?)<\/loc>/)?.[1];
+    const lastmod = entry[1].match(/<lastmod>(.*?)<\/lastmod>/)?.[1];
+    assert(Boolean(lastmod) && !Number.isNaN(Date.parse(lastmod)), `Missing or invalid lastmod: ${loc}`);
+    if (loc) assert(!redirectMap.has(new URL(loc).pathname), `Removed route remains in sitemap: ${loc}`);
+  }
+}
+console.log(`Full-site audit: ${builtFiles.length} HTML files, ${redirectRules.length} redirect rules.`);
 
 if (failures.length > 0) {
   console.error(`SEO check failed with ${failures.length} issue(s):`);

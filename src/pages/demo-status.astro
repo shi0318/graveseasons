@@ -4,43 +4,142 @@ import SourcePanel from '../components/SourcePanel.astro';
 import Layout from '../layouts/Layout.astro';
 import { ASSETS } from '../data/assets';
 import { SOURCES } from '../data/sources';
+import { SITE } from '../data/site';
 
-const title = 'Grave Seasons Demo Status - Is There a Demo?';
-const description = 'Grave Seasons demo status: the planned June 15 demo was cancelled, the game moved to Fall 2026, and no replacement demo is announced.';
+const title = 'Grave Seasons Demo & Download Status - Is There a Demo?';
+const description =
+  'Is there a Grave Seasons demo? The PAX East demo, the cancelled June 15 Steam demo, current download status, and how to spot fake installer sites before the March 9, 2027 launch.';
 const breadcrumbs = [
   { name: 'Home', url: '/' },
   { name: 'Demo Status', url: '/demo-status/' },
 ];
-const sources = [SOURCES.steamDevlog, SOURCES.steam, SOURCES.blumhouse, SOURCES.blumhouseMedia];
+const sources = [SOURCES.steamDevlog, SOURCES.steam, SOURCES.playstation, SOURCES.xbox];
 const faqs = [
-  { question: 'Is there a Grave Seasons demo?', answer: 'The planned June 15, 2026 demo was cancelled in the official June 5 update. No replacement public demo is announced in the sources checked on August 12, 2026.' },
-  { question: 'When does Grave Seasons release?', answer: 'The current official window is Fall 2026. Perfect Garbage moved the earlier August 14 date to Fall, while Steam lists 2026.' },
+  {
+    question: 'Is there a Grave Seasons demo?',
+    answer:
+      'No public demo is available. The March 26, 2026 announcement promoted an in-person demo at PAX East, and a Steam demo was planned for June 15, 2026, but Perfect Garbage cancelled it on June 5, 2026. The Steam store page showed no demo when we checked it on November 9, 2026.',
+  },
+  {
+    question: 'Will the Grave Seasons demo come back?',
+    answer:
+      'Possibly. The June 5, 2026 post said the demo could return depending on studio capacity. No new demo date has been announced in the Steam posts published since, up to the November 4, 2026 mines devlog.',
+  },
+  {
+    question: 'Can I download Grave Seasons now?',
+    answer:
+      'No. Grave Seasons is scheduled for March 9, 2027 and there is no public build, demo, or beta. You can wishlist it on Steam or follow the PlayStation and Microsoft Store pages, but there is nothing to download yet.',
+  },
+  {
+    question: 'Are "Grave Seasons free download" sites real?',
+    answer:
+      'No. With no released build, any site offering a working download, torrent, crack, repack, or mobile APK is distributing something else. Do not run installers from those sites.',
+  },
+  {
+    question: 'Was the Grave Seasons demo at PAX East?',
+    answer:
+      'Yes. The March 26, 2026 release-date announcement invited players to try the game at PAX East at booth #19049. That was an in-person event demo, not a download.',
+  },
 ];
 ---
 
 <Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.townNight.src}>
   <article class="mx-auto max-w-3xl">
-    <p class="section-kicker">Playable status</p>
+    <p class="section-kicker">Demo and download status - checked November 9, 2026</p>
     <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">Does Grave Seasons Have a Demo?</h1>
-    <p class="mt-5 text-lg leading-relaxed text-fog">The planned June 15, 2026 demo was cancelled. As of August 12, 2026, no replacement public demo or beta is announced, and the full game remains scheduled for Fall 2026.</p>
+    <p class="mt-5 text-lg leading-relaxed text-fog">
+      <strong class="text-bone">Not at the moment.</strong> The March release announcement promoted an in-person demo at
+      PAX East (booth #19049), promoted in the March 26, 2026 release-date post. A Steam demo planned for June 15, 2026 was cancelled, and the Steam store page showed no
+      demo when we rechecked it on November 9, 2026. The full game is scheduled for
+      <a href="/release-date/">March 9, 2027</a>, so there is also nothing to download yet.
+    </p>
     <figure class="mt-8 overflow-hidden rounded-md border border-white/10">
       <img src={ASSETS.townNight.src} alt={ASSETS.townNight.alt} width={ASSETS.townNight.width} height={ASSETS.townNight.height} loading="eager" decoding="async" />
-      <figcaption class="border-t border-white/10 bg-soil px-4 py-3 text-xs text-fog">{ASSETS.townNight.credit}. This image is official media, not a playable demo capture.</figcaption>
+      <figcaption class="border-t border-white/10 bg-soil px-4 py-3 text-xs text-fog">{ASSETS.townNight.credit}. This image is official media, not a demo capture.</figcaption>
     </figure>
+
     <section class="prose-page mt-10">
-      <h2>What happened to the Grave Seasons demo?</h2>
-      <p>Perfect Garbage first announced a demo planned for June 15, 2026. In the official June 5 Steam update, the studio said the demo was cancelled and that the full-game release was moving from August 14 to Fall 2026. No replacement demo date is listed in the current first-party sources.</p>
-      <h2>Can you download Grave Seasons now?</h2>
-      <p>There is no official demo download link to provide at this time. Steam lists Grave Seasons as coming soon, while the official Blumhouse page carries the Fall 2026 window. Avoid third-party installers claiming to be a playable demo; this site never hosts game files.</p>
-      <h2>What can you prepare for without a demo?</h2>
-      <p>The official Steam description confirms a narrative farming sim in Ashenridge with farming, romance, investigation, a day-and-night cycle, 30+ residents, 70+ interiors, seven major locations, and a supernatural serial-killer structure. It also says each playthrough can select a killer from a candidate pool. These facts support planning pages, but they do not provide a walkthrough for a build that is not publicly playable.</p>
+      <h2>Demo history, step by step</h2>
+      <ol>
+        <li>
+          <strong>March 26, 2026 - PAX East demo and a planned Steam demo.</strong> The "Release Date Announcement!"
+          post, which set the original August 14, 2026 launch, invited players to try Grave Seasons at PAX East
+          (booth #19049) and said a Steam demo was on the way.
+        </li>
+        <li>
+          <strong>June 5, 2026 - Steam demo cancelled.</strong> The "Release News + Dev Log Updates" post cancelled the
+          Steam demo that had been set for June 15. The studio said the demo might come back later, depending on
+          studio capacity. The same post moved the full game from August 14 to a Fall 2026 window.
+        </li>
+        <li>
+          <strong>September 30, 2026 - launch moved to March 9, 2027.</strong> The game was declared content complete
+          and the release date moved for console porting work. No replacement demo date was given.
+        </li>
+        <li>
+          <strong>November 9, 2026 - still no demo.</strong> The Steam store page lists March 9, 2027, shows no price,
+          and offers no demo. No Steam announcement up to the November 4 mines devlog has scheduled one.
+        </li>
+      </ol>
+
+      <h2>Could the demo come back?</h2>
+      <p>
+        The June 5 post did not rule it out: it said the demo might return depending on studio capacity. Since then
+        the studio has announced a content-complete game and a console porting push for the March 9, 2027 launch,
+        but none of the later posts sets a demo date. Until one does, plan on no hands-on time before launch, and
+        treat any "demo is live" claim that does not link to the official Steam page as unverified.
+      </p>
+
+      <h2>Can you download Grave Seasons right now?</h2>
+      <p>
+        No. There is no released game, no public beta, and no demo build, so there is no official public game download available. What you can do today is add the game to your list on an official store:
+      </p>
       <ul>
-        <li>Read the <a href="/release-date/">release-date page</a> for the current Fall 2026 window.</li>
-        <li>Use the <a href="/farming-crafting-investigation/">farming and investigation guide</a> for the confirmed systems.</li>
-        <li>Check the official <a href={SOURCES.steamDevlog.url} target="_blank" rel="nofollow noopener noreferrer">Steam news hub</a> for a future demo announcement.</li>
+        <li><a href={SITE.steamUrl} target="_blank" rel="nofollow noopener noreferrer">Steam (App {SITE.appId})</a> - wishlist to get Steam's release-day notification.</li>
+        <li><a href={SITE.playstationUrl} target="_blank" rel="nofollow noopener noreferrer">PlayStation Store concept page</a> - for PlayStation 5.</li>
+        <li><a href={SITE.xboxUrl} target="_blank" rel="nofollow noopener noreferrer">Microsoft Store page</a> - for Xbox Series X|S. Day 1 Xbox Game Pass was announced in March 2026.</li>
       </ul>
+      <p>Nintendo Switch is a confirmed platform, but we do not track an eShop listing yet.</p>
+
+      <h2>Warning: fake download and installer sites</h2>
+      <p>
+        Unreleased games with a visible fan base attract fake download pages, and searches like "Grave Seasons free
+        download", "Grave Seasons demo download", or "Grave Seasons APK" are where they appear. Because there is no
+        build to copy, an unofficial installer is not a verified way to obtain the game.
+      </p>
+      <ul>
+        <li><strong>Repacks, torrents, and cracks</strong> - there is no released build to repack or crack. The file is something else.</li>
+        <li><strong>"Installer" downloads behind surveys or captchas</strong> - a common way to collect personal data or push unwanted software.</li>
+        <li><strong>Mobile APKs</strong> - no phone or tablet version has been announced at all.</li>
+        <li><strong>"Early access" or "beta key" offers</strong> - no public beta exists, and keys are not being sold.</li>
+      </ul>
+      <p>
+        If a demo returns, it will appear on the official Steam page and be announced on the Grave Seasons Steam news
+        hub. This site never hosts game files or installers.
+      </p>
+
+      <h2>What to do without a demo</h2>
+      <p>
+        The Steam description already tells you a lot: a narrative farming sim in Ashenridge with a supernatural serial
+        killer, one year to protect potential victims, 30+ residents, 70+ interiors, seven major locations, and 12
+        potential romance options. Each playthrough picks the killer from a candidate pool.
+      </p>
+      <ul>
+        <li>Check the <a href="/release-date/">release date page</a> for the full dated history and platform details.</li>
+        <li>Learn the confirmed systems in the <a href="/gameplay-preview/">gameplay preview</a> and the <a href="/farming-grid-seasons-guide/">farming grid guide</a>.</li>
+        <li>Read the <a href="/mines-roguelike-preview/">mines preview</a> from the November 4, 2026 devlog.</li>
+      </ul>
+
       <h2>Current status table</h2>
-      <table><thead><tr><th>Question</th><th>Official answer</th></tr></thead><tbody><tr><td>Public demo</td><td>Planned June 15 demo cancelled; no replacement announced.</td></tr><tr><td>Full release</td><td>Fall 2026; Steam currently shows 2026.</td></tr><tr><td>Platforms</td><td>PC, Xbox Series X|S, PlayStation 5, and Nintendo Switch announced.</td></tr><tr><td>Day-one Game Pass</td><td>Announced; specific tier details are not published.</td></tr></tbody></table>
+      <table>
+        <thead><tr><th>Question</th><th>Answer (November 9, 2026)</th></tr></thead>
+        <tbody>
+          <tr><td>Public demo</td><td>None. June 15, 2026 Steam demo cancelled; may return depending on studio capacity.</td></tr>
+          <tr><td>Event demo</td><td>PAX East 2026, booth #19049 (in person only).</td></tr>
+          <tr><td>Full release</td><td>March 9, 2027.</td></tr>
+          <tr><td>Platforms</td><td>PC, Xbox Series X|S, PlayStation 5, Nintendo Switch.</td></tr>
+          <tr><td>Legitimate downloads</td><td>None until launch. Wishlist or follow the official store pages.</td></tr>
+        </tbody>
+      </table>
     </section>
     <FaqBlock items={faqs} />
     <SourcePanel sources={sources} />

@@ -59,7 +59,7 @@ const videoGame = {
   genre: ['Indie', 'RPG', 'Simulation'],
   author: { '@type': 'Organization', name: SITE.developer },
   publisher: { '@type': 'Organization', name: SITE.publisher },
-  gamePlatform: ['PC', 'PlayStation 5', 'Xbox Series X|S'],
+  gamePlatform: ['PC', 'PlayStation 5', 'Xbox Series X|S', 'Nintendo Switch'],
 };
 
 const graph: Record<string, unknown>[] = [organization];
@@ -114,7 +114,7 @@ const schema = {
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-86E36TBGH6"></script>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-86E36TBGH6"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -124,6 +124,7 @@ const schema = {
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {path.startsWith('/404') && <meta name="robots" content="noindex, follow" />}
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />

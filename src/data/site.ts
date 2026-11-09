@@ -6,7 +6,7 @@ export const SITE = {
   url: 'https://graveseasonsguide.com',
   tagline: 'Official-source guides for Ashenridge',
   description:
-    'Independent Grave Seasons guide with official-source romance, walkthrough, character, quest, and tips pages for Blumhouse Games and Perfect Garbage Games farming murder mystery.',
+    'Independent Grave Seasons guide with official-source release date, romance, character, farming, investigation, and tips pages for the Perfect Garbage and Blumhouse Games farming murder mystery.',
   locale: 'en',
   gameName: 'Grave Seasons',
   developer: 'Perfect Garbage',
@@ -19,13 +19,12 @@ export const SITE = {
   playstationUrl: SOURCES.playstation.url,
   xboxUrl: SOURCES.xbox.url,
   contactEmail: 'nmlkareem161@gmail.com',
-  lastVerified: '2026-11-01',
 } as const;
 
 export const NAV = [
   { label: 'Guide', href: '/guide/' },
   { label: 'Romance Guide', href: '/romance-guide/' },
-  { label: 'Walkthrough', href: '/walkthrough/' },
+  { label: 'One-Year Planner', href: '/grave-seasons-prelaunch-one-year-planner/' },
   { label: 'Characters', href: '/characters/' },
   { label: 'Farming Plan', href: '/farming-crafting-investigation/' },
   { label: 'Investigation', href: '/killer-decisions-and-replay/' },
@@ -34,12 +33,25 @@ export const NAV = [
 export const FOOTER_NAV = [
   ...NAV,
   { label: 'Tips', href: '/tips/' },
-  { label: 'Quests', href: '/quests/' },
   { label: 'Release Date', href: '/release-date/' },
-  { label: 'Download', href: '/download/' },
+  { label: 'Demo & Download', href: '/demo-status/' },
 ] as const;
 
 export const LATEST_GUIDES = [
+  {
+    href: '/release-date/',
+    title: 'Release Date: March 9, 2027',
+    description:
+      'The full dated history from the 2025 release-year trailer to the March 9, 2027 launch, plus platforms, Game Pass, price, and what content complete means.',
+    priority: 'Updated',
+  },
+  {
+    href: '/demo-status/',
+    title: 'Demo & Download Status',
+    description:
+      'The PAX East demo, the cancelled June 15 Steam demo, why there is nothing to download yet, and how to spot fake installer sites.',
+    priority: 'Updated',
+  },
   { href: '/mines-roguelike-preview/', title: 'Mines Preview: Roguelike Levels and Energy', description: 'What the November 4 devlog confirms about generated mine levels, no enemies, time and energy pressure, rest rooms, and what is still unknown.', priority: 'New' },
   { href: '/controller-and-crowbar-gameplay-preview/', title: 'Controller Farming and Crowbar Exploration', description: 'A pre-release look at isometric farming controls, the crowbar, exploration, and the March 9, 2027 launch plan.', priority: 'New' },
   {
@@ -49,52 +61,10 @@ export const LATEST_GUIDES = [
     priority: 'New',
   },
   {
-    href: '/resident-investigation-tracker/',
-    title: 'Resident Investigation Tracker',
-    description:
-      'A pre-launch template for tracking Ashenridge residents, clues, locations, and separate killer scenarios without guessing unknown details.',
-    priority: 'New',
-  },
-  {
-    href: '/still-coming-soon/',
-    title: 'Still Coming Soon on October 26',
-    description:
-      'Steam App 3255110 still lists March 9, 2027 and coming soon. The previous Fall 2026 window is superseded. No US price.',
-    priority: 'New',
-  },
-  {
-    href: '/no-price-before-the-farm/',
-    title: 'No Price Before the Farm',
-    description:
-      'The October 26 check printed no US price. Do not plan crops, romance, or a killer from a leak.',
-    priority: 'New',
-  },
-  {
-    href: '/steam-date-versus-fall-window/',
-    title: 'Steam Date vs the Fall 2026 Window',
-    description:
-      'Steam lists March 9, 2027. The previous Fall 2026 window is superseded. How to read both before launch.',
-    priority: 'New',
-  },
-  {
-    href: '/platforms-and-game-pass/',
-    title: 'Platforms and Day 1 Game Pass',
-    description:
-      'PC, Xbox Series, PS5, and Switch are announced, plus Day 1 Xbox Game Pass. Steam itself is Windows only.',
-    priority: 'New',
-  },
-  {
-    href: '/price-and-file-size/',
-    title: 'Price and File Size',
-    description:
-      'No US price and no install size are on the Steam coming-soon page. Do not use a leaked number.',
-    priority: 'New',
-  },
-  {
     href: '/multiplayer-co-op-status/',
     title: 'Grave Seasons Multiplayer and Co-op Status',
     description:
-      'What is currently confirmed about Grave Seasons multiplayer, co-op, shared farms, and the revised March 2027 plan.',
+      'What is confirmed about Grave Seasons multiplayer, co-op, and shared farms: Steam lists Single-player, and no co-op mode has been announced.',
     priority: 'New',
   },
   {
@@ -102,13 +72,6 @@ export const LATEST_GUIDES = [
     title: 'Grave Seasons Gameplay Preview',
     description:
       'Official gameplay facts on farming, the one-year investigation, romance risk, Ashenridge, and replayable killer scenarios before launch.',
-    priority: 'New',
-  },
-  {
-    href: '/pre-launch-investigation-checklist/',
-    title: 'Pre-Launch Investigation Checklist',
-    description:
-      'What the official one-year investigation, Ashenridge map, killer pool, romance system, and cancelled demo mean before launch.',
     priority: 'New',
   },
   {
@@ -183,24 +146,24 @@ export const OFFICIAL_FACTS = [
   {
     label: 'Platforms',
     value:
-      'Officially announced for PC, Xbox Series X|S, PlayStation 5, and Nintendo Switch, plus Day 1 Xbox Game Pass.',
+      'Officially announced for PC, Xbox Series X|S, PlayStation 5, and Nintendo Switch. Day 1 Xbox Game Pass was announced on March 26, 2026.',
     source: SOURCES.steamDevlog,
   },
 ] as const;
 
 export const REQUIRED_GUIDES = [
   {
-    href: '/resident-investigation-tracker/',
-    title: 'Resident Investigation Tracker',
+    href: '/release-date/',
+    title: 'Release Date',
     description:
-      'A pre-launch template for tracking Ashenridge residents, clues, locations, and separate killer scenarios without guessing unknown details.',
-    priority: 'New',
+      'March 9, 2027 on PC, Xbox Series X|S, PS5, and Switch, with every dated delay, Game Pass, and price status in one place.',
+    priority: 'Updated',
   },
   {
     href: '/multiplayer-co-op-status/',
     title: 'Grave Seasons Multiplayer and Co-op Status',
     description:
-      'Current Grave Seasons multiplayer, co-op, shared-farm, and current release status, without assuming an unannounced feature.',
+      'Grave Seasons multiplayer, co-op, and shared-farm status: Steam lists Single-player, and no co-op mode has been announced.',
     priority: 'New',
   },
   {
@@ -208,13 +171,6 @@ export const REQUIRED_GUIDES = [
     title: 'Grave Seasons Gameplay Preview',
     description:
       'A source-tracked gameplay preview for farming, investigation, romance risk, Ashenridge, and replayable killer scenarios.',
-    priority: 'New',
-  },
-  {
-    href: '/pre-launch-investigation-checklist/',
-    title: 'Pre-Launch Investigation Checklist',
-    description:
-      'A source-tracked checklist for the one-year investigation, killer scenarios, residents, romance, and the revised March 2027 launch date.',
     priority: 'New',
   },
   {
@@ -235,49 +191,21 @@ export const REQUIRED_GUIDES = [
     href: '/romance-guide/',
     title: 'Romance Guide',
     description:
-      '12 confirmed romance options, killer-risk tracking, and launch-day route update hub.',
+      'What the 12 romance slots and changing killer scenarios mean for relationships and spoiler-safe guides.',
     priority: 'P0',
-  },
-  {
-    href: '/walkthrough/',
-    title: 'Walkthrough',
-    description:
-      'Pre-launch walkthrough framework for the one-year Ashenridge investigation.',
-    priority: 'P1',
   },
   {
     href: '/characters/',
     title: 'Characters',
     description:
-      'Resident tracker built from Steam and official Blumhouse media captions.',
-    priority: 'P1',
-  },
-  {
-    href: '/collectibles/',
-    title: 'Collectibles',
-    description:
-      'Crop, tool, item, and special-object tracker ready for release-day verification.',
-    priority: 'P1',
-  },
-  {
-    href: '/platforms/',
-    title: 'Platforms',
-    description:
-      'PC, PlayStation, and Xbox availability notes with only official store data.',
-    priority: 'P1',
-  },
-  {
-    href: '/residents/',
-    title: 'Residents',
-    description:
-      '30+ resident framework that separates confirmed names from launch-day roster work.',
+      'Confirmed cast overview: Yuto and Hari from official media, 30+ residents, 12 romance options, and the killer-candidate pool.',
     priority: 'P1',
   },
   {
     href: '/tips/',
     title: 'Tips',
     description:
-      'Pre-release planning tips that avoid claiming unverified mechanics.',
+      'Spoiler-safe starter tips built on confirmed systems: autosaved choices, the 24-hour clock, plot types, and the mines.',
     priority: 'P2',
   },
   {
@@ -292,13 +220,6 @@ export const REQUIRED_GUIDES = [
     title: 'Killer & Replay Planning',
     description:
       'How to log decisions, residents, romance risk, and changing killer scenarios.',
-    priority: 'P2',
-  },
-  {
-    href: '/quests/',
-    title: 'Quests',
-    description:
-      'Quest and investigation tracker for release-day updates.',
     priority: 'P2',
   },
   {
@@ -331,8 +252,8 @@ export const REQUIRED_GUIDES = [
   },
   {
     href: '/demo-status/',
-    title: 'Demo Status',
-    description: 'Current answer on the cancelled June demo, the revised March 2027 launch, and where official access will appear.',
+    title: 'Demo & Download Status',
+    description: 'The PAX East demo, the cancelled June 15 Steam demo, why there is nothing to download yet, and fake-installer warnings.',
     priority: 'New',
   },
   {

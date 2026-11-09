@@ -6,12 +6,12 @@ import { SOURCES } from '../data/sources';
 
 const title = 'Grave Seasons Tips - Spoiler-Safe Pre-Launch Planning';
 const description =
-  'Spoiler-safe Grave Seasons tips based on official facts: farming, foraging, crafting, investigation, seasons, residents, and killer variation.';
+  'Spoiler-safe Grave Seasons tips based on confirmed systems: autosaved decisions, the 24-hour clock, farming plot types, the roguelike mines, residents, and changing killers.';
 const breadcrumbs = [
   { name: 'Home', url: '/' },
   { name: 'Tips', url: '/tips/' },
 ];
-const sources = [SOURCES.steam, SOURCES.blumhouse];
+const sources = [SOURCES.steam, SOURCES.steamDevlog, SOURCES.blumhouse];
 ---
 
 <Layout title={title} description={description} breadcrumbs={breadcrumbs} image={ASSETS.farmHarvest.src}>
@@ -21,7 +21,9 @@ const sources = [SOURCES.steam, SOURCES.blumhouse];
       Grave Seasons Tips
     </h1>
     <p class="mt-4 text-lg leading-relaxed text-fog">
-      These tips are planning principles based on official descriptions, not final in-game strategy. The practical numbers will be updated after launch.
+      Grave Seasons launches on March 9, 2027, so nobody outside the studio has tested crop prices or murder schedules
+      yet. These tips are built only on systems the Steam page and the developer's devlogs have confirmed. Each one
+      links to the page with the full detail.
     </p>
 
     <figure class="mt-8">
@@ -32,15 +34,61 @@ const sources = [SOURCES.steam, SOURCES.blumhouse];
     <div class="prose-page mt-8">
       <h2>Spoiler-safe starter advice</h2>
       <ol>
-        <li>Track your decisions. Steam says decisions are checked and autosaved, so assume important branches may not be easy to undo.</li>
-        <li>Separate farm notes from investigation notes. The official pitch mixes farming, crafting, and murder investigation.</li>
-        <li>Watch every resident. Steam confirms 30+ residents and a killer chosen from a pool of candidates.</li>
-        <li>Record season and location. Steam says changing seasons impact the world around you and lists seven major areas.</li>
-        <li>Protect spoiler boundaries. Romance routes and killer identity should be clearly labeled after release.</li>
+        <li>
+          <strong>Track your decisions.</strong> Steam says decisions are checked and autosaved, so assume important
+          branches may not be easy to undo. Write down the choice and the date before you see the result.
+        </li>
+        <li>
+          <strong>Treat time as your scarcest resource.</strong> The Day &amp; Night Cycle devlog describes a full
+          24-hour clock with no hard bedtime, and says time keeps ticking whatever you do. Late nights are useful for
+          investigating, but they cost you rest you need for farming. See the <a href="/day-and-night/">day and night guide</a>.
+        </li>
+        <li>
+          <strong>Learn the three plot types before planting big.</strong> The farming devlog names Arid, Regular, and
+          Wet plots, and says Wet plots do not need watering. It also confirms four seasons and more than 45 seeds,
+          but no prices or growth times. Start with a small test plot. The <a href="/farming-grid-seasons-guide/">farming grid guide</a> has the rest.
+        </li>
+        <li>
+          <strong>Prepare before you go into the mines.</strong> The November 4, 2026 devlog says the mines are
+          roguelike with generated levels and no enemies; the pressure comes from your time and energy, and it grows
+          the deeper you go. Bring supplies and set a turnaround point. Details are in the <a href="/mines-roguelike-preview/">mines preview</a>.
+        </li>
+        <li>
+          <strong>Watch every resident, at every hour.</strong> Steam confirms 30+ residents and a killer chosen from a
+          pool of candidates, and the devlog says residents keep schedules at night as well. A short note per resident
+          beats memory; the <a href="/killer-decisions-and-replay/">investigation notes guide</a> gives a template.
+        </li>
+        <li>
+          <strong>Do not treat a romance as a safe answer.</strong> Steam lists 12 potential romance options and says a
+          few may be the killer. Keep relationship notes separate from your suspect notes.
+        </li>
+        <li>
+          <strong>Record season and location.</strong> Steam says changing seasons affect the world around you and lists
+          seven major areas, from your farm to the mines. What you see in spring may not be there in winter.
+        </li>
+        <li>
+          <strong>Expect a different case next time.</strong> Each playthrough selects a killer with its own reasoning,
+          kill style, and targets. Label notes by run so a second playthrough does not overwrite the first.
+        </li>
       </ol>
-      <h2>What to avoid before launch</h2>
+
+      <h2>Using the controller on the farm</h2>
       <p>
-        Avoid publishing exact crop profit charts, best gifts, murder schedules, or quest outcomes until they are tested in the release build. A fast page can rank, but an inaccurate page loses trust quickly.
+        The September 30, 2026 launch-date post mentions two controller changes made for the console versions: a radial
+        menu and a hold-to-rotate input for working on farming plots. If you plan to play with a pad, spend your first
+        few minutes facing a plot and rotating in place to see which tile is selected. The
+        <a href="/controller-and-crowbar-gameplay-preview/">controller and crowbar preview</a> goes further.
+      </p>
+
+      <h2>What to avoid before launch</h2>
+      <ul>
+        <li>Crop profit charts, best-gift lists, or murder schedules posted before March 9, 2027. None of that data is public.</li>
+        <li>"Free download", demo, or APK sites. There is no public build; see <a href="/demo-status/">demo status</a>.</li>
+        <li>Killer identities presented as fixed. The killer changes between playthroughs, so a single "answer" cannot apply to everyone.</li>
+      </ul>
+      <p>
+        For a fuller first-year plan that ties these tips together, read the
+        <a href="/grave-seasons-prelaunch-one-year-planner/">one-year planner</a>.
       </p>
     </div>
 

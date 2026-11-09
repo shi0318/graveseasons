@@ -7,7 +7,7 @@
     const context = canvas.getContext('2d');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const colors = ['255, 52, 72', '255, 196, 61', '74, 214, 205'];
-    let particles = [];
+    let particles: ReturnType<typeof createParticle>[] = [];
     let animationFrame = 0;
     let width = 0;
     let height = 0;

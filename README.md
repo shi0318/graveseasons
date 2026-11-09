@@ -1,6 +1,6 @@
 # Grave Seasons Guide
 
-Independent, source-tracked fan guide for **Grave Seasons** (Perfect Garbage / Blumhouse Games, launching Fall 2026) — a farming murder-mystery set in Ashenridge.
+Independent, source-tracked fan guide for **Grave Seasons** (Perfect Garbage / Blumhouse Games, scheduled for March 9, 2027) — a farming murder-mystery set in Ashenridge.
 
 🔗 **Live site: https://graveseasonsguide.com**
 
@@ -23,7 +23,7 @@ Every fact carries a visible confirmation status and links back to its source (o
 
 ## Content
 
-Romance guide, walkthrough, characters, quests, and tips for Ashenridge. Structured data lives in `src/data/`; guide articles are Markdown files in `src/content/guides/` where the file path becomes the URL.
+Pre-release system analysis, release and demo status, character coverage, and planning advice for Ashenridge. Pages live in `src/pages/` as Astro files; shared guide data and modification dates live in `src/data/`. Removed topics redirect through `public/_redirects`. Run `npm run build` then `npm test` before publishing.
 
 ## Disclaimer
 

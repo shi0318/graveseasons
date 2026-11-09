@@ -1,2 +1,39 @@
 /romance/ /romance-guide/ 301
 /romance /romance-guide/ 301
+
+# Release, price, and platform pages merged into /release-date/ (2026-11-09)
+/steam-date-versus-fall-window/ /release-date/ 301
+/steam-date-versus-fall-window /release-date/ 301
+/still-coming-soon/ /release-date/ 301
+/still-coming-soon /release-date/ 301
+/price-and-file-size/ /release-date/ 301
+/price-and-file-size /release-date/ 301
+/no-price-before-the-farm/ /release-date/ 301
+/no-price-before-the-farm /release-date/ 301
+/platforms/ /release-date/ 301
+/platforms /release-date/ 301
+/platforms-and-game-pass/ /release-date/ 301
+/platforms-and-game-pass /release-date/ 301
+
+# Download page merged into /demo-status/ (2026-11-09)
+/download/ /demo-status/ 301
+/download /demo-status/ 301
+
+# Pre-release placeholder pages folded into substantive guides (2026-11-09)
+/walkthrough/ /grave-seasons-prelaunch-one-year-planner/ 301
+/walkthrough /grave-seasons-prelaunch-one-year-planner/ 301
+/quests/ /killer-decisions-and-replay/ 301
+/quests /killer-decisions-and-replay/ 301
+/collectibles/ /farming-grid-seasons-guide/ 301
+/collectibles /farming-grid-seasons-guide/ 301
+/residents/ /characters/ 301
+/residents /characters/ 301
+
+# Repeated preparation guides consolidated into existing topic pages
+/resident-investigation-tracker/ /killer-decisions-and-replay/ 301
+/resident-investigation-tracker /killer-decisions-and-replay/ 301
+/pre-launch-investigation-checklist/ /grave-seasons-prelaunch-one-year-planner/ 301
+/pre-launch-investigation-checklist /grave-seasons-prelaunch-one-year-planner/ 301
+# Previous directory pagination no longer exists
+/guide/page/4/ /guide/ 301
+/guide/page/4 /guide/ 301
