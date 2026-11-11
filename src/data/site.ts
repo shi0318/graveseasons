@@ -38,6 +38,7 @@ export const FOOTER_NAV = [
 ] as const;
 
 export const LATEST_GUIDES = [
+  { href: '/procedural-mine-route-notebook/', title: 'Mine Navigation: Route Notebook', description: 'A focused pre-release method for marking generated branches, transitions, and the return path without assuming a fixed floor map.', priority: 'New' },
   {
     href: '/release-date/',
     title: 'Release Date: March 9, 2027',
