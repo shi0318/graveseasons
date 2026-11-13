@@ -38,6 +38,7 @@ export const FOOTER_NAV = [
 ] as const;
 
 export const LATEST_GUIDES = [
+  { href: '/cozy-horror-combat-expectations/', title: 'Is Grave Seasons Cozy?', description: 'A comfort-focused preview separating farming, murder-mystery tension, mine exploration and unconfirmed content settings.', priority: 'New' },
   { href: '/procedural-mine-route-notebook/', title: 'Mine Navigation: Route Notebook', description: 'A focused pre-release method for marking generated branches, transitions, and the return path without assuming a fixed floor map.', priority: 'New' },
   {
     href: '/release-date/',

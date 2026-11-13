@@ -3,8 +3,9 @@
 // such as a source panel's "checked" date or note, do not move a page's lastmod.
 // Update a path here whenever its main content changes.
 const PAGE_LASTMOD = {
+  '/cozy-horror-combat-expectations/': '2026-11-12',
   '/procedural-mine-route-notebook/': '2026-11-10',
-  '/': '2026-11-10',
+  '/': '2026-11-12',
   '/release-date/': '2026-11-09',
   '/demo-status/': '2026-11-09',
   '/terms/': '2026-11-09',
@@ -16,7 +17,7 @@ const PAGE_LASTMOD = {
   '/occult-items-victim-protection/': '2026-11-09',
   '/grave-seasons-prelaunch-one-year-planner/': '2026-11-09',
   '/multiplayer-co-op-status/': '2026-11-09',
-  '/guide/': '2026-11-10',
+  '/guide/': '2026-11-12',
   '/guide/page/2/': '2026-11-09',
   '/guide/page/3/': '2026-11-09',
   '/mines-roguelike-preview/': '2026-11-04',
