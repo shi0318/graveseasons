@@ -20,7 +20,7 @@ const PAGE_LASTMOD = {
   '/guide/': '2026-11-12',
   '/guide/page/2/': '2026-11-09',
   '/guide/page/3/': '2026-11-09',
-  '/mines-roguelike-preview/': '2026-11-04',
+  '/mines-roguelike-preview/': '2026-11-24',
   '/farming-crafting-investigation/': '2026-11-04',
   '/controller-and-crowbar-gameplay-preview/': '2026-11-01',
   '/gameplay-preview/': '2026-08-17',

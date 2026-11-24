@@ -54,7 +54,7 @@ export const LATEST_GUIDES = [
       'The PAX East demo, the cancelled June 15 Steam demo, why there is nothing to download yet, and how to spot fake installer sites.',
     priority: 'Updated',
   },
-  { href: '/mines-roguelike-preview/', title: 'Mines Preview: Roguelike Levels and Energy', description: 'What the November 4 devlog confirms about generated mine levels, no enemies, time and energy pressure, rest rooms, and what is still unknown.', priority: 'New' },
+  { href: '/mines-roguelike-preview/', title: 'Mines Preview: Roguelike Levels and Energy', description: 'Plan a first mine trip for crafting materials or deeper exploration using what the developers confirmed about time, energy and fishing rooms.', priority: 'New' },
   { href: '/controller-and-crowbar-gameplay-preview/', title: 'Controller Farming and Crowbar Exploration', description: 'A pre-release look at isometric farming controls, the crowbar, exploration, and the March 9, 2027 launch plan.', priority: 'New' },
   {
     href: '/grave-seasons-prelaunch-one-year-planner/',
