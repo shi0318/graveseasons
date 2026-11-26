@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SourcePanel from '../components/SourcePanel.astro';
+import { ASSETS } from '../data/assets';
+import { SOURCES, type SourceRef } from '../data/sources';
+
+const title = 'Grave Seasons Farm Animals Preview: When to Add Livestock';
+const description = 'What the Grave Seasons developers have confirmed about animal ownership, with a first-farm plan for checking housing, care, and time before expanding.';
+const preview: SourceRef = {
+  label: 'October 27 gameplay with developer commentary',
+  url: 'https://www.youtube.com/watch?v=gEhIWqWbs-M',
+  publisher: 'Blumhouse Games / Perfect Garbage',
+  status: 'official',
+  lastChecked: '2026-11-26',
+  note: 'Publisher gameplay preview with Son M. and Emmett Nahil discussing farming, owning animals, and mining.',
+};
+const image = ASSETS.farmHarvest;
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Guide', url: '/guide/' },
+  { name: 'Farm Animals Preview', url: '/grave-seasons-farm-animals-preview/' },
+];
+---
+
+<Layout title={title} description={description} image={image.src} breadcrumbs={breadcrumbs}>
+  <article class="mx-auto max-w-3xl">
+    <p class="section-kicker">Pre-release preview · November 26, 2026</p>
+    <h1 class="mt-3 text-4xl font-black leading-tight text-bone md:text-5xl">{title}</h1>
+    <p class="mt-5 text-lg leading-relaxed text-fog">Animal ownership is part of Grave Seasons. If you want livestock in your first playthrough, check what one animal would ask of your farm before committing to several. The useful decision is when you can afford both the purchase and the time to look after it while still getting into Ashenridge for the investigation.</p>
+    <figure class="mt-8">
+      <img class="w-full rounded-md" src={image.src} alt="Dara harvesting tomatoes among planted crop beds on the Ashenridge farm" width={image.width} height={image.height} loading="eager" />
+      <figcaption class="mt-2 text-sm text-fog">Crop beds on the Ashenridge farm. Screenshot from the <a href={image.sourceUrl}>Blumhouse Games media gallery</a>.</figcaption>
+    </figure>
+
+    <div class="prose-page mt-8">
+      <h2>What the developers have shown about farm animals</h2>
+      <p>Blumhouse Games published gameplay with Perfect Garbage creative director Son M. and narrative director Emmett Nahil on October 27. It covers raising a farm, owning animals, and mining. The studio's November 4 Steam devlog also points to the developers' discussion of farm upgrades and animals. The current launch is scheduled for March 9, 2027 on PC, Xbox Series X|S, PlayStation 5 and Nintendo Switch. This is planning based on preview material. Check the live menus once you can play. <a href="https://www.youtube.com/watch?v=gEhIWqWbs-M">Official gameplay preview</a> · <a href="https://steamcommunity.com/app/3255110/allnews/">Perfect Garbage announcements</a></p>
+      <p>The preview is enough to make room for animal ownership in your farm plan. It leaves the full species list, the unlock and ownership costs, and care requirements open. The storefront says you can upgrade tools and farm buildings. Read an upgrade's description before paying and check whether it unlocks housing, adds room to what you have, or serves another part of the farm. A building shown in a preview tells you where to look, while the retail menu will tell you what that upgrade does for your save.</p>
+
+      <h2>Check housing and supplies together</h2>
+      <p>When the game first offers an animal, write down its displayed purchase cost and any housing prerequisite. Check whether your existing building has room for it, then look for what the game says it consumes. If it requires supplies, see how many you have and how you can restock. If you can only afford the animal and buying it would leave you short for a confirmed requirement, delay the purchase until you know how you will cover both.</p>
+      <p>It helps to check the town route before spending. A building upgrade may mean a separate trip from finding the animal or its supplies. Read the resident or shop prompt when you first pass through the area, then combine errands on a day when your next conversation has some flexibility. Use the <a href="/map-of-ashenridge/">Ashenridge map preview</a> for the relationship between the farm and town districts. The release build will supply shop hours and acquisition steps.</p>
+      <p>Keep the animal purchase separate in your notes from the upgrades you were already saving for. If a planned tool upgrade would remove a recurring bottleneck, compare it with the upkeep of an additional animal. Both can be worthwhile. The choice turns on whether your current problem is finding enough time for the farm each day or deciding how to spend available time there.</p>
+
+      <h2>Try a small routine before expanding</h2>
+      <p>On your first day with an animal, check its status and complete the interactions the game asks of you. Note the in-game time when you start and when you are ready to leave for town. Check it again the next day before spending on another animal. You want to find out which actions repeat, which are optional and whether any task is easier to combine with checking crops. That gives you a practical schedule from your own save instead of an assumed daily care sequence.</p>
+      <p>Each farm day also contains crop work. The farming devlog confirms that Wet plots need no watering. If a crop you want can grow there, using that plot may free up time on a day you also need to check your animals. The <a href="/farming-grid-seasons-guide/">farming grid and seasons guide</a> explains the plot types. Check a seed's requirements before moving your planting plan around the Wet plots.</p>
+      <p>The developers describe a 24-hour day and night cycle. Pick a town objective, such as a resident you need to speak to, then work backward from when you can meet them. Allow time to travel from the farm. On a day when the animal and crops leave you late for your objective, ask which other farm task could wait until tomorrow before taking on an additional commitment. <a href="/day-and-night/">Day and night in Ashenridge</a></p>
+
+      <h2>Compare a farm day with an investigation day</h2>
+      <p><strong>Farm day.</strong> Look at one animal's care prompt, compare different parts of your morning route, and inspect any produce or materials already in the inventory screen. If an item lists more than one potential use, hold some back while you check the recipe or request it would fill. Record sales or crafting values from the interface when it exposes them.</p>
+      <p><strong>Investigation day.</strong> Choose the resident, location, or time window you care about first. Use the familiar part of your farm routine before leaving and move optional experiments, such as trying an upgrade or extending your route into the mines, to a less constrained day. The <a href="/grave-seasons-prelaunch-one-year-planner/">one-year planner</a> covers how to set those priorities as the case progresses.</p>
+      <p>Only compare the time each routine took after you have seen what the actual game asks. A first animal may be simple to fit in while several could consume a meaningful share of your morning. The decision to expand is easier once you know whether completing all the care leaves enough time for your most constrained town objective.</p>
+      <p>For the first week you can compare, keep one line per day with the care you completed, when you set out for town, and whether you made the planned meeting. A late departure caused by extra planting tells you something different from one caused by a care task you need to repeat. If the game shows a missed interaction or a change in animal status, record that separately from what you earned. Those observations can tell you whether the next purchase should be a second animal, a housing improvement, or another day learning the first routine.</p>
+
+      <h2>What to verify before relying on livestock income</h2>
+      <ul>
+        <li>Read the animal and building names, purchase cost, capacity and unlock conditions from the live menus.</li>
+        <li>For several in-game dates, record care actions and whether the animal produced anything. Include the season and any visible status indicators.</li>
+        <li>Check the purpose and value of what you receive before investing in more housing. Keep breeding, seasonal changes and the consequence of missed care open until the game explains them.</li>
+      </ul>
+      <p>Start with an animal you actually want to keep and expand when you can repeat the care loop comfortably. That lets you learn the ownership system without losing sight of the rest of Ashenridge.</p>
+    </div>
+
+    <SourcePanel sources={[preview, SOURCES.steamDevlog, SOURCES.steam]} />
+  </article>
+</Layout>

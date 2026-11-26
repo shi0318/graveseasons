@@ -3,6 +3,7 @@
 // such as a source panel's "checked" date or note, do not move a page's lastmod.
 // Update a path here whenever its main content changes.
 const PAGE_LASTMOD = {
+  '/grave-seasons-farm-animals-preview/': '2026-11-26',
   '/cozy-horror-combat-expectations/': '2026-11-12',
   '/procedural-mine-route-notebook/': '2026-11-10',
   '/': '2026-11-12',
